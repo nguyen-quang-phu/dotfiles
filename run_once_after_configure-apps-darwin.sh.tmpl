@@ -1,0 +1,44 @@
+#!/bin/bash
+{{ if (eq .chezmoi.os "darwin") -}}
+
+# Dock
+# set dock to left
+defaults write com.apple.dock "orientation" -string "left" && killall Dock
+
+# change docker icon size
+defaults write com.apple.dock "tilesize" -int "16" && killall Dock
+
+# auto hide dock
+defaults write com.apple.dock "autohide" -bool "true" && killall Dock
+
+# change speed auto hide animation
+defaults write com.apple.dock "autohide-time-modifier" -float "0.5" && killall Dock
+
+# change speed auto hide delay
+defaults write com.apple.dock "autohide-delay" -float "0.5" && killall Dock
+
+# remove show recents
+defaults write com.apple.dock "show-recents" -bool "false" && killall Dock
+
+# animation effect
+defaults write com.apple.dock "mineffect" -string "genie" && killall Dock
+
+# show active application only
+defaults write com.apple.dock "static-only" -bool "true" && killall Dock
+
+# Screenshot
+# include date
+defaults write com.apple.screencapture "include-date" -bool "true" 
+
+# set save in ~/Desktop
+defaults write com.apple.screencapture "location" -string "~/Desktop" && killall SystemUIServer
+
+# display thumbnail
+defaults write com.apple.screencapture "show-thumbnail" -bool "true" 
+
+# default format is png
+defaults write com.apple.screencapture "type" -string "png" 
+
+# Safari
+# show full url
+defaults write com.apple.safari "ShowFullURLInSmartSearchField" -bool "true" && killall Safari
