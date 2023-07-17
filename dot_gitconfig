@@ -1,0 +1,47 @@
+[core]
+	excludesfile = ~/.gitignore
+	editor = vim
+[alias]
+	a = !git add . && git status
+	aliases = config --get-regexp alias
+	alias = ! git config --get-regexp ^alias\\. | sed -e s/^alias.// -e s/\\ /\\ $(printf \"\\043\")--\\>\\ / | column -t -s $(printf \"\\043\") | sort -k 1
+	acm = !git add . && git status && cz c
+	                     c=commit
+	                    cm=commit -m
+	                    ca=commit --amend
+	can = !git add . && git status && git commit --amend --no-edit
+	cara = commit --amend --reset-author --no-edit
+	co = "!f() { git checkout $(git branch | grep $1 | head -1); }; f"
+	colast = checkout -
+	fp = fetch --prune
+	xxx = "!f() {IFS='-' read -r -a array <<<  git branch --show-current; }; f"
+	bl = branch -l # list all branch
+	ba = branch -a
+	br = branch -r # list all remote branch
+	bd = branch -d # delete branch
+	bD = branch -D # force delete branch
+	bm = branch -m # rename branch
+	s = stash -u # stash all file include unstrack file
+	sp = stash pop # pop the last stash
+	p = push origin
+	pf = push --force-with-lease
+	rm = rm -r --cached .
+	uiau = update-index --assume-unchanged
+	f = fetch -p
+	st = status
+	ldo = log --graph --decorate --oneline
+	plog = log --graph --pretty='format:%C(red)%d%C(reset) %C(yellow)%h%C(reset) %ar %C(green)%aN%C(reset) %s'
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	tlog = log --stat --since='1 Day Ago' --graph --pretty=oneline --abbrev-commit --date=relative
+	email = !git config --local user.email
+	name = !git config --local user.name
+	cfeat = !git flow feature start
+	pfeat = !git flow feature finish HEAD
+	crelease = !git flow release start
+	prelease = !git flow release finish
+	local = !git config --list --local
+	global = !git config --list --global
+	rss = !git reset --soft HEAD~1
+	fsck = !git fsck --unreachable | grep commit | cut -d" " -f3 | xargs git log --merges --no-walk --grep=WIP
+[color]
+	ui = auto
