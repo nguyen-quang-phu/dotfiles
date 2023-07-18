@@ -42,3 +42,33 @@ defaults write com.apple.screencapture "type" -string "png"
 # Safari
 # show full url
 defaults write com.apple.safari "ShowFullURLInSmartSearchField" -bool "true" && killall Safari
+
+# Finder
+# show quit finder
+defaults write com.apple.finder "QuitMenuItem" -bool "true" && killall Finder
+
+# show extensions files
+defaults write NSGlobalDomain "AppleShowAllExtensions" -bool "true" && killall Finder
+
+# show hidden files
+defaults write com.apple.finder "AppleShowAllFiles" -bool "true" && killall Finder
+
+# show path files
+defaults write com.apple.finder "ShowPathbar" -bool "true" && killall Finder
+
+# keep folder on top
+defaults write com.apple.finder "_FXSortFoldersFirst" -bool "true" && killall Finder
+
+# show title bar icons
+defaults write com.apple.universalaccess "showWindowTitlebarIcons" -bool "true" && killall Finder
+
+# set sidebar icon size small
+defaults write NSGlobalDomain "NSTableViewDefaultSizeMode" -int "1" && killall Finder
+
+# Desktop
+# keep folder on top
+defaults write com.apple.finder "_FXSortFoldersFirstOnDesktop" -bool "true" && killall Finder
+
+# Menubar
+# set digital clock
+defaults write com.apple.menuextra.clock "DateFormat" -string "\"EEE HH:mm:ss\"" 
