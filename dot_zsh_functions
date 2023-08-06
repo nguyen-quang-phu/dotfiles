@@ -6,5 +6,6 @@ function brew() {
 }
 
 function source_zsh() {
-  echo $@
-}z
+  source ~/.zshrc
+  command chezmoi re-add
+}
