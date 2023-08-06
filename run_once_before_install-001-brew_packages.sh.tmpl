@@ -1,7 +1,7 @@
 {{- if eq .chezmoi.os "darwin" -}}
 #!/bin/bash
 
-brew bundle --no-lock --file=/dev/stdin <<EOF
+brew bundle --no-lock --file=/dev/stdin <<Brewfile
 tap "elastic/tap"
 tap "homebrew/bundle"
 tap "homebrew/cask"
@@ -45,5 +45,5 @@ cask "telegram"
 cask "visual-studio-code"
 cask "warp"
 
-EOF
+Brewfile
 {{ end -}}
