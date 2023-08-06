@@ -14,7 +14,7 @@ function source() {
   if [[  $1 == '/Users/harvey/.zshrc' ]];
   then
       echo "chezmoi re-add"
-      command chezmoi re-add
+      # command chezmoi re-add
   fi
   echo "DONE"
 }
