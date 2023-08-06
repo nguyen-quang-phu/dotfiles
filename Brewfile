@@ -34,6 +34,7 @@ brew "mysql", restart_service: true
 brew "mysql-client"
 brew "neovide"
 brew "nvm"
+brew "pnpm"
 brew "postgresql@14"
 brew "ruby-build"
 brew "rbenv"
