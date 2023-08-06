@@ -1,11 +1,19 @@
 function brew() {
+  echo "brew $@"
   command brew $@
+  echo "brew bundle dump --file=~/Brewfile -f"
   command brew bundle dump --file=~/Brewfile -f
+  echo "chezmoi add ~/Brewfile"
   command chezmoi add ~/Brewfile
-  echo "brew bundle dump --file=~/Brewfile"
+  echo "DONE"
 }
 
-function source_zsh() {
-  source ~/.zshrc
-  command chezmoi re-add
+function source() {
+  echo "source $@"
+  $(source $@)
+  if [[  $1 == '/Users/harvey/.zshrc' ]];
+  then
+      echo "chezmoi re-add"
+      command chezmoi re-add
+  fi
 }
