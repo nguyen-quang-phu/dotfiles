@@ -9,7 +9,7 @@ function brew() {
 }
 
 function source() {
-  $(source $@)
+  $(command source $@)
   echo "source $@"
   if [[  $1 == '/Users/harvey/.zshrc' ]];
   then
