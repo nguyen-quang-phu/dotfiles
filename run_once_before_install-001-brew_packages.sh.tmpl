@@ -1,0 +1,49 @@
+{{- if eq .chezmoi.os "darwin" -}}
+#!/bin/bash
+
+brew bundle --no-lock --file=/dev/stdin <<EOF
+tap "elastic/tap"
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/cask-fonts"
+tap "homebrew/core"
+tap "homebrew/services"
+tap "jesseduffield/lazydocker"
+brew "automake"
+brew "aws-elasticbeanstalk"
+brew "awscli", link: false
+brew "bash-completion"
+brew "chezmoi"
+brew "gmp"
+brew "coreutils"
+brew "curl"
+brew "git"
+brew "gitleaks"
+brew "libtool"
+brew "git"
+brew "graphviz"
+brew "lazygit"
+brew "libffi"
+brew "libpq"
+brew "mysql", restart_service: true
+brew "neovide"
+brew "nvm"
+brew "pkg-config"
+brew "postgresql@14"
+brew "ruby-build"
+brew "rbenv"
+brew "redis"
+brew "ripgrep"
+brew "yarn"
+brew "jesseduffield/lazydocker/lazydocker"
+cask "alacritty"
+cask "evkey"
+cask "iterm2"
+cask "google-chrome"
+cask "rectangle"
+cask "telegram"
+cask "visual-studio-code"
+cask "warp"
+
+EOF
+{{ end -}}
