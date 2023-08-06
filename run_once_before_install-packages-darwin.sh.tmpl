@@ -2,55 +2,6 @@
 #!/bin/bash
 
 brew bundle --no-lock --file=/dev/stdin <<Brewfile
-tap "elastic/tap"
-tap "homebrew/bundle"
-tap "homebrew/cask"
-tap "homebrew/cask-fonts"
-tap "homebrew/core"
-tap "homebrew/services"
-tap "jesseduffield/lazydocker"
-# Tool for generating GNU Standards-compliant Makefiles
-brew "automake"
-# Client for Amazon Elastic Beanstalk web service
-brew "aws-elasticbeanstalk"
-# Official Amazon AWS command-line interface
-brew "awscli"
-# Programmable completion for Bash 3.2
-brew "bash-completion"
-# Manage your dotfiles across multiple diverse machines, securely
-brew "chezmoi"
-# GNU multiple precision arithmetic library
-brew "gmp"
-# GNU File, Shell, and Text utilities
-brew "coreutils"
-# Get a file from an HTTP, HTTPS or FTP server
-brew "curl"
-# Distributed revision control system
-brew "git"
-# Audit git repos for secrets
-brew "gitleaks"
-# Generic library support script
-brew "libtool"
-# Graph visualization software from AT&T and Bell Labs
-brew "graphviz"
-# Simple terminal UI for git commands
-brew "lazygit"
-# Portable Foreign Function Interface library
-brew "libffi"
-# Postgres C API library
-brew "libpq"
-# Open source relational database management system
-brew "mysql", restart_service: true
-# No Nonsense Neovim Client in Rust
-brew "neovide"
-# Manage multiple Node.js versions
-brew "nvm"
-# Manage compile and link flags for libraries
-brew "pkg-config"
-# Object-relational database system
-brew "postgresql@14"
-# Install various Ruby versions and implementations
-brew "ruby-build"
-# Ruby version manager
+$(cat ~/Brewfile)
 Brewfile
 {{ end -}}

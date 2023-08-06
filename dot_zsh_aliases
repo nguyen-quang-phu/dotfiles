@@ -1,0 +1,5 @@
+alias ssh-gen="ssh-keygen -t rsa -C"
+alias vim="neovide"
+alias ..="cd .."
+alias ...="cd ../.."
+

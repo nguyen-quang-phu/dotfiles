@@ -1,0 +1,10 @@
+function brew() {
+  command brew $@
+  command brew bundle dump --file=~/Brewfile -f
+  command chezmoi re-add ~/Brewfile
+  echo "brew bundle dump --file=~/Brewfile"
+}
+
+function hello() {
+  echo $@
+}
