@@ -16,4 +16,5 @@ function source() {
       echo "chezmoi re-add"
       command chezmoi re-add
   fi
+  echo "DONE"
 }
