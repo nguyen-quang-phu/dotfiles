@@ -10,13 +10,11 @@ function brew() {
 
 function source_zsh() {
   $(source ~/.zshrc)
-  echo "chezmoi add ~/zshrc"
   command chezmoi add ~/.zshrc
   echo "chezmoi add ~/zshrc"
   command chezmoi add ~/.zsh_aliases
   echo "chezmoi add ~/.zsh_aliases"
   command chezmoi add ~/.zsh_functions
   echo "chezmoi add ~/.zsh_functions"
-  # fi
   echo "DONE"
 }
