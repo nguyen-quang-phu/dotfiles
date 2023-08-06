@@ -4,6 +4,7 @@ alias nvm="fnm"
 alias cat="bat"
 alias ls="exa"
 alias man="tldr"
+alias cz="chezmoi"
 alias ..="cd .."
 alias ...="cd ../.."
 
