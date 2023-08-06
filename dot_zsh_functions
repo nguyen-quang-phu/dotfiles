@@ -1,10 +1,10 @@
 function brew() {
   command brew $@
   command brew bundle dump --file=~/Brewfile -f
-  command chezmoi re-add ~/Brewfile
+  command chezmoi add ~/Brewfile
   echo "brew bundle dump --file=~/Brewfile"
 }
 
-function hello() {
+function source_zsh() {
   echo $@
-}
+}z
