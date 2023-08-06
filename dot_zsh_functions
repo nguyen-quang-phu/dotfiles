@@ -9,8 +9,8 @@ function brew() {
 }
 
 function source() {
-  echo "source $@"
   $(source $@)
+  echo "source $@"
   if [[  $1 == '/Users/harvey/.zshrc' ]];
   then
       echo "chezmoi re-add"
