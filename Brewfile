@@ -31,7 +31,6 @@ brew "httpd"
 brew "lazygit"
 brew "libffi"
 brew "lynx"
-brew "mysql", restart_service: true
 brew "mysql-client"
 brew "neovide"
 brew "nvm"
