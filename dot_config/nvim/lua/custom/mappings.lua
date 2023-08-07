@@ -273,7 +273,7 @@ M.nvterm = {
 
 M.lspsaga = {
   n = {
-    ["gd"] = { "<Cmd>Lspsaga finder<CR>", "Lspsaga lsp_finder" },
+    ["gd"] = { "<Cmd>Lspsaga goto_definition<CR>", "Lspsaga goto_definition" },
     ["<D-.>"] = { "<Cmd>Lspsaga code_action<Cr>", "Lspsaga code_action" },
     ["<F2>"] = { "<Cmd>Lspsaga rename<CR>", "Lspsaga rename" },
   },

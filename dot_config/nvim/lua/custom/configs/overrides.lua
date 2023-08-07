@@ -110,6 +110,14 @@ M.mason = {
     "html-lsp",
     "typescript-language-server",
     "deno",
+
+    -- ruby
+    "solargraph",
+    -- python
+    "pyright",
+    "ruff",
+    "mypy",
+    "black"
   },
 }
 

@@ -1,2 +1,3 @@
 0000000000000000000000000000000000000000 7a6172e9d4e2f9d6dae8627bf34bc0400cbabdab Harvey <harvey@Goldens-MacBook-Pro.local> 1689749607 +0700	clone: from github.com-nqphu:nguyen-quang-phu/neovim-config.git
 7a6172e9d4e2f9d6dae8627bf34bc0400cbabdab 5d5a9ebfb1324998af16ec5b3ede5fa6b7ffd7b9 Harvey <harvey@Goldens-MacBook-Pro.local> 1689823588 +0700	commit: feat: change lspsaga
+5d5a9ebfb1324998af16ec5b3ede5fa6b7ffd7b9 002871eb17a945a3b9a30686f341f0fbc75e04e4 harvey <harvey@goldenowls-MacBook-Pro.local> 1691403098 +0700	commit: feat: update python tool

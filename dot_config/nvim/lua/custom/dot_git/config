@@ -6,7 +6,7 @@
 	ignorecase = true
 	precomposeunicode = true
 [remote "origin"]
-	url = git@github.com-nqphu:nguyen-quang-phu/neovim-config.git
+	url = https://github.com-nqp/nguyen-quang-phu/dotfiles.git
 	fetch = +refs/heads/*:refs/remotes/origin/*
 [branch "master"]
 	remote = origin

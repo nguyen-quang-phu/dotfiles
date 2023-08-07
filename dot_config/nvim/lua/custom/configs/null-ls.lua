@@ -57,6 +57,18 @@ local sources = {
     diagnostics_format = "[gospel] #{m}\n(#{c})",
     methods = methods.DIAGNOSTICS_ON_SAVE,
   },
+  -- python
+  diagnostics.mypy.with {
+    diagnostics_format = "[mypy] #{m}\n(#{c})",
+    methods = methods.DIAGNOSTICS_ON_SAVE,
+  },
+  diagnostics.ruff.with {
+      diagnostics_format = "[ruff] #{m}\n(#{c})",
+      methods = methods.DIAGNOSTICS_ON_SAVE,
+    },
+  formatting.black,
+  formatting.ruff
+
 }
 
 null_ls.setup {
