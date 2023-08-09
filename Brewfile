@@ -33,6 +33,7 @@ brew "httpd"
 brew "lazygit"
 brew "libffi"
 brew "lynx"
+brew "macvim"
 brew "mypy"
 brew "mysql", restart_service: true
 brew "mysql-client"
