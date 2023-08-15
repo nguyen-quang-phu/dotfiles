@@ -22,7 +22,7 @@
 	bD = branch -D # force delete branch
 	bm = branch -m # rename branch
 	s = stash -u # stash all file include unstrack file
-	sp = stash pop # pop the last stash
+	sp = stash apply stash@{0} # pop the last stash
 	p = push origin
 	pf = push --force-with-lease
 	rm = rm -r --cached .
