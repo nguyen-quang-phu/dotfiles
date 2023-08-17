@@ -48,3 +48,5 @@
 	ui = auto
 [push]
 	autoSetupRemote = true
+[rerere]
+	enabled = true
