@@ -1,6 +1,7 @@
 [core]
 	excludesfile = ~/.gitignore
 	editor = vim
+	autocrlf = input
 [alias]
 	a = !git add . && git status
 	aliases = config --get-regexp alias
