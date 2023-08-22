@@ -117,7 +117,11 @@ M.mason = {
     "pyright",
     "ruff",
     "mypy",
-    "black"
+    "black",
+    -- go
+    "gopls",
+    -- rust
+    "rust-analyzer",
   },
 }
 

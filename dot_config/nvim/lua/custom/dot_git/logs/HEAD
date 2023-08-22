@@ -1,3 +1,5 @@
 0000000000000000000000000000000000000000 7a6172e9d4e2f9d6dae8627bf34bc0400cbabdab Harvey <harvey@Goldens-MacBook-Pro.local> 1689749607 +0700	clone: from github.com-nqphu:nguyen-quang-phu/neovim-config.git
 7a6172e9d4e2f9d6dae8627bf34bc0400cbabdab 5d5a9ebfb1324998af16ec5b3ede5fa6b7ffd7b9 Harvey <harvey@Goldens-MacBook-Pro.local> 1689823588 +0700	commit: feat: change lspsaga
 5d5a9ebfb1324998af16ec5b3ede5fa6b7ffd7b9 002871eb17a945a3b9a30686f341f0fbc75e04e4 harvey <harvey@goldenowls-MacBook-Pro.local> 1691403098 +0700	commit: feat: update python tool
+002871eb17a945a3b9a30686f341f0fbc75e04e4 98227140f24da164025cd2a9eff7452b12ad3855 harvey <harvey@192.168.1.171> 1692686411 +0700	commit: feat: add hardtime
+98227140f24da164025cd2a9eff7452b12ad3855 b0a315ca2fad7716b4da9e53b95e16c75487b0c3 Harvey <nqphu1998@gmail.com> 1692686434 +0700	commit (amend): feat: add hardtime

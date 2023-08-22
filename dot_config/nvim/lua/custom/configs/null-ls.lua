@@ -40,7 +40,7 @@ local sources = {
   },
   formatting.rubocop.with {
     command = "bundle",
-    args = vim.list_extend({ "exec", "rubocop" }, formatting.rubocop._opts.args),
+    args = vim.list_extend({ "exec", "rubocop", "--auto-correct" }, formatting.rubocop._opts.args),
   },
   ruby_code_actions.insert_frozen_string_literal,
   ruby_code_actions.autocorrect_with_rubocop,
@@ -57,18 +57,25 @@ local sources = {
     diagnostics_format = "[gospel] #{m}\n(#{c})",
     methods = methods.DIAGNOSTICS_ON_SAVE,
   },
+  formatting.gofumpt,
+  formatting.goimports_reviser,
+  formatting.golines,
   -- python
   diagnostics.mypy.with {
     diagnostics_format = "[mypy] #{m}\n(#{c})",
     methods = methods.DIAGNOSTICS_ON_SAVE,
+    extra_args = function()
+      local virtual = os.getenv "VIRTUAL_ENV" or os.getenv "CONDA_DEFAULT_ENV" or "./venv"
+      print(virtual)
+      return { "--python-executable", virtual .. "/bin/python3" }
+    end,
   },
   diagnostics.ruff.with {
-      diagnostics_format = "[ruff] #{m}\n(#{c})",
-      methods = methods.DIAGNOSTICS_ON_SAVE,
-    },
+    diagnostics_format = "[ruff] #{m}\n(#{c})",
+    methods = methods.DIAGNOSTICS_ON_SAVE,
+  },
   formatting.black,
-  formatting.ruff
-
+  formatting.ruff,
 }
 
 null_ls.setup {
