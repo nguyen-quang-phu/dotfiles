@@ -30,6 +30,8 @@
 	uiau = update-index --assume-unchanged
 	f = fetch -p
 	st = status
+  hide = update-index --skip-worktree
+  unhide = update-index --no-skip-worktree
 	ldo = log --graph --decorate --oneline
 	plog = log --graph --pretty='format:%C(red)%d%C(reset) %C(yellow)%h%C(reset) %ar %C(green)%aN%C(reset) %s'
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
