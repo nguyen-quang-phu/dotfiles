@@ -16,11 +16,12 @@ g.neovide_background_color = "1e1e1e"
 g.neovide_remember_window_size = true
 g.neovide_input_macos_alt_is_meta = true
 
-g.splitjoin_split_mapping= ''
-g.splitjoin_join_mapping= ''
+g.splitjoin_split_mapping = ""
+g.splitjoin_join_mapping = ""
 
 g.camelcasemotion_key = "<leader>"
 g["test#strategy"] = "neovim"
+g["test#neovim#start_normal"] = true
 g.vimwiki_list = { { path = "~/wiki", syntax = "markdown", ext = ".md" } }
 g.noswapfile = true
 g["$MYVIMRC"] = "~/.config/nvim/lua/custom/init.lua"

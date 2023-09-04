@@ -14,6 +14,7 @@ local servers = {
   "pyright", -- python
   "phpactor", --php
   "gopls",
+  "tailwindcss"
 }
 
 for _, lsp in ipairs(servers) do
