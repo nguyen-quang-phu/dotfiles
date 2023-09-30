@@ -1,8 +1,8 @@
 blank_issues_enabled: false
 contact_links:
-  - name: Wiki
-    url: https://github.com/siduck76/NvChad/wiki
-    about: "Walks you through how to use and Configure NvChad."
-  - name: Visit our gitter chat
-    url: https://gitter.im/neovim-dotfiles/community
-    about: "A place where we dicuss NvChad related stuff."
+  - name: r/AstroNvim (Reddit)
+    url: https://www.reddit.com/r/AstroNvim
+    about: Ask questions about AstroNvim on the official Subreddit
+  - name: Discord Chat
+    url: https://discord.gg/UcZutyeaFW
+    about: Ask questions and have discussions about AstroNvim on Discord

@@ -1,0 +1,5 @@
+0000000000000000000000000000000000000000 d65fe4d459ca4f7249c18eabf76a714ba2bbcd2b harvey <harvey@goldenowls-MacBook-Pro.local> 1693829168 +0700	clone: from https://github.com/nguyen-quang-phu/astronvim_config.git
+d65fe4d459ca4f7249c18eabf76a714ba2bbcd2b d1998ba5fdeb3c40e15202dcba23dff1400bc1b9 Harvey <nqphu1998@gmail.com> 1693879895 +0700	commit: feat: add config null_ls
+d1998ba5fdeb3c40e15202dcba23dff1400bc1b9 09f167e7ff9a51846cc330104f2b8ebd4b6b0102 Harvey <nqphu1998@gmail.com> 1695279200 +0700	commit: fix: update setting
+09f167e7ff9a51846cc330104f2b8ebd4b6b0102 6b884eedd9a3e95dae15dce4c858b060d00ffa53 Harvey <nqphu1998@gmail.com> 1695379909 +0700	commit: feat: update old config from nvchad
+6b884eedd9a3e95dae15dce4c858b060d00ffa53 b19363f9d63dd4bad7e31f919c86efa733afe00a Harvey <nqphu1998@gmail.com> 1695709936 +0700	commit: fix: update pack in settings vim
