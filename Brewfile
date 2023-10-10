@@ -56,6 +56,7 @@ brew "mysql-client"
 brew "neovim"
 brew "neovide"
 brew "nvm"
+brew "php"
 brew "pnpm"
 brew "postgresql@14", restart_service: true
 brew "pyright"
