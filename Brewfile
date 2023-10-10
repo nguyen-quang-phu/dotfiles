@@ -82,7 +82,6 @@ brew "zsh"
 brew "fsouza/prettierd/prettierd"
 brew "incu6us/tap/goimports-reviser"
 brew "jesseduffield/lazydocker/lazydocker"
-brew "shivammathur/php/php@7.4", link: true
 cask "adobe-creative-cloud"
 cask "alacritty"
 cask "chromedriver"
