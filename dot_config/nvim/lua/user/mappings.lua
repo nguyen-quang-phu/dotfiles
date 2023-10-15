@@ -32,13 +32,16 @@ return {
     -- ["<leader>b"] = { name = "Buffers" },
     ["<leader>e"] = { "<cmd>Neotree focus<cr>" },
     ["<leader>b"] = { "<cmd>Neotree toggle<cr>" },
+    ["<S-D-f>"] = { "<cmd>Telescope live_grep hidden=true no_ignore=true<cr>" },
     ["<D-f>"] = { "<cmd>lua vim.lsp.buf.format{async=true}<cr><cmd> w <CR>" },
     ["<D-p>"] = { "<cmd>Telescope find_files hidden=true no_ignore=true<cr>" },
-    ["<S-D-f>"] = { "<cmd>Telescope live_grep hidden=true no_ignore=true<cr>" },
     ["<D-.>"] = { "<Cmd>Lspsaga code_action<Cr>" },
     ["gd"] = { "<Cmd>Lspsaga goto_definition<CR>" },
     ["gr"] = { "<Plug>ReplaceWithRegisterOperator" },
     ["grr"] = { "<Plug>ReplaceWithRegisterLine" },
+    ["<leader>a"] = { "<cmd>AerialToggle<CR>" },
+    ["gS"] = { "<cmd>SplitjoinSplit<CR><cr>" },
+    ["gJ"] = { "<cmd>SplitjoinJoin<CR><cr>" },
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
   },

@@ -16,6 +16,7 @@ return {
   { import = "astrocommunity.pack.json" },
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.pack.markdown" },
+  { import = "astrocommunity.pack.full-dadbod" },
   -- { import = "astrocommunity.pack.ruby" },
 
   { import = "astrocommunity.editing-support.auto-save-nvim" },
@@ -23,6 +24,7 @@ return {
   { import = "astrocommunity.editing-support.treesj" },
   { import = "astrocommunity.editing-support.dial-nvim" },
   { import = "astrocommunity.editing-support.hypersonic-nvim" },
+  -- { import = "astrocommunity.editing-support.ultimate-autopair-nvim" },
 
   { import = "astrocommunity.workflow.hardtime-nvim" },
 
@@ -46,4 +48,6 @@ return {
   { import = "astrocommunity.diagnostics.trouble-nvim" },
   { import = "astrocommunity.lsp.lsp-signature-nvim" },
   { import = "astrocommunity.comment.mini-comment" },
+  { import = "astrocommunity.syntax.vim-easy-align" },
+  { import = "astrocommunity.utility.noice-nvim" },
 }

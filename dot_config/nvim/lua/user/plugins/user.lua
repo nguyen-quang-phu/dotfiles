@@ -75,5 +75,8 @@ return {
       { "<C-o>", "<cmd>Portal jumplist backward<cr>", desc = "Portal Jump backward" },
       { "<C-i>", "<cmd>Portal jumplist forward<cr>", desc = "Portal Jump forward" },
     },
+  },  {
+    "AndrewRadev/splitjoin.vim",
+    lazy = false,
   },
 }

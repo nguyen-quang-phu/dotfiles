@@ -24,6 +24,26 @@ autocmd("BufReadPre", {
   end,
 })
 
+local terminal_settings_group = augroup("terminal_settings", { clear = true })
+-- TODO: drop when dropping support for Neovim v0.9
+if vim.fn.has "nvim-0.9.4" == 0 then
+  -- HACK: Disable custom statuscolumn for terminals because truncation/wrapping bug
+  -- https://github.com/neovim/neovim/issues/25472
+  autocmd("TermOpen", {
+    group = terminal_settings_group,
+    desc = "Disable custom statuscolumn for terminals to fix neovim/neovim#25472",
+    callback = function() vim.opt_local.statuscolumn = nil end,
+  })
+end
+autocmd("TermOpen", {
+  group = terminal_settings_group,
+  desc = "Disable foldcolumn and signcolumn for terinals",
+  callback = function()
+    vim.opt_local.foldcolumn = "0"
+    vim.opt_local.signcolumn = "no"
+  end,
+})
+
 local bufferline_group = augroup("bufferline", { clear = true })
 autocmd({ "BufAdd", "BufEnter", "TabNewEntered" }, {
   desc = "Update buffers when adding new buffers",
@@ -45,7 +65,7 @@ autocmd({ "BufAdd", "BufEnter", "TabNewEntered" }, {
     astroevent "BufsUpdated"
   end,
 })
-autocmd("BufDelete", {
+autocmd({ "BufDelete", "TermClose" }, {
   desc = "Update buffers when deleting buffers",
   group = bufferline_group,
   callback = function(args)
@@ -160,14 +180,14 @@ autocmd("BufEnter", {
 })
 
 if is_available "alpha-nvim" then
-  autocmd({ "User", "BufEnter" }, {
+  autocmd({ "User", "BufWinEnter" }, {
     desc = "Disable status, tablines, and cmdheight for alpha",
     group = augroup("alpha_settings", { clear = true }),
     callback = function(args)
       if
         (
           (args.event == "User" and args.file == "AlphaReady")
-          or (args.event == "BufEnter" and vim.api.nvim_get_option_value("filetype", { buf = args.buf }) == "alpha")
+          or (args.event == "BufWinEnter" and vim.api.nvim_get_option_value("filetype", { buf = args.buf }) == "alpha")
         ) and not vim.g.before_alpha
       then
         vim.g.before_alpha = {
@@ -178,7 +198,7 @@ if is_available "alpha-nvim" then
         vim.opt.showtabline, vim.opt.laststatus, vim.opt.cmdheight = 0, 0, 0
       elseif
         vim.g.before_alpha
-        and args.event == "BufEnter"
+        and args.event == "BufWinEnter"
         and vim.api.nvim_get_option_value("buftype", { buf = args.buf }) ~= "nofile"
       then
         vim.opt.laststatus, vim.opt.showtabline, vim.opt.cmdheight =
@@ -191,8 +211,15 @@ if is_available "alpha-nvim" then
     desc = "Start Alpha when vim is opened with no arguments",
     group = augroup("alpha_autostart", { clear = true }),
     callback = function()
-      local should_skip = false
-      if vim.fn.argc() > 0 or vim.fn.line2byte(vim.fn.line "$") ~= -1 or not vim.o.modifiable then
+      local should_skip
+      local lines = vim.api.nvim_buf_get_lines(0, 0, 2, false)
+      if
+        vim.fn.argc() > 0 -- don't start when opening a file
+        or #lines > 1 -- don't open if current buffer has more than 1 line
+        or (#lines == 1 and lines[1]:len() > 0) -- don't open the current buffer if it has anything on the first line
+        or #vim.tbl_filter(function(bufnr) return vim.bo[bufnr].buflisted end, vim.api.nvim_list_bufs()) > 1 -- don't open if any listed buffers
+        or not vim.o.modifiable -- don't open if not modifiable
+      then
         should_skip = true
       else
         for _, arg in pairs(vim.v.argv) do
@@ -202,10 +229,9 @@ if is_available "alpha-nvim" then
           end
         end
       end
-      if not should_skip then
-        require("alpha").start(true, require("alpha").default_config)
-        vim.schedule(function() vim.cmd.doautocmd "FileType" end)
-      end
+      if should_skip then return end
+      require("alpha").start(true, require("alpha").default_config)
+      vim.schedule(function() vim.cmd.doautocmd "FileType" end)
     end,
   })
 end
@@ -217,7 +243,10 @@ if is_available "indent-blankline.nvim" then
     desc = "Refresh indent blankline on window scroll",
     group = augroup("indent_blankline_refresh_scroll", { clear = true }),
     callback = function()
-      if vim.v.event.all.leftcol ~= 0 then pcall(vim.cmd.IndentBlanklineRefresh) end
+      -- TODO: remove neovim version check when dropping support for Neovim 0.8
+      if vim.fn.has "nvim-0.9" ~= 1 or (vim.v.event.all and vim.v.event.all.leftcol ~= 0) then
+        pcall(vim.cmd.IndentBlanklineRefresh)
+      end
     end,
   })
 end

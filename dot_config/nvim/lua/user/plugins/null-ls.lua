@@ -17,6 +17,7 @@ return {
       -- null_ls.builtins.formatting.stylua,
       -- null_ls.builtins.formatting.prettier,
       -- refactor
+      require("typescript.extensions.null-ls.code-actions"),
       code_actions.refactoring,
 
       -- check spell
