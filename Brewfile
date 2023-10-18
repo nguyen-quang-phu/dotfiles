@@ -59,7 +59,6 @@ brew "neovim"
 brew "neovide"
 brew "nvm"
 brew "pgcli"
-brew "php"
 brew "pnpm"
 brew "postgresql@14", restart_service: true
 brew "pyright"
