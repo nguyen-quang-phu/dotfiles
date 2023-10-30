@@ -17,6 +17,7 @@ return {
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.pack.markdown" },
   { import = "astrocommunity.pack.full-dadbod" },
+  { import = "astrocommunity.pack.php" },
   -- { import = "astrocommunity.pack.ruby" },
 
   { import = "astrocommunity.editing-support.auto-save-nvim" },
@@ -48,6 +49,16 @@ return {
   { import = "astrocommunity.diagnostics.trouble-nvim" },
   { import = "astrocommunity.lsp.lsp-signature-nvim" },
   { import = "astrocommunity.comment.mini-comment" },
+  {
+    "echasnovski/mini.comment",
+    opts = {
+      options = {
+        custom_commentstring = function()
+          return require('ts_context_commentstring.internal').calculate_commentstring() or vim.bo.commentstring
+        end,
+      },
+    },
+  },
   { import = "astrocommunity.syntax.vim-easy-align" },
   { import = "astrocommunity.utility.noice-nvim" },
 }

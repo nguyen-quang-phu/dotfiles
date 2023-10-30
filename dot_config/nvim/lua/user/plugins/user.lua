@@ -36,6 +36,11 @@ return {
     ft = "ruby",
   },
   {
+    "noahfrederick/vim-laravel",
+    lazy = false,
+    dependencies = { { 'tpope/vim-dispatch','tpope/vim-projectionist', 'noahfrederick/vim-composer'} },
+  },
+  {
     "semanticart/ruby-code-actions.nvim",
   },
   {
@@ -78,5 +83,13 @@ return {
   },  {
     "AndrewRadev/splitjoin.vim",
     lazy = false,
+  },
+  {
+    "stevearc/dressing.nvim",
+    lazy = false,
+  },
+  {
+    "mfussenegger/nvim-dap",
+    dependencies = { "suketa/nvim-dap-ruby", config = true },
   },
 }
