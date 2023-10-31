@@ -1,4 +1,5 @@
 tap "elastic/tap"
+tap "felixkratz/formulae"
 tap "fsouza/prettierd"
 tap "homebrew/bundle"
 tap "homebrew/cask-fonts"
