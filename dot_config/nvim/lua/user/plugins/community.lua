@@ -60,5 +60,5 @@ return {
     },
   },
   { import = "astrocommunity.syntax.vim-easy-align" },
-  { import = "astrocommunity.utility.noice-nvim" },
+  -- { import = "astrocommunity.utility.noice-nvim" },
 }
