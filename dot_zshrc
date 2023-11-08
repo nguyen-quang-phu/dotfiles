@@ -1,10 +1,23 @@
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 export NVM_DIR="$HOME/.nvm"
-[ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
-[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+# [ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+# [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 eval "$(zoxide init zsh)"
 eval "$(fnm env --use-on-cd)"
 
 # aliases
 . ~/.zsh_aliases
 . ~/.zsh_functions
+
+# [[ -s "/Users/harvey/.gvm/scripts/gvm" ]] && source "/Users/harvey/.gvm/scripts/gvm"
+
+export PATH="/usr/local/opt/php@7.4/bin:$PATH"
+export PATH="/usr/local/opt/php@7.4/sbin:$PATH"
+
+
+# Herd injected PHP binary.
+export PATH="/Users/harvey/Library/Application Support/Herd/bin/":$PATH
+
+
+# Herd injected PHP 8.2 configuration.
+export HERD_PHP_82_INI_SCAN_DIR="/Users/harvey/Library/Application Support/Herd/config/php/82/"
