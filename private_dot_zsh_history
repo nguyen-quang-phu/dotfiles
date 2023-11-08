@@ -1,0 +1,1113 @@
+git stash apply stash@{2}
+docker compose up -d
+rails s
+docker compose up -d
+rails s
+neovide Gemfile 
+neovide ~/.ssh/config
+pecl install xdebug
+neovide ~/.gitignore
+neovide package.json
+neovide ~/.gitignore
+neovide package.json
+git name Troy
+git email troy.tran.goldenowl@gmail.com
+git cara
+eb deploy
+git stash list
+git sp
+eb deploy
+eb deploy Gigstaging-new-version-env
+neovide package.json
+cd ../provider-web-react/
+yarn start
+neovide Gemfile
+git diff
+rails s
+rails s
+rails c
+git s
+git checkout develop 
+git pull origin develop
+yarn deploy:pre-production 
+git colast 
+git sp
+rails s
+cd ../api
+exa
+neovide .
+__zoxide_z fron
+git pull origin develop
+yarn deploy:pre-production 
+neovide package.json
+git checkout develop 
+git pull origin develop
+git checkout feat/paid-template 
+git pull origin feat/paid-template
+git checkout develop 
+git checkout -b deploy/pre-23-10-2023
+git merge feat/paid-template 
+yarn deploy:pre-production 
+yarn ssh:pre-production 
+yarn ssh:pre-production
+docker compose up -d
+docker compose up -d
+cd ..
+exa
+cd provider-web-react/
+yarn start
+cd ../api
+exa
+neovide .
+neovide Gemfile
+spring stop
+rails db:migrate
+rails db:migrate
+rails db:migrate
+rails db:migrate
+rails db:migrate
+rails db:migrate
+rails db:migrate
+rails db:migrate
+rails db:migrate
+rails db:migrate
+rails db:migrate
+rails db:migrate
+rails db:migrate
+rails db:migrate
+rails db:migrate
+git s
+git checkout feat/paid-template 
+git checkout -b fix/remove-wrong-foreign-key
+git sp
+git checkout feat/paid-template 
+git pull origin feat/paid-template
+git pull origin feat/paid-template
+git checkout deploy/pre-prod-16-10-2023 
+git merge feat/paid-template 
+code .
+yarn deploy:pre-production 
+yarn ssh:pre-production 
+neovide Gemfile
+neovide .
+git checkout feat/paid-template 
+rails s
+neovide Gemfile
+rails s
+neovide Gemfile
+neovide Gemfile
+rails c
+git s
+git checkout feat/paid-template 
+git add .
+git sp
+git add .
+git commit -m "feat: add payment type timesheet list view"
+git rss
+git checkout -b feat/add-payment-type-for-timesheet-list-view
+git add .
+git commit -m "feat: add payment type timesheet list view"
+git push
+git checkout feat/paid-template 
+git pull origin feat/paid-template
+git checkout deploy/pre-prod-16-10-2023 
+git merge feat/paid-template
+yarn deploy:pre-production 
+docker compose down
+git checkout deploy/pre-prod-16-10-2023 
+git merge feat/paid-template 
+yarn deploy:pre-production 
+rails c
+yarn ssh:pre-production 
+git checkout develop 
+git pull origin develop 
+git checkout deploy/pre-23-10-2023 
+git merge develop 
+yarn deploy:pre-production 
+__zoxide_z fon
+__zoxide_z fon
+__zoxide_z fron
+git fetch
+git checkout -b deploy/pre-23-10-2023
+git merge feat/payment-template
+yarn deploy:pre-production 
+git checkout develop 
+git pull origin develop
+git colast
+git merge develop 
+yarn deploy:pre-production 
+git fetch
+git checkout feat/payment-template
+git pull origin feat/payment-template
+git colast
+git merge feat/payment-template
+yarn deploy:pre-production 
+git checkout feat/paid-template 
+git pull origin feat/paid-template
+git colast
+git merge feat/paid-template 
+yarn deploy:pre-production 
+git pull origin feat/paid-template
+rails c
+spring stop
+rails c
+rails s
+git checkout feat/paid-template 
+git pull origin feat/paid-template
+git checkout deploy/pre-23-10-2023 
+git merge feat/paid-template 
+yarn deploy:pre-production 
+git checkout feat/payment-template
+git pull origin https://gitlab.com/techleadgo/gigadmin-frontend/-/merge_requests/1664/diffs
+git pull origin feat/payment-template
+git colast
+git merge feat/payment-template
+code .
+yarn deploy:pre-production 
+git checkout feat/payment-template
+git pull origin feat/payment-template
+git pull origin feat/payment-template
+git fetch
+__zoxide_z portal
+neovide package.json
+yarn dev
+npx create-chakra-icons -i src/assets/video-camera.svg 
+npx create-chakra-icons -o src/assets/video-camera.svg
+npx create-chakra-icons -i src/assets/video-camera.svg -t c
+npx create-chakra-icons -i src/assets/video-camera.svg -T c
+yarn dev
+__zoxide_z user
+neovide init.lua
+vimi package.json 
+neovide package.json
+neovide package.json
+vim Gemfile
+mysql
+git fetch
+git checkout fix/pay-template-conflict
+git pull origin fix/pay-template-conflict
+yarn deploy:pre-production 
+git checkout develop 
+git pull origin develop 
+docker compose up -d
+yarn start
+__zoxide_z api
+__zoxide_z api
+__zoxide_z api
+cd ../gigadmin-api/
+exa
+git checkout develop 
+git pull origin develop
+neovide Gemfile
+neovide Gemfile
+neovide Gemfile
+git s
+git sp
+neovide Gemfile
+rails s
+git checkout develop 
+git pull origin develop
+git checkout feat/paid-template 
+git pull origin feat/paid-template
+git checkout develop 
+git checkout -b deploy/pre-24-10-2023
+git merge feat/paid-template 
+yarn deploy:pre-production 
+neovide package.json 
+docker compose up -d
+yarn ssh:pre-production 
+neovide Gemfile
+neovide Gemfile
+neovide Gemfile
+__zoxide_z train
+exa
+cd nest/
+cd manage-tasks/
+exa
+neovide package.json
+__zoxide_z user
+neovide init.lua
+__zoxide_z fron
+git fetch
+git checkout fix/conflict-pay-template
+yarn deploy:pre-production 
+__zoxide_z api
+__zoxide_z api
+rails c
+rails c
+rails s
+rails s
+docker compose down
+yaiba
+yabai --stop-service
+__zoxide_z api
+__zoxide_z api
+cd ../api/
+exa
+neovide package.json
+__zoxide_z gigadmin-api
+neovide Gemfile
+neovide Gemfile
+rails db:migrate
+rails db:migrate
+rails db:rollback STEP=1
+rails db:migrate
+rails db:migrate
+rails db:migrate
+rails db:migrate
+rails db:migrate
+rails db:migrate
+git checkout feat/paid-template 
+git pull origin feat/paid-template
+git pull origin feat/paid-template
+git checkout deploy/pre-23-10-2023 
+git merge feat/paid-template 
+yarn deploy:pre-production 
+docker compose up -d
+docker compose up -d
+docker ps -a
+docker exec -it api-laravel-app-1 /bin/bash
+docker compose up -d
+cd ../provider-web-react/
+yarn start
+neovide Gemfile
+rails c
+vim Gemfile
+rails c
+vim Gemfile
+docker exec -it api-laravel-app-1 /bin/bash
+rails db:migrate
+rails c
+rails c
+rails c
+rails c
+rails c
+docker exec -it api-laravel-app-1 /bin/bash
+rails c
+pcli
+pgcli
+psql
+docker compose down
+docker compose up -d
+docker compose up -d
+docker compose up -d
+yabai --stop-service
+neovide Gemfile
+docker compose up -d
+eb deploy Gigstaging-new-version-env
+neovide package.json 
+neovide package.json
+eb deploy Gigstaging-new-version-env
+git diff
+git checkout develop 
+git pull origin develop
+git colast
+git checkout deploy/pre-24-10-2023 
+git merge develop 
+git checkout feat/paid-template 
+git pull origin feat/paid-template
+git checkout deploy/pre-24-10-2023 
+yarn deploy:pre-production 
+__zoxide_z fron
+git checkout develop 
+git pull origin develop 
+git colast
+git merge develop 
+yarn deploy:pre-production 
+eb ssh Gigstaging-new-version-env
+cd ../provider-web-react/
+yarn start
+neovide package.json
+eb deploy Gigstaging-new-version-env
+docker exec -it api-laravel-app-1 /bin/bash
+php -m
+php --version
+brew list | grep php
+brew uninstall php
+brew uninstall --ignore-dependencies php
+php --version
+yabai --stop-service
+php l
+php --version
+brew list | grep php
+php --version
+php artisan serve
+code .
+neovide package.json
+__zoxide_z user
+neovide init.lua
+__zoxide_z fron
+git fetch
+git checkout fix/conflict-payment-template
+yarn deploy:pre-production 
+yarn ssh:pre-production 
+yarn start
+docker compose up -d
+yarn start
+cd ../provider-web-react/
+neovide package.json
+yarn ssh:pre-production
+git checkout develop 
+git pull origin develop 
+git colast
+git merge develop 
+yarn deploy:pre-production 
+vim Gemfile
+cd ../api/
+exa
+eb deploy Gigstaging-new-version-env
+vim Gemfile
+rails c
+rails s
+git merge feat/paid-template 
+git checkout deploy/pre-24-10-2023 
+git checkout feat/paid-template 
+git pull origin feat/paid-template
+git checkout deploy/pre-24-10-2023 
+git merge feat/paid-template 
+yarn deploy:pre-production 
+git checkout develop 
+git pull origin develop
+git colast 
+git merge develop 
+yarn deploy:pre-production 
+git checkout main
+git pull origin main
+yarn deploy:production 
+docker compose down
+yarn ssh:production 
+lazydocker
+lazygit
+__zoxide_z fon
+__zoxide_z fron
+lazygit
+lazygit
+git pull origin fix/conflict-pay-template
+git pull origin fix/conflict-pay-template
+git checkout develop 
+git bd fix/conflict-pay-template
+git fetch
+git colast
+git checkout fix/conflict-pay-template
+git pull origin fix/conflict-pay-template
+yarn deploy:pre-production 
+cd ../api/
+lazydocker
+__zoxide_z api
+lazydocker
+lazydocker
+cargo install --locked lazycli
+brew install cargo
+cargo install --locked lazycli
+cd ../gigadmin-api/
+rails s
+git diff
+neovide Gemfile
+rails db:migrate
+cd ../api/
+lazydocker
+neovide package.json
+rails db:rollback STEP=1
+rails db:migrate
+git checkout feat/paid-template
+git pull origin feat/paid-template
+git checkout deploy/pre-24-10-2023
+git merge feat/paid-template
+yarn deploy:pre-production
+yarn deploy:pre-production
+git diff
+eb deploy Gigstaging-new-version-env
+cd ../api/
+cd ../provider-web-react/
+yarn start
+rails c
+spring stop
+rails c
+yarn ssh:pre-production
+rails s
+rails c
+rails c
+rails c
+cd ../api/
+neovide package.json
+rails c
+rails c
+__zoxide_z font
+__zoxide_z fron
+lazygit
+lazygit
+yarn deploy:pre-production 
+rails c
+yarn ssh:production
+cd ~/.ssh/
+open .
+z api
+rails s
+yarn deploy:pre-production
+neovide Gemfile 
+lazydocker
+__zoxide_z gigadmin-api
+vim Gemfile
+rails s
+__zoxide_z use
+neovide init.lua
+neovide Gemfile 
+neovide Gemfile
+neovide Gemfile
+__zoxide_z user
+l
+neovide init.lua
+rails c
+__zoxide_z fron
+open .
+neovide package.json
+__zoxide_z user
+neovide init.lua
+neovide package.json
+yabai --stol
+yabai --stop-service
+__zoxide_z gigadmin-api
+yarn ssh:pre-production
+neovide Gemfile
+rails s
+chezmoi ~/.config/nvim/
+chezmoi add ~/.config/nvim/
+__zoxide_z user
+neovide init.lua
+neovide Gemfile
+vim Gemfile
+neovide init.lua
+vim Gemfile
+__zoxide_z api
+__zoxide_z api
+cd ../api/
+cd ~
+exa
+exa -a
+neovide ~/.zshrc
+neovide ~/.zshrc
+neovide ~/.zsh_aliases
+source ~/.zshrc
+lzd 
+lzdiff
+lzd
+__zoxide_z api
+__zoxide_z api
+exa
+yarn ssh:pre-production
+cd ../api/
+exa
+git diff
+neovide .
+__zoxide_z gigadmin-api
+git fetch
+git checkout feat/create_timecard_after_checkout
+git colast
+git merge feat/create_timecard_after_checkout
+yarn deploy:pre-production
+rails c
+mysql
+rails c
+rails c
+cd ../provider-web-react/
+rails c
+neovide Gemfile
+rails c
+rails c
+cd ../api/
+neovide Gemfile
+neovide init.lua
+yarn start
+git diff
+git s
+git checkout feat/paid-template
+neovide Gemfile
+rails s
+__zoxide_z fron
+neovide package.json
+yarn start
+neovide Gemfile
+rails s
+__zoxide_z api
+__zoxide_z api
+cd ../api/
+neovide .
+__zoxide_z user
+neovide init.lua
+__zoxide_z api
+__zoxide_z api
+neovide Gemfile
+__zoxide_z user
+neovide init.lua
+__zoxide_z api
+__zoxide_z api
+neovide Gemfile
+neovide Gemfile
+neovide Gemfile
+cd ../api/
+neovide .
+__zoxide_z user
+neovide init.lua
+neovide .
+__zoxide_z api
+__zoxide_z api
+neovide Gemfile
+neovide init.lua
+__zoxide_z api
+__zoxide_z api
+spring stop
+rails db:migrate
+rails db:migrate
+rails db:rollback STEP=2
+rails db:migrate
+rails db:rollback STEP=2
+rails db:migrate
+rails db:migrate
+git checkout feat/paid-template
+git pull origin feat/paid-template
+git checkout deploy/pre-24-10-2023
+git merge feat/paid-template
+yarn deploy:pre-production
+yarn deploy:pre-production
+yarn ssh:pre-production
+neovide Gemfile
+git checkout develop
+git pull origin develop\
+
+git checkout -b deploy/pre-30-10-2023
+git merge feat/paid-template
+yarn deploy:pre-production
+yarn ssh:pre-production
+yarn deploy:pre-production
+yarn ssh:pre-production
+git checkout deploy/pre-30-10-2023
+git merge feat/paid-template
+git checkout develop
+git s
+git reset ORIG_HEAD
+git s
+git checkout develop
+git checkout -b deploy/pre-30-10-2023-p2
+git merge feat/paid-template
+yarn deploy:pre-production
+yarn ssh:pre-production
+__zoxide_z fron
+git fetch
+git checkout fix/deploy-pay-template
+yarn deploy:pre-production
+exiq
+\:q
+git s
+git checkout feat/paid-template
+git sp
+git checkout develop
+git checkout -b deploy/pre-30-10-2023-p3
+git merge feat/paid-template
+yarn deploy:pre-production
+yarn ssh:pre-production
+__zoxide_z api
+__zoxide_z api
+cd ../api/
+neovide .
+cd ../ap
+cd ../api
+exa
+__zoxide_z fron
+git fetch
+git checkout feat/select-all-payroll
+yarn deploy:pre-production
+__zoxide_z user
+__zoxide_z user
+neovide init.lua
+neovide .
+cd ../provider-web-react/
+exa
+yarn start
+brew tap FelixKratz/formulae
+brew install sketchybar
+brew services start sketchybar
+brew tap homebrew/cask-fonts
+brew install --cask font-hack-nerd-font
+cd ~/.config/
+exa
+cd sketchybar
+mkdir sketchybar
+open .
+brew services restart sketchybar
+__zoxide_z download
+cd sketchybar-app-font-main/
+exa
+sh generate_icon_map_fn.sh
+npm i
+yabai --start-service
+brew install --cask sf-symbols
+yabai --stop-service
+brew install jq
+brew install gh
+brew install switchaudio-osx
+curl -L https://github.com/kvndrsslr/sketchybar-app-font/releases/download/v1.0.16/sketchybar-app-font.ttf -o $HOME/Library/Fonts/sketchybar-app-font.ttf
+brew services restart sketchybar
+brew services stop sketchybar
+__zoxide_z user
+neovide init.lua
+__zoxide_z gigadmin-api
+rails c
+neovide Gemfile
+neovide Gemfile
+rails c
+spring stop
+rails c
+__zoxide_z fron
+git checkout fix/deploy-pay-template
+git pull origin fix/deploy-pay-template
+yarn deploy:pre-production
+cd ../api
+neovide .
+__zoxide_z gigadmin-api
+rails s
+rails c
+neovide Gemfile
+mysqldump -h test-prod-26-10.crvbcqcacjvv.eu-west-1.rds.amazonaws.com -u gigmaster -p gigproduction > prod-26-10-2023.dump
+tail -f prod-26-10-2023.dump 
+open .
+rails s
+open .
+open .
+mysqldump -h test-prod-26-10.crvbcqcacjvv.eu-west-1.rds.amazonaws.com -u gigmaster -p gigproduction > prod-26-10-2023.dump > /dev/null 2> output.log
+tail -f output.log
+bat output.log
+exa -a | grep 26
+open .
+mysqldump -h test-prod-26-10.crvbcqcacjvv.eu-west-1.rds.amazonaws.com -u gigmaster -p gigproduction --verbose  > prod-26-10-2023.dump 
+__zoxide_z fron
+git checkout fix/deploy-pay-template
+git pull origin fix/deploy-pay-template
+yarn deploy:pre-production
+open .
+mysqldump -h test-prod-26-10.crvbcqcacjvv.eu-west-1.rds.amazonaws.com -u gigmaster -p gigproduction > prod-26-10-2023.dump
+open .
+open .
+open .
+open .
+open .
+open .
+open .
+open .
+open .
+open .
+open .
+open .
+open .
+open .
+open .
+open .
+open .
+open .
+mysql
+mysql
+mysql
+open .
+lazydocker
+yarn start
+lazydocker
+neovide .
+eb deploy Gigstaging-new-version-env
+yarn ssh:pre-production
+git diff
+git s
+neovide Gemfile
+git s
+git s
+open .
+neovide Gemfile
+cd ../api
+lazydocker
+neovide .
+lazydocker
+cd ../gigadmin-api/
+exa
+yarn ssh:pre-production
+exit
+cd ../provider-web-react/
+neovide package.json
+__zoxide_z fron
+git fetch
+git checkout fix/deploy-pay-template
+yarn
+yarn deploy:pre-production
+git pull origin fix/deploy-pay-template
+yarn deploy:pre-production
+__zoxide_z api
+git checkout develop
+git pull origin develop
+git checkout -b deploy/pre-1-11-2023
+git checkout feat/paid-template
+git pull origin feat/paid-template
+git colast
+git merge feat/paid-template
+code .
+yarn deploy:pre-production
+__zoxide_z font
+__zoxide_z fron
+git pull origin fix/deploy-pay-template
+yarn deploy:pre-production
+__zoxide_z gigadmin-api
+rails c
+neovide Gemfile
+rails c
+rails c
+rails c
+rails c
+rails c
+rails c
+rails c
+__zoxide_z fron
+git checkout feat/payment-template
+neovide package.json
+__zoxide_z api
+neovide Gemfile
+neovide package.json
+yarn start
+rails s
+neovide package.json
+git s
+git sp
+code .
+git add .
+git git diff
+git diff
+git add .
+git commit -m "fix: add miss field hour template"
+git pull origin feat/paid-template
+git pull origin feat/paid-template
+git config pullff only
+git config pull.ff only
+git pull origin feat/paid-template
+git rss
+git s
+git pull origin feat/paid-template
+git sp
+git add .
+git commit -m "fix: add miss field hour template"
+git checkout deploy/pre-1-11-2023
+git merge feat/paid-template
+code .
+git reset ORIG_HEAD
+git s
+git merge feat/paid-template
+git commit -m "Merge branch 'feat/paid-template' into deploy/pre-1-11-2023" --no-verify
+yarn deploy:pre-production
+git checkout feat/paid-template
+git pull origin feat/paid-template
+git merge --no-ff
+git colast
+git merge feat/paid-template
+yarn deploy:pre-production
+git diff
+git s
+git pull origin feat/payment-template
+git pull origin feat/payment-template
+rails s
+yarn start
+neovide Gemfile
+rails s
+git diff
+neovide package.json
+neovide Gemfile
+rails s
+neovide package.json
+cd ../api/
+lazydocker
+rails
+rails s
+rails c
+git s
+git pull origin feat/payment-template
+git sp
+git push --no-verify
+yarn deploy:pre-production
+yarn deploy:pre-production
+yarn start
+cd ../api/
+neovide .
+neovide Gemfile
+neovide Gemfile
+rails s
+yarn start
+rails s
+rails c
+__zoxide_z api
+git checkout feat/paid-template
+git pull origin feat/paid-template
+yarn deploy:pre-production
+__zoxide_z fron
+git checkout feat/payment-template
+git pull origin feat/payment-template
+yarn deploy:pre-production
+cd ../api/
+code .
+yarn deploy:pre-production
+yarn start
+rails s
+neovide package.json
+rails s
+spring stop
+rails s
+rails c
+git s
+git fetch
+git checkout docker-production
+neovide .
+lazydocker
+yabai --start-service
+skhd --start-service
+skhd --start-service
+brew services list
+cd ~/.config/
+exa
+exa -a
+cd yabai/
+exa
+exa -a
+neovide yabairc
+yabai --restart-service
+cd ..
+exa
+exa -a
+exa
+mkdir skhd
+cd skhd/
+touch skhdrc
+exa
+neovide skhdrc
+skhd --restart-service
+skhd --restart-service
+skhd --restart-service
+skhd --restart-service
+skhd --restart-service
+skhd --restart-service
+skhd --restart-service
+defaults write -g NSUserKeyEquivalents -dict-add "Special Characters..." nul
+skhd --restart-service
+brew install jq
+skhd --restart-service
+skhd --restart-service
+skhd --restart-service
+skhd --restart-service
+skhd --restart-service
+skhd --restart-service
+neovide ~/.config/skhd/skhdrc
+skhd --restart-service
+yabai -m space --create && \\
+                  index="$(yabai -m query --spaces --display | jq 'map(select(."is-native-fullscreen" == false))[-1].index')" && \\
+                  yabai -m window --space "${index}" && \\
+                  yabai -m space --focus "${index}"
+skhd --restart-service
+skhd --restart-service
+fd Gemfile
+__zoxide_z api
+cd ../api
+exa
+git diff
+git checkout develop
+git stash list
+git sp
+neovide .
+git reset ORIG_HEAD
+git sp
+git s
+git pull origin develop
+git sp
+git stash list
+__zoxide_z api
+exa
+rails c
+neovide Gemfile
+rails c
+neovide Gemfile
+rails c
+rake timecard:create_timecard
+rake timecard:create_timecard
+rake timecard:create_timecard
+rake timecard:create_timecard
+rake timecard:create_timecard
+rake timecard:create_timecard
+rake timecard:create_timecard
+rake timecard:create_timecard
+rake timecard:create_timecard
+rake timecard:create_timecard
+rake timecard:create_timecard
+rake timecard:create_timecard
+rake timecard:create_timecard
+rake timecard:create_timecard
+rake timecard:create_timecard
+rake timecard:create_timecard
+rake timecard:create_timecard
+cd ../api
+lazydocker
+rails c
+rake timecard:create_timecard
+rake timecard:create_timecard
+rake timecard:create_timecard
+rails c
+__zoxide_z fron
+git checkout develop
+git diff
+git s
+git checkout develop
+git pull origin develop
+git checkout feat/payment-template
+git pull origin feat/payment-template
+git checkout develop
+git checkout -b deploy/pre-06-11-2023
+git merge feat/payment-template
+code .
+git reset ORIG_HEAD --hard
+git checkout fix/deploy-pay-template
+git merge deploy/pre-06-11-2023
+git rss
+git merge develop
+git diff
+git s
+git merge develop
+git merge feat/payment-template
+git reset ORIG_HEAD --hard
+git checkout feat/payment-template
+git log
+git fetch
+git checkout deploy/pay-template
+yarn deploy:pre-production
+rake timecard:create_timecard
+rails c
+git diff
+git s
+git pull origin feat/paid-template
+git add .
+git pull origin feat/paid-template
+git diff
+git sp
+git add app/serializers/pay_templates/timesheets/payroll_template_hour_serializer.rb
+git commit -m "fix: payroll template hour serializer"
+git push
+yarn deploy:pre-production
+yabai --stop-service
+neovide Gemfile 
+rake timecard:create_timecard
+rails c
+rake timecard:create_timecard
+rails c
+cd ../api
+exa
+git checkout develop
+git pull origin develop
+eb deploy Gigstaging-new-version-env
+cd ../gigadmin-api/
+: 1699264293:0;neovide Gemfile 
+: 1699266545:0;__zoxide_z fron
+: 1699266552:0;git checkout feat/payment-template
+: 1699266557:0;git pull origin feat/payment-template
+: 1699266569:0;yarn deploy:pre-production
+: 1699267056:0;cd ../gigadmin-api/
+: 1699267061:0;yarn ssh:pre-production
+: 1699267479:0;brew install --cask spacelauncher
+: 1699286181:0;cd ~/.config/skhd
+: 1699286184:0;neovide skhdrc
+: 1699286244:0;yabai --start-service
+: 1699286292:0;yabai --stop-service
+: 1699286316:0;skhd --restart-service
+: 1699286333:0;yabai --start-service
+: 1699323249:0;cd ../yabai/
+: 1699323250:0;exa
+: 1699323255:0;neovide yabairc
+: 1699328318:0;__zoxide_z fron
+: 1699328324:0;git pull origin feat/payment-template
+: 1699328484:0;git pull origin feat/payment-template
+: 1699328562:0;yarn deploy:pre-production
+: 1699328802:0;__zoxide_z api
+: 1699328805:0;git diff
+: 1699328808:0;git s
+: 1699328813:0;git pull origin feat/paid-template
+: 1699328820:0;yarn deploy:pre-production
+: 1699329517:0;yarn ssh:pre-production
+: 1699329596:0;neovide Gemfile 
+: 1699329997:0;yarn ssh:production
+: 1699330256:0;cd ../provider-web-react/
+: 1699330260:0;yarn start
+: 1699330263:0;cd ../api
+: 1699330290:0;neovide package.json 
+: 1699330401:0;lazydocker
+: 1699333042:0;yabai --stop-service
+: 1699334395:0;cd ../gigadmin-api/
+: 1699334400:0;yarn ssh:pre-production
+: 1699340948:0;neovide Gemfile 
+: 1699341059:0;rails s
+: 1699341804:0;__zoxide_z fron
+: 1699341812:0;neovide package.json
+: 1699342306:0;__zoxide_z gigadmin-api
+: 1699342310:0;neovide Gemfile 
+: 1699342939:0;yarn deploy:pre-production
+: 1699344749:0;cd ..
+: 1699344752:0;cd gigadmin-frontend/
+: 1699344758:0;neovide package.json
+: 1699344791:0;yarn start
+: 1699344826:0;rails s
+: 1699344881:0;git pull origin feat/payment-template
+: 1699346255:0;yarn deploy:pre-production
+: 1699346829:0;__zoxide_z api
+: 1699346842:0;git checkout feat/paid-template
+: 1699346846:0;git pull origin feat/paid-template
+: 1699346853:0;yarn deploy:pre-production
+: 1699347911:0;yarn ssh:pre-production
+: 1699348928:0;__zoxide_z fron
+: 1699348930:0;exa
+: 1699348933:0;git pull origin feat/payment-template
+: 1699348939:0;yarn start
+: 1699349373:0;rails s
+: 1699349658:0;git pull origin feat/paid-template
+: 1699349863:0;rails s
+: 1699350063:0;git pull origin feat/paid-template
+: 1699350069:0;yarn deploy:pre-production
+: 1699350455:0;yarn deploy:pre-production
+: 1699350653:0;rails s
+: 1699351640:0;neovide Gemfile 
+: 1699351804:0;yarn deploy:pre-production
+: 1699352275:0;cd ../api/
+: 1699352276:0;exa
+: 1699352279:0;neovide package.json 
+: 1699353903:0;cd ../gigadmin-api/
+: 1699353909:0;neovide Gemfile 
+: 1699354134:0;__zoxide_z fron
+: 1699354138:0;neovide package.json 
+: 1699373372:0;cd ../api/
+: 1699373376:0;neovide package.json 
+: 1699373769:0;lazydocker
+: 1699373869:0;docker compose up -d --build
+: 1699373985:0;docker compose up -d --build
+: 1699374057:0;code .
+: 1699374246:0;lazydocker
+: 1699375037:0;docker compose up -d --build
+: 1699410744:0;__zoxide_z user
+: 1699410748:0;neovide init.lua
+: 1699411411:0;fd phpDebug.js
+: 1699411461:0;cd ~/.vscode
+: 1699411462:0;exa
+: 1699411465:0;cd extensions/
+: 1699411466:0;exa
+: 1699411478:0;cd ~
+: 1699411501:0;git clone https://github.com/xdebug/vscode-php-debug.git
+: 1699411508:0;cd vscode-php-debug
+: 1699411513:0;npm install && npm run build
+: 1699412192:0;neovide package.json 
+: 1699412996:0;yabaiL
+: 1699413003:0;yabai --stop-service
+: 1699414478:0;cd ~/.config/nvim/
+: 1699414486:0;chezmoi ~/.config/nvim/
+: 1699414491:0;chezmoi add ~/.config/nvim/
+: 1699414543:0;chezmoi add ~/.config/karabiner/
+: 1699414557:0;chezmoi add ~/.config/raycast/
+: 1699414576:0;chezmoi add ~/.config/skhd/
+: 1699414587:0;chezmoi add ~/.config/yabai/
+: 1699414614:0;chezmoi add ~/vscode-php-debug
+: 1699414636:0;chezmoi add ~/vscode-php-debug/out
+: 1699414742:0;chezmoi add ~/.zsh_aliases
+: 1699414751:0;chezmoi add ~/.zsh_history
