@@ -27,7 +27,7 @@ return {
   { import = "astrocommunity.editing-support.hypersonic-nvim" },
   -- { import = "astrocommunity.editing-support.ultimate-autopair-nvim" },
 
-  { import = "astrocommunity.workflow.hardtime-nvim" },
+  -- { import = "astrocommunity.workflow.hardtime-nvim" },
 
   { import = "astrocommunity.motion.nvim-surround" },
   { import = "astrocommunity.motion.mini-move" },
@@ -60,5 +60,8 @@ return {
     },
   },
   { import = "astrocommunity.syntax.vim-easy-align" },
+  -- { import = "astrocommunity.debugging.nvim-dap-repl-highlights" },
+  { import = "astrocommunity.debugging.nvim-dap-virtual-text" },
+  -- { import = "astrocommunity.debugging.persistent-breakpoints-nvim" },
   -- { import = "astrocommunity.utility.noice-nvim" },
 }

@@ -20,4 +20,5 @@ return {
       },
     }
   end,
+  dependencies = { "suketa/nvim-dap-ruby", config = true },
 }

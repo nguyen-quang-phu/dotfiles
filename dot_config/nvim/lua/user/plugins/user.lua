@@ -88,10 +88,6 @@ return {
     "stevearc/dressing.nvim",
     lazy = false,
   },
-  {
-    "mfussenegger/nvim-dap",
-    dependencies = { "suketa/nvim-dap-ruby", config = true },
-  },
   -- lazy.nvim
   {
     "folke/noice.nvim",
