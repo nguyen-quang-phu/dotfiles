@@ -72,6 +72,7 @@ brew "redis", restart_service: true
 brew "ripgrep"
 brew "ruff"
 brew "rust-analyzer"
+brew "shellcheck"
 brew "solargraph"
 brew "stylua"
 brew "switchaudio-osx"
