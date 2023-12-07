@@ -69,6 +69,7 @@ brew "pgcli"
 brew "pnpm"
 brew "postgresql@14", restart_service: true
 brew "pyenv"
+brew "pyenv-virtualenv"
 brew "pyright"
 brew "ruby-build"
 brew "rbenv"
