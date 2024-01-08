@@ -58,6 +58,7 @@ brew "libffi"
 brew "lsd"
 brew "lynx"
 brew "macvim"
+brew "mycli"
 brew "mypy"
 brew "mysql", restart_service: true
 brew "mysql-client"
