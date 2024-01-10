@@ -42,6 +42,7 @@ return {
     ["<leader>a"] = { "<cmd>AerialToggle<CR>" },
     ["gS"] = { "<cmd>SplitjoinSplit<CR><cr>" },
     ["gJ"] = { "<cmd>SplitjoinJoin<CR><cr>" },
+    ["<C-g>"] = { "<cmd>let @+=expand('%:p')<cr>" },
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
   },

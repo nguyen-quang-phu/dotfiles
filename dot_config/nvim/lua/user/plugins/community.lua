@@ -25,15 +25,17 @@ return {
   { import = "astrocommunity.editing-support.treesj" },
   { import = "astrocommunity.editing-support.dial-nvim" },
   { import = "astrocommunity.editing-support.hypersonic-nvim" },
+  { import = "astrocommunity.editing-support.vim-move" },
   -- { import = "astrocommunity.editing-support.ultimate-autopair-nvim" },
 
   -- { import = "astrocommunity.workflow.hardtime-nvim" },
 
   { import = "astrocommunity.motion.nvim-surround" },
-  { import = "astrocommunity.motion.mini-move" },
   { import = "astrocommunity.motion.mini-ai" },
   { import = "astrocommunity.motion.nvim-spider" },
   { import = "astrocommunity.motion.flash-nvim" },
+  { import = "astrocommunity.motion.vim-matchup" },
+  { import = "astrocommunity.motion.marks-nvim" },
   -- { import = "astrocommunity.motion.mini-bracketed" },
   {
     "folke/flash.nvim",
@@ -47,21 +49,21 @@ return {
   },
   { import = "astrocommunity.git.git-blame-nvim" },
   { import = "astrocommunity.diagnostics.trouble-nvim" },
-  { import = "astrocommunity.lsp.lsp-signature-nvim" },
+  -- { import = "astrocommunity.lsp.lsp-signature-nvim" },
   { import = "astrocommunity.comment.mini-comment" },
   {
     "echasnovski/mini.comment",
     opts = {
       options = {
         custom_commentstring = function()
-          return require('ts_context_commentstring.internal').calculate_commentstring() or vim.bo.commentstring
+          return require("ts_context_commentstring.internal").calculate_commentstring() or vim.bo.commentstring
         end,
       },
     },
   },
   { import = "astrocommunity.syntax.vim-easy-align" },
   -- { import = "astrocommunity.debugging.nvim-dap-repl-highlights" },
-  { import = "astrocommunity.debugging.nvim-dap-virtual-text" },
+  -- { import = "astrocommunity.debugging.nvim-dap-virtual-text" },
   -- { import = "astrocommunity.debugging.persistent-breakpoints-nvim" },
-  -- { import = "astrocommunity.utility.noice-nvim" },
+  { import = "astrocommunity.utility.noice-nvim" },
 }
