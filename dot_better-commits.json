@@ -62,6 +62,12 @@
                 "emoji": "🧹"
             },
             {
+                "value": "deploy",
+                "label": "deploy",
+                "hint": "deploy",
+                "emoji": "🚀"
+            },
+            {
                 "value": "",
                 "label": "none"
             }
