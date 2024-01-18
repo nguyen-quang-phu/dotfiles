@@ -1,0 +1,13 @@
+customCommands:
+  - key: "c"
+    command: "better-commits"
+    description: "commit with better-commits"
+    context: "files"
+    loadingText: "opening better-commits tool"
+    subprocess: true
+  - key: "n"
+    command: "better-branch"
+    description: "new branch with better-branch"
+    context: "localBranches"
+    loadingText: "opening better-branch tool"
+    subprocess: true
