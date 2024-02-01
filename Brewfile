@@ -68,6 +68,7 @@ brew "macvim"
 brew "mycli"
 brew "mypy"
 brew "zlib"
+brew "mysql", restart_service: true
 brew "mysql-client"
 brew "neovim"
 brew "neovide"
