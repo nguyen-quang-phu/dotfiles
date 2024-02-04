@@ -1,10 +1,6 @@
-0000000000000000000000000000000000000000 d65fe4d459ca4f7249c18eabf76a714ba2bbcd2b harvey <harvey@goldenowls-MacBook-Pro.local> 1693829168 +0700	clone: from https://github.com/nguyen-quang-phu/astronvim_config.git
-d65fe4d459ca4f7249c18eabf76a714ba2bbcd2b d1998ba5fdeb3c40e15202dcba23dff1400bc1b9 Harvey <nqphu1998@gmail.com> 1693879895 +0700	commit: feat: add config null_ls
-d1998ba5fdeb3c40e15202dcba23dff1400bc1b9 09f167e7ff9a51846cc330104f2b8ebd4b6b0102 Harvey <nqphu1998@gmail.com> 1695279200 +0700	commit: fix: update setting
-09f167e7ff9a51846cc330104f2b8ebd4b6b0102 6b884eedd9a3e95dae15dce4c858b060d00ffa53 Harvey <nqphu1998@gmail.com> 1695379909 +0700	commit: feat: update old config from nvchad
-6b884eedd9a3e95dae15dce4c858b060d00ffa53 b19363f9d63dd4bad7e31f919c86efa733afe00a Harvey <nqphu1998@gmail.com> 1695709936 +0700	commit: fix: update pack in settings vim
-b19363f9d63dd4bad7e31f919c86efa733afe00a 60a22ddf3325253b85e4a2c352bd05c6e37641b1 Harvey <nqphu1998@gmail.com> 1697385140 +0700	commit: feat: update telescope
-60a22ddf3325253b85e4a2c352bd05c6e37641b1 e5049867609155d8a8215abe4878ee2452585dc2 Harvey <nqphu1998@gmail.com> 1698636342 +0700	commit: fix: update config auto pairs
-e5049867609155d8a8215abe4878ee2452585dc2 1961b1015eb22ae844db5ae417688937e2c619d8 Harvey <nqphu1998@gmail.com> 1704858541 +0700	commit: chore: update config
-1961b1015eb22ae844db5ae417688937e2c619d8 1961b1015eb22ae844db5ae417688937e2c619d8 Harvey <nqphu1998@gmail.com> 1705287424 +0700	reset: moving to HEAD
-1961b1015eb22ae844db5ae417688937e2c619d8 484e796ab5ad96d8318bced2885b01d7afc7bba1 Harvey <nqphu1998@gmail.com> 1705430092 +0700	commit: fix: remove auto fix all eslint
+0000000000000000000000000000000000000000 1e452c3a8ce53998154f80ad06c36a99a85879d0 harvey <harvey@goldenowls-MacBook-Pro-2.local> 1707056376 +0000	clone: from github.com-nqp:nguyen-quang-phu/astronvim_config.git
+1e452c3a8ce53998154f80ad06c36a99a85879d0 1e452c3a8ce53998154f80ad06c36a99a85879d0 harvey <harvey@goldenowls-MacBook-Pro-2.local> 1707063526 +0000	reset: moving to HEAD
+1e452c3a8ce53998154f80ad06c36a99a85879d0 3b8229840e1941d082c5cc161f5f730e4e2b702c harvey <harvey@goldenowls-MacBook-Pro-2.local> 1707063538 +0000	commit: feat: add tmux settings
+3b8229840e1941d082c5cc161f5f730e4e2b702c a523f6dd76f9448d04b0f7ae3a9b608d5a8ada8a harvey <harvey@goldenowls-MacBook-Pro-2.local> 1707063560 +0000	commit (amend): feat: add tmux settings
+a523f6dd76f9448d04b0f7ae3a9b608d5a8ada8a 93022f02a7564c4eb95ab2f9f9c92476eb7bd0fb harvey <harvey@goldenowls-MacBook-Pro-2.local> 1707064286 +0000	commit: feat: add no swap file
+93022f02a7564c4eb95ab2f9f9c92476eb7bd0fb ed1e7929267841c6c359fc4fbef26ba289e28097 harvey <harvey@goldenowls-MacBook-Pro-2.local> 1707064294 +0000	commit (amend): feat: add no swap file

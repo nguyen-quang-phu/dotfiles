@@ -6,7 +6,7 @@ return {
 
   { import = "astrocommunity.colorscheme.vscode-nvim" },
 
-  { import = "astrocommunity.completion.codeium-vim" },
+  -- { import = "astrocommunity.completion.codeium-vim" },
   { import = "astrocommunity.completion.cmp-cmdline" },
 
   { import = "astrocommunity.pack.yaml" },
@@ -48,7 +48,8 @@ return {
   { import = "astrocommunity.editing-support.treesj" },
   { import = "astrocommunity.editing-support.dial-nvim" },
   { import = "astrocommunity.editing-support.hypersonic-nvim" },
-  { import = "astrocommunity.editing-support.vim-move" },
+  { import = "astrocommunity.editing-support.comment-box-nvim" },
+  { import = "astrocommunity.editing-support.wildfire-nvim" },
   -- { import = "astrocommunity.editing-support.ultimate-autopair-nvim" },
 
   -- { import = "astrocommunity.workflow.hardtime-nvim" },
@@ -59,6 +60,7 @@ return {
   { import = "astrocommunity.motion.flash-nvim" },
   { import = "astrocommunity.motion.vim-matchup" },
   { import = "astrocommunity.motion.marks-nvim" },
+  { import = "astrocommunity.motion.tabout-nvim" },
   -- { import = "astrocommunity.motion.mini-bracketed" },
   {
     "folke/flash.nvim",

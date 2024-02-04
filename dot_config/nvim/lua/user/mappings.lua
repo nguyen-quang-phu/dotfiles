@@ -31,7 +31,7 @@ return {
     -- this is useful for naming menus
     -- ["<leader>b"] = { name = "Buffers" },
     ["<leader>e"] = { "<cmd>Neotree focus<cr>" },
-    ["<leader>b"] = { "<cmd>Neotree toggle<cr>" },
+    -- ["<leader>b"] = { "<cmd>Neotree toggle<cr>" },
     ["<S-D-f>"] = { "<cmd>Telescope live_grep hidden=true no_ignore=true<cr>" },
     ["<D-f>"] = { "<cmd>lua vim.lsp.buf.format{async=true}<cr><cmd> w <CR>" },
     ["<D-p>"] = { "<cmd>Telescope find_files hidden=true no_ignore=true<cr>" },
@@ -43,7 +43,9 @@ return {
     ["gS"] = { "<cmd>SplitjoinSplit<CR><cr>" },
     ["gJ"] = { "<cmd>SplitjoinJoin<CR><cr>" },
     ["<C-g>"] = { "<cmd>let @+=expand('%:p')<cr>" },
-    -- quick save
+    ["<leader>rr"] = { "<cmd>lua require('ror.commands').list_commands()<CR>" },
+
+    -- quick sav
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
   },
   i = {
