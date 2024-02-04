@@ -1,5 +1,5 @@
 alias ssh-gen="ssh-keygen -t rsa -C"
-alias vim="neovide"
+alias vim="nvim"
 alias nvm="fnm"
 alias cat="bat"
 alias ls="exa"
