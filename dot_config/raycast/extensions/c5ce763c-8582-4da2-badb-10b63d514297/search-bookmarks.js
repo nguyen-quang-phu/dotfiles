@@ -53,13 +53,25 @@ ${a.message}`:s,o=[n,p,e].filter(Boolean).join(`
     set link to quoted form of "${e||"about:blank"}"
     do shell script "open -na 'Google Chrome' --args --profile-directory=" & profile & " " & link
   `;switch(t){case"default":i=`
-    tell application "Google Chrome"
-      activate
-      tell window 1
-          set newTab to make new tab `+(e?`with properties {URL:"${e}"}`:p?'with properties {URL:"https://www.google.com/search?q='+p+'"}':"")+` 
-      end tell
-    end tell
-    return true
+        set winExists to false
+        tell application "Google Chrome"
+            repeat with win in every window
+                if index of win is 1 then
+                    set winExists to true
+                    exit repeat
+                end if
+            end repeat
+            
+            if not winExists then
+                make new window
+            end if
+            
+            tell window 1
+                set newTab to make new tab `+(e?`with properties {URL:"${e}"}`:p?'with properties {URL:"https://www.google.com/search?q='+p+'"}':"")+`
+            end tell
+        end tell
+        return true
+        
   `;break;case"profile_current":i=m(a);break;case"profile_original":i=m(d);break}return await ie(i)}async function e4(e){await ie(`
     tell application "Google Chrome"
       activate
