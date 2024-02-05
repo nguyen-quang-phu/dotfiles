@@ -70,7 +70,7 @@ brew "mycli"
 brew "mypy"
 brew "zlib"
 brew "mysql-client"
-brew "mysql@8.0"
+brew "mysql@8.0", restart_service: true
 brew "neovim"
 brew "neovide"
 brew "node", link: false
@@ -78,7 +78,7 @@ brew "nvm"
 brew "openssl@1.1"
 brew "pgcli"
 brew "pnpm"
-brew "postgresql@14", restart_service: true
+brew "postgresql@14"
 brew "pyenv"
 brew "pyenv-virtualenv"
 brew "pyright"
