@@ -79,6 +79,7 @@ brew "openssl@1.1"
 brew "pgcli"
 brew "pnpm"
 brew "postgresql@14", restart_service: true
+brew "powerlevel10k"
 brew "pyenv"
 brew "pyenv-virtualenv"
 brew "pyright"
