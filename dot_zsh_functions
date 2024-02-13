@@ -1,6 +1,9 @@
 function brew() {
-  echo "brew $@"
+  echo "running custom cmd brew $@"
   command brew $@
+  if [[ $@[1] != "install" || $@[1] != "uninstall" ]]; then
+    return
+  fi
   echo "brew bundle dump --file=~/Brewfile -f"
   command brew bundle dump --file=~/Brewfile -f
   echo "chezmoi add ~/Brewfile"
