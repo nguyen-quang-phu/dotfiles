@@ -1,77 +1,12 @@
-[[colors.indexed_colors]]
-color = "#9c715a"
-index = 16
-
-[[colors.indexed_colors]]
-color = "#F4DBD6"
-index = 17
-
-[colors.bright]
-black = "#5B6078"
-blue = "#8AADF4"
-cyan = "#8BD5CA"
-green = "#A6DA95"
-magenta = "#F5BDE6"
-red = "#ED8796"
-white = "#A5ADCB"
-yellow = "#EED49F"
-
-[colors.cursor]
-cursor = "#F4DBD6"
-text = "#24273A"
-
-[colors.dim]
-black = "#494D64"
-blue = "#8AADF4"
-cyan = "#8BD5CA"
-green = "#A6DA95"
-magenta = "#F5BDE6"
-red = "#ED8796"
-white = "#B8C0E0"
-yellow = "#EED49F"
-
-[colors.hints.end]
-background = "#A5ADCB"
-foreground = "#24273A"
-
-[colors.hints.start]
-background = "#EED49F"
-foreground = "#24273A"
-
-[colors.normal]
-black = "#494D64"
-blue = "#494D64"
-cyan = "#5b8a83"
-green = "#A6DA95"
-magenta = "#b884aa"
-red = "#ED8796"
-white = "#B8C0E0"
-yellow = "#EED49F"
-
-[colors.primary]
-background = "0x1E1E1E"
-bright_foreground = "0xD4D4D4"
-dim_foreground = "0xD4D4D4"
-foreground = "0xD4D4D4"
-
-[colors.search.focused_match]
-background = "#A6DA95"
-foreground = "#24273A"
-
-[colors.search.matches]
-background = "#A5ADCB"
-foreground = "#24273A"
-
-[colors.selection]
-background = "#F4DBD6"
-text = "#24273A"
-
-[colors.vi_mode_cursor]
-cursor = "#B7BDF8"
-text = "#24273A"
+import = [
+    "~/.config/alacritty/themes/themes/github_dark.toml"
+]
 
 [font]
 size = 14.0
+
+[window]
+decorations = "None"
 
 [font.normal]
 family = "MesloLGLDZ Nerd Font"
@@ -506,3 +441,4 @@ mods = "Alt"
 chars = "\u001Bl"
 key = "L"
 mods = "Alt"
+
