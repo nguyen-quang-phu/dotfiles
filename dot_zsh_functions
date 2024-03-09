@@ -1,5 +1,4 @@
 function brew() {
-  echo "running custom cmd brew $@"
   command brew $@
   if [[ $@[1] != "install" || $@[1] != "uninstall" ]]; then
     return
