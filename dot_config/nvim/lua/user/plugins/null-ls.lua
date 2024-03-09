@@ -17,7 +17,7 @@ return {
       -- null_ls.builtins.formatting.stylua,
       -- null_ls.builtins.formatting.prettier,
       -- refactor
-      require("typescript.extensions.null-ls.code-actions"),
+      require "typescript.extensions.null-ls.code-actions",
       code_actions.refactoring,
 
       -- check spell
@@ -33,10 +33,14 @@ return {
       formatting.eslint_d,
       diagnostics.eslint_d.with {
         diagnostics_format = "[eslint] #{m}\n(#{c})",
-        filetypes = { "js", "jsx", "ts", "tsx" },
+        filetypes = { "js", "jsx", "ts", "tsx", "vue" },
         methods = methods.DIAGNOSTICS_ON_SAVE,
       },
-
+      diagnostics.eslint.with {
+        diagnostics_format = "[eslint] #{m}\n(#{c})",
+        filetypes = { "js", "jsx", "ts", "tsx", "vue" },
+        methods = methods.DIAGNOSTICS_ON_SAVE,
+      },
       -- ruby
       -- diagnostics.rubocop.with {
       --   command = "bundle",
@@ -56,6 +60,10 @@ return {
       formatting.stylua,
 
       -- go
+      diagnostics.volar.with {
+        diagnostics_format = "[volar] #{m}\n(#{c})",
+        methods = methods.DIAGNOSTICS_ON_SAVE,
+      },
       diagnostics.golangci_lint.with {
         diagnostics_format = "[golangci_lint] #{m}\n(#{c})",
         methods = methods.DIAGNOSTICS_ON_SAVE,

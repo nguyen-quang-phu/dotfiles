@@ -13,6 +13,7 @@ return {
     wrap = false, -- sets vim.opt.wrap
     showtabline = 0,
     swapfile = false,
+    eof = true,
   },
   g = {
     mapleader = " ", -- sets vim.g.mapleader
@@ -34,8 +35,10 @@ return {
     splitjoin_split_mapping = "",
     splitjoin_join_mapping = "",
     camelcasemotion_key = "<leader>",
-    ["test#strategy"] = "neovim",
+    ["test#strategy"] = "mood-term",
     ["test#neovim#start_normal"] = true,
+    ruby_debugger = "binding.pry",
+    spotify_token = "ZjkyNzMzM2RjOWU1NDRiZjhiOGQ4Y2NhMDE2YjJlMWE6YzNkYTZiODEwMjEzNGNjYzkwMTdjOGIwZjY0YWI4MjQ="
     -- neovide_transparency = 0.0,
     -- transparency = 0.8,
     -- neovide_background_color = "#0f1117" .. alpha(),

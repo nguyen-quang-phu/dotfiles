@@ -1,2 +1,9 @@
-c58489a292fc2ebbc662c54a45213b01f7401f41		branch 'main' of https://github.com/AstroNvim/AstroNvim
-c58489a292fc2ebbc662c54a45213b01f7401f41	not-for-merge	tag 'v3.41.2' of https://github.com/AstroNvim/AstroNvim
+d36af2f75369e3621312c87bd0e377e7d562fc72		branch 'main' of https://github.com/AstroNvim/AstroNvim
+117d05911f7a8fade41da411df9fed04b913be70	not-for-merge	branch 'nightly' of https://github.com/AstroNvim/AstroNvim
+5f6f12c7ca2c5199ee1eaac0d144a207108d763e	not-for-merge	branch 'textobject_restructure' of https://github.com/AstroNvim/AstroNvim
+850608dc3b2407d4255835e308d836cecf540681	not-for-merge	branch 'v4' of https://github.com/AstroNvim/AstroNvim
+ae3b86a51d2333bd14fb671624a5d7badf84886d	not-for-merge	branch 'v4_indent_blankline' of https://github.com/AstroNvim/AstroNvim
+d36af2f75369e3621312c87bd0e377e7d562fc72	not-for-merge	tag 'v3.44.1' of https://github.com/AstroNvim/AstroNvim
+49d48171c22bcc1c3e67b36930f6b9c710f0c70c	not-for-merge	tag 'v3.43.3' of https://github.com/AstroNvim/AstroNvim
+f8b94716912ad867998e0659497884d577cd9ec1	not-for-merge	tag 'v3.43.4' of https://github.com/AstroNvim/AstroNvim
+e7483c864e67fed4d1737c3ba76fe9c50b50ad12	not-for-merge	tag 'v3.44.0' of https://github.com/AstroNvim/AstroNvim

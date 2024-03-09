@@ -5,7 +5,7 @@ return {
       mappings = {
         ["f"] = function() vim.api.nvim_exec("Neotree focus filesystem left", true) end,
         ["b"] = function() vim.api.nvim_exec("Neotree focus buffers left", true) end,
-        ["g"] = function() vim.api.nvim_exec("Neotree focus git_status left", true) end,
+        ["s"] = function() vim.api.nvim_exec("Neotree focus git_status left", true) end,
       },
     },
     filesystem = {
@@ -15,9 +15,9 @@ return {
         hide_dotfiles = false,
         hide_gitignored = true,
         hide_by_name = {
-          -- '.git',
-          -- '.DS_Store',
-          -- 'thumbs.db',
+          '.git',
+          '.DS_Store',
+          'thumbs.db',
         },
         never_show = {},
       },
