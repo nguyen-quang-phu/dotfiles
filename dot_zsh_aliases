@@ -1,5 +1,5 @@
 alias ssh-gen="ssh-keygen -t rsa -C"
-alias vim="nvim"
+alias vim="nvim --listen /tmp/nvim-server.pipe"
 alias nvm="fnm"
 alias cat="bat"
 alias ls="exa"
@@ -11,3 +11,7 @@ alias ber="bundle exec rspec"
 alias lzd="lazydocker"
 alias lzg="lazygit"
 alias zshconfig="nvim ~/.zshrc"
+
+if [ -n "$NVIM_LISTEN_ADDRESS" ]; then
+    alias vim=nvr -cc split --remote-wait +'set bufhidden=wipe'
+fi
