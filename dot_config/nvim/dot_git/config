@@ -5,9 +5,12 @@
 	logallrefupdates = true
 	ignorecase = true
 	precomposeunicode = true
+[user]
+	name = Harvey
+	email = nqphu1998@gmail.com
 [remote "origin"]
-	url = https://github.com/AstroNvim/AstroNvim
+	url = git@github.com-nqp:nguyen-quang-phu/lazyvim-config.git
 	fetch = +refs/heads/*:refs/remotes/origin/*
-[branch "main"]
+[branch "master"]
 	remote = origin
-	merge = refs/heads/main
+	merge = refs/heads/master
