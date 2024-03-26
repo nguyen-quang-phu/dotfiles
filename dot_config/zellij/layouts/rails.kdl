@@ -6,10 +6,8 @@ layout {
     }
   }
   tab name="Code" focus=true {
-    pane split_direction="horizontal" focus=true {
-      pane command="nvim" borderless=true{
-        args "Gemfile"
-      }
+    pane command="nvim" borderless=true{
+      args "Gemfile"
     }
   }
   tab name="Rails server"{

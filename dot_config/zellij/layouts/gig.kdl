@@ -1,0 +1,42 @@
+layout {
+  default_tab_template {
+    children
+    pane size=1 borderless=true {
+      plugin location="zellij:compact-bar"
+    }
+  }
+
+  cwd "~/Code/GO"
+  tab name="1. Backend" focus=true cwd="gigadmin-api"{
+    pane split_direction="horizontal" focus=true {
+      pane command="nvim" borderless=true{
+        args "Gemfile"
+      }
+    }
+  }
+
+  tab name="2. Frontend" cwd="gigadmin-frontend" {
+    pane split_direction="horizontal" focus=true {
+      pane command="nvim" borderless=true{
+        args "package.json"
+      }
+    }
+  }
+
+  tab name="3. Rails server" cwd="gigadmin-api"{
+    pane split_direction="vertical" {
+      pane name="Rails console"
+      pane split_direction="horizontal" {
+        pane name="Rails server"
+        pane focus=true
+      }
+    }
+  }
+
+  tab name="4. React Server" cwd="gigadmin-frontend"{
+    pane split_direction="vertical" {
+      pane name="React Server"
+      pane focus=true name="Terminal"
+    }
+  }
+}
