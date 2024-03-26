@@ -5,6 +5,9 @@ keybinds {
         // bind "Alt c" { Copy; }
         bind "Ctrl x" { SwitchToMode "Tmux"; }
         unbind "Ctrl b"
+
+        bind "Ctrl 1" {GoToTab 1;}
+        bind "Ctrl 2" {GoToTab 2;}
     }
     locked {
         bind "Ctrl g" { SwitchToMode "Normal"; }
@@ -24,10 +27,10 @@ keybinds {
         bind "Ctrl h" { SwitchToMode "Normal"; }
         bind "n" "Tab" { MovePane; }
         bind "p" { MovePaneBackwards; }
-        bind "h" "Left" { MovePane "Left"; }
-        bind "j" "Down" { MovePane "Down"; }
-        bind "k" "Up" { MovePane "Up"; }
-        bind "l" "Right" { MovePane "Right"; }
+        bind "h" "Left" { MovePane "Left"; SwitchToMode "Normal";}
+        bind "j" "Down" { MovePane "Down"; SwitchToMode "Normal";}
+        bind "k" "Up" { MovePane "Up"; SwitchToMode "Normal";}
+        bind "l" "Right" { MovePane "Right"; SwitchToMode "Normal";}
     }
     tab {
         bind "Ctrl t" { SwitchToMode "Normal"; }
@@ -121,6 +124,17 @@ keybinds {
         };
         SwitchToMode "Normal";
         }
+      bind "1" {GoToTab 1; SwitchToMode "Normal";}
+      bind "2" {GoToTab 2; SwitchToMode "Normal";}
+      bind "3" {GoToTab 3; SwitchToMode "Normal";}
+      bind "4" {GoToTab 4; SwitchToMode "Normal";}
+      bind "5" {GoToTab 5; SwitchToMode "Normal";}
+      bind "6" {GoToTab 6; SwitchToMode "Normal";}
+      bind "7" {GoToTab 7; SwitchToMode "Normal";}
+      bind "8" {GoToTab 8; SwitchToMode "Normal";}
+      bind "9" {GoToTab 9; SwitchToMode "Normal";}
+      bind "m" {SwitchToMode "Move";}
+      bind "e" { SwitchToMode "Scroll"; EditScrollback; SwitchToMode "Normal";}
     }
     shared_except "locked" {
         bind "Ctrl g" { SwitchToMode "Locked"; }
@@ -198,7 +212,7 @@ simplified_ui true
 //   - true (default)
 //   - false
 //
-pane_frames false
+pane_frames true
 
 // Toggle between having Zellij lay out panes according to a predefined set of layouts whenever possible
 // Options:
@@ -212,13 +226,13 @@ pane_frames false
 //   - true (default)
 //   - false
 //
-// session_serialization false
+session_serialization true
 
 // Whether pane viewports are serialized along with the session, default is false
 // Options:
 //   - true
 //   - false (default)
-// serialize_pane_viewport true
+serialize_pane_viewport true
 
 // Scrollback lines to serialize along with the pane viewport when serializing sessions, 0
 // defaults to the scrollback size. If this number is higher than the scrollback size, it will
@@ -305,7 +319,7 @@ copy_command "pbcopy"                     // osx
 // Path to the default editor to use to edit pane scrollbuffer
 // Default: $EDITOR or $VISUAL
 //
-// scrollback_editor "/usr/bin/vim"
+scrollback_editor "/usr/local/bin/nvim"
 
 // When attaching to an existing session with other users,
 // should the session be mirrored (true)
