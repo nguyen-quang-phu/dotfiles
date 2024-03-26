@@ -8,18 +8,14 @@ layout {
 
   cwd "~/Code/GO"
   tab name="1. Backend" focus=true cwd="gigadmin-api"{
-    pane split_direction="horizontal" focus=true {
-      pane command="nvim" borderless=true{
-        args "Gemfile"
-      }
+    pane command="nvim" borderless=true{
+      args "Gemfile"
     }
   }
 
   tab name="2. Frontend" cwd="gigadmin-frontend" {
-    pane split_direction="horizontal" focus=true {
-      pane command="nvim" borderless=true{
-        args "package.json"
-      }
+    pane command="nvim" borderless=true{
+      args "package.json"
     }
   }
 
