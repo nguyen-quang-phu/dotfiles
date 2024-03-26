@@ -1,4 +1,5 @@
 return {
+
   "neovim/nvim-lspconfig",
   opts = {
     diagnostics = {
@@ -13,6 +14,55 @@ return {
       },
     },
     servers = {
+      emmet_language_server = {},
+      css_variables = {},
+      cssls = {},
+      volar = {
+        settings = {
+          volar = {
+            filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue", "json" },
+          },
+        },
+      },
+      tsserver = {
+        filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue" },
+        settings = {
+          typescript = {
+            inlayHints = {
+              includeInlayParameterNameHints = "literal",
+              includeInlayParameterNameHintsWhenArgumentMatchesName = false,
+              includeInlayFunctionParameterTypeHints = true,
+              includeInlayVariableTypeHints = false,
+              includeInlayPropertyDeclarationTypeHints = true,
+              includeInlayFunctionLikeReturnTypeHints = true,
+              includeInlayEnumMemberValueHints = true,
+            },
+          },
+          javascript = {
+            inlayHints = {
+              includeInlayParameterNameHints = "all",
+              includeInlayParameterNameHintsWhenArgumentMatchesName = false,
+              includeInlayFunctionParameterTypeHints = true,
+              includeInlayVariableTypeHints = true,
+              includeInlayPropertyDeclarationTypeHints = true,
+              includeInlayFunctionLikeReturnTypeHints = true,
+              includeInlayEnumMemberValueHints = true,
+            },
+          },
+        },
+      },
+      tailwindcss = {
+        settings = {
+          tailwindCSS = {
+            experimental = {
+              classRegex = {
+                { "cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]" },
+                { "cx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)" },
+              },
+            },
+          },
+        },
+      },
       solargraph = {
         mason = false,
         settings = {
@@ -23,10 +73,9 @@ return {
       },
     },
   },
-  keys = {
-    {
-      "gr",
-      false,
-    },
-  },
+  init = function()
+    local keys = require("lazyvim.plugins.lsp.keymaps").get()
+    -- disable a keymap
+    keys[#keys + 1] = { "gr", false }
+  end,
 }

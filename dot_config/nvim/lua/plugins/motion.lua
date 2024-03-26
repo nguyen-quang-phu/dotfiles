@@ -1,26 +1,47 @@
 return {
   {
-    "vim-scripts/ReplaceWithRegister",
+    "gbprod/substitute.nvim",
     lazy = false,
-    key = {
+    opts = {
+      on_substitute = require("yanky.integration").substitute(),
+    },
+    keys = {
       {
         "gr",
-        "<Plug>ReplaceWithRegisterOperator",
-        mode = "",
-        desc = "REPLACE_WITH_REGISTER: Operator",
+        function()
+          require("substitute").operator()
+        end,
+        mode = "n",
+        silent = true,
+        remap = false,
+        desc = "SUBSTITUTE: operator",
       },
       {
         "grr",
-        "<Plug>ReplaceWithRegisterLine",
+        function()
+          require("substitute").line()
+        end,
         mode = "n",
-        desc = "REPLACE_WITH_REGISTER: Line",
+        desc = "SUBSTITUTE: line",
       },
       {
         "gr",
-        "<Plug>ReplaceWithRegisterVisual",
+        function()
+          require("substitute").visual()
+        end,
         mode = "v",
-        desc = "REPLACE_WITH_REGISTER: Visual",
+        desc = "SUBSTITUTE: visual",
       },
     },
+  },
+  {
+    "kylechui/nvim-surround",
+    version = "*", -- Use for stability; omit to use `main` branch for the latest features
+    event = "VeryLazy",
+    opts = {},
+  },
+  {
+    "michaeljsmith/vim-indent-object",
+    event = "VeryLazy",
   },
 }

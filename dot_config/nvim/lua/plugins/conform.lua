@@ -19,6 +19,11 @@ return {
     formatters_by_ft = {
       ruby = { "rubocop" },
       eruby = { "erb_lint", "erb_formatter" },
+      javascript = { "eslint_d", "prettierd" },
+      javascriptreact = { "eslint_d", "prettierd" },
+      typescript = { "eslint_d", "prettierd" },
+      typescriptreact = { "eslint_d", "prettierd" },
+      vue = { "eslint_d", "prettierd" },
     },
     formatters = {
       ---@type conform.FileFormatterConfig
@@ -42,8 +47,18 @@ return {
       },
       rubocop = {
         command = "bundle",
-        args = { "exec", "rubocop", "-A", "$FILENAME" },
-        stdin = false,
+        args = {
+          "exec",
+          "rubocop",
+          "--server",
+          "-A",
+          "-f",
+          "quiet",
+          "--stderr",
+          "--stdin",
+          "$FILENAME",
+        },
+        exit_codes = { 0, 1 },
       },
     },
   },

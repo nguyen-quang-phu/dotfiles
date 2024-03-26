@@ -1,17 +1,31 @@
-local get_icon = require("astronvim.utils").get_icon
 return {
-  "lewis6991/gitsigns.nvim",
-  enabled = vim.fn.executable "git" == 1,
-  event = "User AstroGitFile",
-  opts = {
-    signs = {
-      add = { text = get_icon "GitSign" },
-      change = { text = get_icon "GitSign" },
-      delete = { text = get_icon "GitSign" },
-      topdelete = { text = get_icon "GitSign" },
-      changedelete = { text = get_icon "GitSign" },
-      untracked = { text = get_icon "GitSign" },
+  {
+    "sindrets/diffview.nvim",
+    lazy = false,
+    cmd = { "DiffviewOpen" },
+    opts = {
+      enhanced_diff_hl = true,
+      view = {
+        default = { winbar_info = true },
+        file_history = { winbar_info = true },
+        merge_tool = {
+          layout = "diff3_mixed",
+        },
+      },
+      hooks = {
+        diff_buf_read = function(bufnr)
+          vim.b[bufnr].view_activated = false
+        end,
+      },
     },
-    worktrees = vim.g.git_worktrees,
+  },
+  {
+    "NeogitOrg/neogit",
+    optional = true,
+    opts = { integrations = { diffview = true } },
+  },
+  {
+    "f-person/git-blame.nvim",
+    lazy = false,
   },
 }

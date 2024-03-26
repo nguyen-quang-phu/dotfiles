@@ -6,3 +6,14 @@ vim.api.nvim_create_autocmd({ "InsertLeave", "TextChanged" }, {
   command = "silent! wall",
   nested = true,
 })
+
+vim.api.nvim_create_autocmd({ "BufEnter" }, {
+  pattern = { "*" },
+  command = "set formatoptions-=c formatoptions-=r formatoptions-=o",
+})
+
+-- Add auto command for YAML files
+vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" }, {
+  pattern = { "*.yml" },
+  command = "setfiletype=yaml",
+})

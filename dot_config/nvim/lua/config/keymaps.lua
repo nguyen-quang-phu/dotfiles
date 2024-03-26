@@ -4,5 +4,4 @@
 local Util = require("lazyvim.util")
 
 vim.keymap.del("n", "<leader>l")
-vim.keymap.del("n", "gr")
 vim.keymap.del({ "n", "v" }, "<leader>cf")
