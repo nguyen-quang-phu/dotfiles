@@ -7,32 +7,51 @@ layout {
   }
 
   cwd "~/Code/GO"
-  tab name="1. Backend" focus=true cwd="gigadmin-api"{
+  tab name="1. GIGADMIN Backend" focus=true cwd="gigadmin-api"{
     pane command="nvim" borderless=true{
       args "Gemfile"
     }
   }
 
-  tab name="2. Frontend" cwd="gigadmin-frontend" {
-    pane command="nvim" borderless=true{
-      args "package.json"
-    }
-  }
-
-  tab name="3. Rails server" cwd="gigadmin-api"{
+  tab name="2. Rails server" cwd="gigadmin-api"{
     pane split_direction="vertical" {
       pane name="Rails console"
       pane split_direction="horizontal" {
         pane name="Rails server"
-        pane focus=true
+        pane focus=true name="Terminal"
       }
+    }
+  }
+
+  tab name="3. GIGADMIN Frontend" cwd="gigadmin-frontend" {
+    pane command="nvim" borderless=true{
+      args "package.json"
     }
   }
 
   tab name="4. React Server" cwd="gigadmin-frontend"{
     pane split_direction="vertical" {
       pane name="React Server"
-      pane focus=true name="Terminal"
+      pane split_direction="horizontal" {
+        pane name="Git" command="lazygit"
+        pane focus=true name="Terminal"
+      }
+    }
+  }
+
+  tab name="5.GIGPROVIDER Backend" cwd="api" {
+    pane command="nvim" borderless=true{
+      args "package.json"
+    }
+  }
+
+  tab name="6. Lavarel server" cwd="api"{
+    pane split_direction="vertical" {
+      pane name="Lavarel Server"
+      pane split_direction="horizontal" {
+        pane name="Git" command="lazygit"
+        pane focus=true name="Terminal"
+      }
     }
   }
 }
