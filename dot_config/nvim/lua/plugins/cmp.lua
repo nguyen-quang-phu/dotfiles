@@ -12,6 +12,7 @@ return {
       "hrsh7th/cmp-buffer",
       "hrsh7th/cmp-path",
       "onsails/lspkind.nvim",
+      "saadparwaiz1/cmp_luasnip",
     },
     enabled = true,
     opts = function()
@@ -59,6 +60,7 @@ return {
         formatting = {
           fields = { "abbr", "kind", "menu" },
           format = lspkind_status_ok and lspkind.cmp_format({
+            before = require("tailwind-tools.cmp").lspkind_format,
             mode = "symbol_text",
             show_labelDetails = true,
             symbol_map = { Codeium = "" },

@@ -1,8 +1,8 @@
 return {
-  {
-    "nvim-neo-tree/neo-tree.nvim",
-    enabled = false,
-  },
+  -- {
+  --   "nvim-neo-tree/neo-tree.nvim",
+  --   enabled = false,
+  -- },
   {
     "echasnovski/mini.comment",
     enabled = false,
@@ -11,4 +11,8 @@ return {
     "echasnovski/mini.surround",
     enabled = false,
   },
+  {
+    "akinsho/bufferline.nvim",
+    enabled = false
+  }
 }

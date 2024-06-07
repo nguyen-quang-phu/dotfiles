@@ -17,13 +17,14 @@ return {
       timeout_ms = 30000,
     },
     formatters_by_ft = {
+      go = { "gofumpt", "goimports-reviser", "golines" },
       ruby = { "rubocop" },
       eruby = { "erb_lint", "erb_formatter" },
-      javascript = { "eslint_d", "prettierd" },
-      javascriptreact = { "eslint_d", "prettierd" },
-      typescript = { "eslint_d", "prettierd" },
-      typescriptreact = { "eslint_d", "prettierd" },
-      vue = { "eslint_d", "prettierd" },
+      javascript = { "eslint_d", "prettier" },
+      javascriptreact = { "eslint_d", "prettier" },
+      typescript = { "eslint_d", "prettier" },
+      typescriptreact = { "eslint_d", "prettier" },
+      vue = { "eslint_d", "prettier" },
     },
     formatters = {
       ---@type conform.FileFormatterConfig

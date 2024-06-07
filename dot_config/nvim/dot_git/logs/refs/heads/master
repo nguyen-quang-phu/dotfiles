@@ -1,31 +1,17 @@
-0000000000000000000000000000000000000000 c088bd0cdca84111b5ea50fb54eb41d2f0965b50 harvey <harvey@192.168.1.2> 1710856890 +0700	commit (initial): feat: init
-c088bd0cdca84111b5ea50fb54eb41d2f0965b50 8c071cd2197fd700fb4c9080676887069e203d3b Harvey <nqphu1998@gmail.com> 1710865743 +0700	commit (amend): feat: init
-8c071cd2197fd700fb4c9080676887069e203d3b ea2037587d092d8e69088b078c1457f73a66414d Harvey <nqphu1998@gmail.com> 1710865770 +0700	commit (amend): feat: init config lazynvim
-ea2037587d092d8e69088b078c1457f73a66414d 39449dfdf20363eeab19b8b712d0f6cc8b2e91c2 Harvey <nqphu1998@gmail.com> 1710865823 +0700	commit: feat: add lint and formatter for ruby
-39449dfdf20363eeab19b8b712d0f6cc8b2e91c2 a30a17c785cc6a5ee36f5431bab06ab0dffa728e Harvey <nqphu1998@gmail.com> 1710866925 +0700	commit: feat: add keymap format
-a30a17c785cc6a5ee36f5431bab06ab0dffa728e e6ea3424dfdec9c9f091d9be3f1322eb82a8f712 Harvey <nqphu1998@gmail.com> 1710867550 +0700	commit: feat: add theme vscode
-e6ea3424dfdec9c9f091d9be3f1322eb82a8f712 04046bdcb68c85e90a8c7e0d7e3cb4bab39c35ce Harvey <nqphu1998@gmail.com> 1710870786 +0700	commit: feat: add plugin ruby
-04046bdcb68c85e90a8c7e0d7e3cb4bab39c35ce 0b8ddab9e24ee5031fcca4cfdcc3a22d870adf87 Harvey <nqphu1998@gmail.com> 1710902486 +0700	commit: feat: update config
-0b8ddab9e24ee5031fcca4cfdcc3a22d870adf87 f2088f725f58cf31bcecd87535dd8d0543392fbc Harvey <nqphu1998@gmail.com> 1710903618 +0700	commit: fix: disable animation mini indentscope
-f2088f725f58cf31bcecd87535dd8d0543392fbc f050512b4845adc2dc407cd1a8113d84d187be88 Harvey <nqphu1998@gmail.com> 1710907118 +0700	commit: feat: add lspsaga
-f050512b4845adc2dc407cd1a8113d84d187be88 7dc00347fe52069aa8dc35e84e844c7167c3604f Harvey <nqphu1998@gmail.com> 1710907392 +0700	commit: feat: update config lspsaga
-7dc00347fe52069aa8dc35e84e844c7167c3604f 6a82944830b1fdb87c501794d52ded02bfc73695 Harvey <nqphu1998@gmail.com> 1710907731 +0700	commit: feat: update telescope config
-6a82944830b1fdb87c501794d52ded02bfc73695 81cb4a22b8243673e3dc1e3aa3a9b854e4841231 Harvey <nqphu1998@gmail.com> 1710914807 +0700	commit: feat: add substitute
-81cb4a22b8243673e3dc1e3aa3a9b854e4841231 2162a7bfdd66f0c043e2a0b0d0016f13c2a475d2 Harvey <nqphu1998@gmail.com> 1710922212 +0700	commit: feat: add formatter eslint and prettier, fix neotree keymap
-2162a7bfdd66f0c043e2a0b0d0016f13c2a475d2 8012c40fbbcd777533d8fd81f52526c3465cae91 Harvey <nqphu1998@gmail.com> 1710933355 +0700	commit: fix: update config for neotree
-8012c40fbbcd777533d8fd81f52526c3465cae91 8354c757b7bff5ed4cf718c66ed4c8af5ecd8d9d Harvey <nqphu1998@gmail.com> 1710960766 +0700	commit: fix: add more vim opt
-8354c757b7bff5ed4cf718c66ed4c8af5ecd8d9d 5529ef4c54f34fd70c0bff1ea52f59d273126aa6 Harvey <nqphu1998@gmail.com> 1710962246 +0700	commit: feat: change comment plugin and add more map key for telescope
-5529ef4c54f34fd70c0bff1ea52f59d273126aa6 de6fe61423dacf149da1f4328c312f309d71a52a Harvey <nqphu1998@gmail.com> 1710963180 +0700	commit: feat: change mini surround
-de6fe61423dacf149da1f4328c312f309d71a52a 71e892cad216e4451eaeb00e110d5e92ff46e267 Harvey <nqphu1998@gmail.com> 1710963880 +0700	commit: feat: add indent motion
-71e892cad216e4451eaeb00e110d5e92ff46e267 fc2c27b8d7206619f20fdb59ee213a15f31bddb2 Harvey <nqphu1998@gmail.com> 1710964469 +0700	commit: feat: add edgy
-fc2c27b8d7206619f20fdb59ee213a15f31bddb2 71e892cad216e4451eaeb00e110d5e92ff46e267 Harvey <nqphu1998@gmail.com> 1710964640 +0700	reset: moving to 71e892cad216e4451eaeb00e110d5e92ff46e267
-71e892cad216e4451eaeb00e110d5e92ff46e267 ea42deabfe27f62231032ff33b53e15d3ab0dfdb Harvey <nqphu1998@gmail.com> 1710965179 +0700	commit: feat: add config trouble
-ea42deabfe27f62231032ff33b53e15d3ab0dfdb 9b865f72c5e5718ccce2a4c40cec70b8afca8e44 Harvey <nqphu1998@gmail.com> 1710992802 +0700	commit: feat: update rubocop and refactor
-9b865f72c5e5718ccce2a4c40cec70b8afca8e44 1b74d1f465c3ead36c9e202ca8b7d7216dd3e094 Harvey <nqphu1998@gmail.com> 1711006725 +0700	commit: feat: add arrow
-1b74d1f465c3ead36c9e202ca8b7d7216dd3e094 b0e8b36b2f86fc153cb21b0fb06f917b586daa29 Harvey <nqphu1998@gmail.com> 1711127750 +0700	commit: feat: add tailwincss lsp
-b0e8b36b2f86fc153cb21b0fb06f917b586daa29 6d51c61a48ca7fa3796be21585b6393116e1bab1 Harvey <nqphu1998@gmail.com> 1711201345 +0700	commit: fix: remove tailwind-tool
-6d51c61a48ca7fa3796be21585b6393116e1bab1 2a9b0b00ef24303122599dd63ff9e21d706ed11c Harvey <nqphu1998@gmail.com> 1711242048 +0700	commit: fix: change file name trouble
-2a9b0b00ef24303122599dd63ff9e21d706ed11c c46057c38ff238a9341548d9f1f5cc163c96c272 Harvey <nqphu1998@gmail.com> 1711250477 +0700	commit: feat: add end wise
-c46057c38ff238a9341548d9f1f5cc163c96c272 32f711d9f283ded06e81de500723b3dacde8bb60 Harvey <nqphu1998@gmail.com> 1711280211 +0700	commit: fix: update vue for typescript
-32f711d9f283ded06e81de500723b3dacde8bb60 13a388dd75603e249c25fffe5f83827910bdd029 Harvey <nqphu1998@gmail.com> 1711281068 +0700	commit: fix: switch to eslint
-13a388dd75603e249c25fffe5f83827910bdd029 f4420c59aa87e8213c3002cb88060448af2eb284 Harvey <nqphu1998@gmail.com> 1711343711 +0700	commit: feat: add git plugin
+0000000000000000000000000000000000000000 677036d43df689818b38d63120292e97789a4e09 harvey <harvey@HarveysMacbook-219.local> 1712332928 +0700	clone: from github.com-nqp:nguyen-quang-phu/lazyvim-config.git
+677036d43df689818b38d63120292e97789a4e09 831140f421ff7ef6ae254ef0014a761116fe377d harvey <harvey@HarveysMacbook-219.local> 1712408837 +0700	commit: fix: change codespell
+831140f421ff7ef6ae254ef0014a761116fe377d ef26a04e2a3db1c2524ed958e655f76281c0b56a harvey <harvey@HarveysMacbook-219.local> 1712408856 +0700	commit (amend): fix: change codespell
+ef26a04e2a3db1c2524ed958e655f76281c0b56a 5222dd85adeb7d7af17311bc4b4e5764bc750bcf harvey <harvey@HarveysMacbook-219.local> 1712408872 +0700	commit (amend): fix: change codespell
+5222dd85adeb7d7af17311bc4b4e5764bc750bcf 089477e8a939ca19592ea843b6f618241a1100fe Harvey <nqphu1998@gmail.com> 1712659802 +0700	commit: feat: update neotest
+089477e8a939ca19592ea843b6f618241a1100fe ec85d720b5610fa5019bace469146a58e85d65ef Harvey <nqphu1998@gmail.com> 1712667908 +0700	commit (amend): feat: update neotest
+ec85d720b5610fa5019bace469146a58e85d65ef 8a116984770147cf382cbe2230578e7bc93d16a0 Harvey <nqphu1998@gmail.com> 1713062537 +0700	commit: feat: add snippets settings
+8a116984770147cf382cbe2230578e7bc93d16a0 06e3ecd2cc717aae3f85d86aaa176200480f9506 Harvey <nqphu1998@gmail.com> 1713080295 +0700	commit: feat: update vim highlight color
+06e3ecd2cc717aae3f85d86aaa176200480f9506 c5ddb6ec6e852ea3bcc53e9a7ad83ff955d4b5dd Harvey <nqphu1998@gmail.com> 1713340171 +0700	commit: feat: update chatgpt and screenkey
+c5ddb6ec6e852ea3bcc53e9a7ad83ff955d4b5dd bb21f2ad98bd63c85b113be1da34513e836422df Harvey <nqphu1998@gmail.com> 1714352874 +0700	commit: feat: add mini files
+bb21f2ad98bd63c85b113be1da34513e836422df e7f1f3bd8b93e76c32c398cf1dface84070e0238 Harvey <nqphu1998@gmail.com> 1714463404 +0700	commit: feat: add dial
+e7f1f3bd8b93e76c32c398cf1dface84070e0238 735c861dd419669fcd6691ac97b899ae7fccfbbb Harvey <nqphu1998@gmail.com> 1716277500 +0700	commit: feat: update config
+735c861dd419669fcd6691ac97b899ae7fccfbbb dd3fbb4b5b6adace7760175b089643588e5f068d Harvey <nqphu1998@gmail.com> 1716365487 +0700	commit: feat: update config
+dd3fbb4b5b6adace7760175b089643588e5f068d 43cf9ef1c31bbdc8dcd38e94761e665e979d7ab2 Harvey <nqphu1998@gmail.com> 1716798212 +0700	commit: feat: update config golang
+43cf9ef1c31bbdc8dcd38e94761e665e979d7ab2 505cdf2d0b84ef5def71542d8e12f00341796903 Harvey <nqphu1998@gmail.com> 1717055951 +0700	commit: fix: update settings
+505cdf2d0b84ef5def71542d8e12f00341796903 b14146ac0a2dd8c28ff36ee5affad40118d9b842 Harvey <nqphu1998@gmail.com> 1717057567 +0700	commit: fix: update signature
+b14146ac0a2dd8c28ff36ee5affad40118d9b842 5120f0d95ecad32dda7158d4337bba252f56d6ab Harvey <nqphu1998@gmail.com> 1717471071 +0700	commit: feat: update theme

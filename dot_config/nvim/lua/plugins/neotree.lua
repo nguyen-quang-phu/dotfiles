@@ -1,14 +1,27 @@
 return {
   "nvim-neo-tree/neo-tree.nvim",
-  branch = "v3.x",
+  branch = "v2.x",
   cmd = "Neotree",
-  enabled = true,
   lazy = false,
-  keys = {
+  dependencies = {
     {
-      "<leader>e",
-      "<cmd>Neotree focus<cr>",
-      desc = "NEOTREE: focus",
+      "s1n7ax/nvim-window-picker",
+      version = "2.*",
+      config = function()
+        require("window-picker").setup({
+          filter_rules = {
+            include_current_win = false,
+            autoselect_one = true,
+            -- filter using buffer options
+            bo = {
+              -- if the file type is one of following, the window will be ignored
+              -- filetype = { "neo-tree", "neo-tree-popup", "notify" },
+              -- if the buffer type is one of following, the window will be ignored
+              -- buftype = { "terminal", "quickfix" },
+            },
+          },
+        })
+      end,
     },
   },
   deactivate = function()
@@ -30,14 +43,18 @@ return {
         visible = true,
         show_hidden_count = true,
         hide_dotfiles = false,
-        hide_gitignored = true,
+        hide_gitignored = false,
         hide_by_name = {
-          ".git",
+          "node_modules",
+        },
+        never_show = {
           ".DS_Store",
           "thumbs.db",
         },
-        never_show = {},
       },
+    },
+    follow_current_file = {
+      enabled = true,
     },
     event_handlers = {
       {

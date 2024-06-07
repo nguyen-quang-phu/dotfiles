@@ -14,4 +14,9 @@ return {
     event = "LazyFile",
     ft = "ruby",
   },
+  {
+    "AndrewRadev/rails_extra.vim",
+    lazy = false,
+    ft = "ruby",
+  },
 }

@@ -9,11 +9,16 @@ vim.api.nvim_create_autocmd({ "InsertLeave", "TextChanged" }, {
 
 vim.api.nvim_create_autocmd({ "BufEnter" }, {
   pattern = { "*" },
-  command = "set formatoptions-=c formatoptions-=r formatoptions-=o",
+  command = "set formatoptions-=c formatoptions-=r",
 })
 
 -- Add auto command for YAML files
 vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" }, {
   pattern = { "*.yml" },
   command = "setfiletype=yaml",
+})
+
+vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" }, {
+  pattern = { "*.slim" },
+  command = "setlocal filetype=slim",
 })
