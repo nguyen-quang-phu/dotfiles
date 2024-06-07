@@ -1,0 +1,183 @@
+font:
+  size: 14.0
+  normal:
+    family: "MesloLGLDZ Nerd Font"
+    use_thin_stroke: true
+
+# window:
+#   opacity: 0.8
+#   dynamic_title: true
+#   decorations_theme_variant: None
+
+colors:
+  # Default colors
+  primary:
+    background: "#24273A" # base
+    foreground: "#CAD3F5" # text
+    # Bright and dim foreground colors
+    dim_foreground: "#CAD3F5" # text
+    bright_foreground: "#CAD3F5" # text
+
+  # Cursor colors
+  cursor:
+    text: "#24273A" # base
+    cursor: "#F4DBD6" # rosewater
+  vi_mode_cursor:
+    text: "#24273A" # base
+    cursor: "#B7BDF8" # lavender
+
+  # Search colors
+  search:
+    matches:
+      foreground: "#24273A" # base
+      background: "#A5ADCB" # subtext0
+    focused_match:
+      foreground: "#24273A" # base
+      background: "#A6DA95" # green
+    footer_bar:
+      foreground: "#24273A" # base
+      background: "#A5ADCB" # subtext0
+
+  # Keyboard regex hints
+  hints:
+    start:
+      foreground: "#24273A" # base
+      background: "#EED49F" # yellow
+    end:
+      foreground: "#24273A" # base
+      background: "#A5ADCB" # subtext0
+
+  # Selection colors
+  selection:
+    text: "#24273A" # base
+    background: "#F4DBD6" # rosewater
+
+  # Normal colors
+  normal:
+    black: "#494D64" # surface1
+    red: "#ED8796" # red
+    green: "#A6DA95" # green
+    yellow: "#EED49F" # yellow
+    blue: "#494D64" # blue
+    magenta: "#b884aa" # pink
+    cyan: "#5b8a83" # teal
+    white: "#B8C0E0" # subtext1
+
+  # Bright colors
+  bright:
+    black: "#5B6078" # surface2
+    red: "#ED8796" # red
+    green: "#A6DA95" # green
+    yellow: "#EED49F" # yellow
+    blue: "#8AADF4" # blue
+    magenta: "#F5BDE6" # pink
+    cyan: "#8BD5CA" # teal
+    white: "#A5ADCB" # subtext0
+
+  # Dim colors
+  dim:
+    black: "#494D64" # surface1
+    red: "#ED8796" # red
+    green: "#A6DA95" # green
+    yellow: "#EED49F" # yellow
+    blue: "#8AADF4" # blue
+    magenta: "#F5BDE6" # pink
+    cyan: "#8BD5CA" # teal
+    white: "#B8C0E0" # subtext1
+
+  indexed_colors:
+    - { index: 16, color: "#9c715a" }
+    - { index: 17, color: "#F4DBD6" }
+
+# To get keybinding, just run: xxd -psd
+key_bindings:
+  - { key: Home, chars: "\x1bOH", mode: AppCursor }
+  - { key: Home, chars: "\x1b[H", mode: ~AppCursor }
+  - { key: End, chars: "\x1bOF", mode: AppCursor }
+  - { key: End, chars: "\x1b[F", mode: ~AppCursor }
+  - { key: PageUp, mods: Shift, chars: "\x1b[5;2~" }
+  - { key: PageUp, mods: Control, chars: "\x1b[5;5~" }
+  - { key: PageUp, chars: "\x1b[5~" }
+  - { key: PageDown, mods: Shift, chars: "\x1b[6;2~" }
+  - { key: Space, mods: Alt, chars: " " }
+  - { key: Back, mods: Alt, chars: "\x1b\x7f" } # Delete word
+  - { key: Left, mods: Alt, chars: "\x1bb" } # one word left
+  - { key: Right, mods: Alt, chars: "\x1bf" } # one word right
+  - { key: Left, mods: Control, chars: "\x1bb" } # one word left
+  - { key: Right, mods: Control, chars: "\x1bf" } # one word right
+  - { key: Delete, mods: Shift, chars: "\x7f" }
+
+  - { key: Back, mods: Shift, chars: "\x1b\x7f" }
+  - { key: R, mods: Alt, chars: "\x18\x2c" }
+  - { key: Return, mods: Shift, chars: "\x00" }
+  - { key: Space, mods: Control, chars: "\x00" }
+  - { key: Space, mods: Alt, chars: "\x00" }
+  - { key: Space, mods: Command, chars: "\x00" }
+  - { key: N, mods: Shift|Command, chars: "\x18\x29" }
+  - { key: N, mods: Shift|Alt, chars: "\x18\x29" }
+  - { key: P, mods: Shift|Command, chars: "\x18\x28" }
+  - { key: P, mods: Shift|Alt, chars: "\x18\x28" }
+  - { key: T, mods: Shift|Command, chars: "\x18\x43" }
+  - { key: T, mods: Shift|Alt, chars: "\x18\x43" }
+  - { key: R, mods: Shift|Command, chars: "\x18\x24" }
+  - { key: R, mods: Shift|Alt, chars: "\x18\x24" }
+  - { key: Comma, mods: Shift|Alt, chars: "\x18<" }
+  - { key: Period, mods: Shift|Alt, chars: "\x18>" }
+  - { key: Comma, mods: Alt, chars: "\x1b," }
+
+  # Mac
+  - { key: V, mods: Command, action: Paste }
+  - { key: B, mods: Command, chars: "\x1b\x62" }
+  - { key: D, mods: Command, chars: "\x1b\x64" }
+  - { key: J, mods: Command, chars: "\x18\x6d" }
+  - { key: K, mods: Command, chars: "\x18\x62" }
+  - { key: C, mods: Command, action: Copy }
+  - { key: Q, mods: Command, action: Quit }
+  - { key: W, mods: Command, action: Quit }
+  - { key: Key0, mods: Command, action: ResetFontSize }
+  - { key: Equals, mods: Command, action: IncreaseFontSize }
+  - { key: Minus, mods: Command, action: DecreaseFontSize }
+  - { key: Back, mods: Command, chars: "\x15" } # delete word/line
+  - { key: D, mods: Shift|Command, chars: "\x18\x64" }
+  - { key: V, mods: Shift|Command, chars: "\x18\x76" }
+  - { key: A, mods: Shift|Command, chars: "\x18\x73" }
+  - { key: S, mods: Shift|Command, chars: "\x18\x56" }
+  - { key: H, mods: Shift|Command, chars: "\x18\x08" }
+  - { key: J, mods: Shift|Command, chars: "\x18\x0a" }
+  - { key: K, mods: Shift|Command, chars: "\x18\x0b" }
+  - { key: L, mods: Shift|Command, chars: "\x18\x0c" }
+  - { key: Key1, mods: Command, chars: "\x18\x31" }
+  - { key: Key2, mods: Command, chars: "\x18\x32" }
+  - { key: Key3, mods: Command, chars: "\x18\x33" }
+  - { key: Key4, mods: Command, chars: "\x18\x34" }
+  - { key: Key5, mods: Command, chars: "\x18\x35" }
+  - { key: Key6, mods: Command, chars: "\x18\x36" }
+  - { key: Key7, mods: Command, chars: "\x18\x37" }
+  - { key: Key8, mods: Command, chars: "\x18\x38" }
+  - { key: Key9, mods: Command, chars: "\x18\x39" }
+  - { key: T, mods: Command, chars: "\x18\x63" }
+  - { key: X, mods: Command, chars: "\x18\x78" }
+  - { key: S, mods: Command, chars: "\x18\x77" }
+  - { key: Slash, mods: Control|Command, chars: "\x18\x2f" }
+  - { key: R, mods: Command, chars: "\x18\x2c" }
+  - { key: LBracket, mods: Command, chars: "\x18\x5b" }
+  - { key: A, mods: Command, chars: "\x18\x3d" }
+  - { key: O, mods: Command, chars: "\x18\x6f" }
+  - { key: O, mods: Shift|Command, chars: "\x18\x7a" }
+  - { key: Return, mods: Command, chars: "\x18\x7a" }
+  - { key: Escape, mods: Command, chars: "\x18\x01" }
+  - { key: Comma, mods: Command, chars: "\x18\x10" }
+  - { key: Semicolon, mods: Command, chars: "\x18\x0e" }
+  - { key: F, mods: Shift|Command, chars: "\x18\x09" }
+  - { key: E, mods: Command, chars: "\x18\x09" }
+  - { key: N, mods: Command, chars: "\x18\x6e" }
+  - { key: P, mods: Command, chars: "\x18\x70" }
+  - { key: Slash, mods: Command, chars: "\x18\x2f" }
+  - { key: F, mods: Command, chars: "\x1b\x66" }
+  - { key: I, mods: Command, chars: "\x18\x21" }
+  - { key: I, mods: Shift|Command, chars: "\x18\x24" }
+
+  - { key: J, mods: Alt, chars: "\x1bj" }
+  - { key: K, mods: Alt, chars: "\x1bk" }
+  - { key: H, mods: Alt, chars: "\x1bh" }
+  - { key: L, mods: Alt, chars: "\x1bl" }

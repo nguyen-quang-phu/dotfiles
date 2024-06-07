@@ -1,5 +1,5 @@
 import = [
-    "~/.config/alacritty/themes/themes/github_dark.toml"
+  "~/.config/alacritty/catppuccin-macchiato.toml"
 ]
 
 [font]
@@ -7,6 +7,7 @@ size = 14.0
 
 [window]
 decorations = "None"
+padding = { x = 0, y = 0 }
 
 [font.normal]
 family = "MesloLGLDZ Nerd Font"
