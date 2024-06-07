@@ -167,16 +167,6 @@
                         },
                         {
                             "from": {
-                                "key_code": "left_control"
-                            },
-                            "to": [
-                                {
-                                    "key_code": "right_option"
-                                }
-                            ]
-                        },
-                        {
-                            "from": {
                                 "key_code": "right_option"
                             },
                             "to": [
@@ -286,16 +276,6 @@
                         },
                         {
                             "from": {
-                                "key_code": "left_command"
-                            },
-                            "to": [
-                                {
-                                    "key_code": "right_option"
-                                }
-                            ]
-                        },
-                        {
-                            "from": {
                                 "key_code": "left_control"
                             },
                             "to": [
@@ -311,6 +291,16 @@
                             "to": [
                                 {
                                     "key_code": "right_command"
+                                }
+                            ]
+                        },
+                        {
+                            "from": {
+                                "key_code": "left_command"
+                            },
+                            "to": [
+                                {
+                                    "key_code": "right_option"
                                 }
                             ]
                         }
