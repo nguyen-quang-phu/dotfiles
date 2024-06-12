@@ -10,7 +10,7 @@ decorations = "None"
 padding = { x = 0, y = 0 }
 
 [font.normal]
-family = "MesloLGLDZ Nerd Font"
+family = "JetBrainsMono Nerd Font Mono"
 
 [[keyboard.bindings]]
 chars = "\u001BOH"
