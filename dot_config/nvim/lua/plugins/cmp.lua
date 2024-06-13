@@ -13,6 +13,7 @@ return {
       "hrsh7th/cmp-path",
       "onsails/lspkind.nvim",
       "saadparwaiz1/cmp_luasnip",
+      "SergioRibera/cmp-dotenv",
     },
     enabled = true,
     opts = function()
@@ -56,6 +57,7 @@ return {
           { name = "path" },
           { name = "buffer" },
           { name = "nvim_lsp_signature_help" },
+          { name = "dotenv" },
         }),
         formatting = {
           fields = { "abbr", "kind", "menu" },
