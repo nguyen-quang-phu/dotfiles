@@ -6,7 +6,7 @@ layout {
     }
   }
 
-  cwd "~/Code/GO"
+  cwd "~/Code/GO/GIGADMIN"
   tab name="1. GIGADMIN Backend" focus=true cwd="gigadmin-api"{
     pane command="nvim" borderless=true{
       args "Gemfile"
