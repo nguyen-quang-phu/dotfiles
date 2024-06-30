@@ -1,18 +1,4 @@
-0000000000000000000000000000000000000000 677036d43df689818b38d63120292e97789a4e09 harvey <harvey@HarveysMacbook-219.local> 1712332928 +0700	clone: from github.com-nqp:nguyen-quang-phu/lazyvim-config.git
-677036d43df689818b38d63120292e97789a4e09 831140f421ff7ef6ae254ef0014a761116fe377d harvey <harvey@HarveysMacbook-219.local> 1712408837 +0700	commit: fix: change codespell
-831140f421ff7ef6ae254ef0014a761116fe377d ef26a04e2a3db1c2524ed958e655f76281c0b56a harvey <harvey@HarveysMacbook-219.local> 1712408856 +0700	commit (amend): fix: change codespell
-ef26a04e2a3db1c2524ed958e655f76281c0b56a 5222dd85adeb7d7af17311bc4b4e5764bc750bcf harvey <harvey@HarveysMacbook-219.local> 1712408872 +0700	commit (amend): fix: change codespell
-5222dd85adeb7d7af17311bc4b4e5764bc750bcf 089477e8a939ca19592ea843b6f618241a1100fe Harvey <nqphu1998@gmail.com> 1712659802 +0700	commit: feat: update neotest
-089477e8a939ca19592ea843b6f618241a1100fe ec85d720b5610fa5019bace469146a58e85d65ef Harvey <nqphu1998@gmail.com> 1712667908 +0700	commit (amend): feat: update neotest
-ec85d720b5610fa5019bace469146a58e85d65ef 8a116984770147cf382cbe2230578e7bc93d16a0 Harvey <nqphu1998@gmail.com> 1713062537 +0700	commit: feat: add snippets settings
-8a116984770147cf382cbe2230578e7bc93d16a0 06e3ecd2cc717aae3f85d86aaa176200480f9506 Harvey <nqphu1998@gmail.com> 1713080295 +0700	commit: feat: update vim highlight color
-06e3ecd2cc717aae3f85d86aaa176200480f9506 c5ddb6ec6e852ea3bcc53e9a7ad83ff955d4b5dd Harvey <nqphu1998@gmail.com> 1713340171 +0700	commit: feat: update chatgpt and screenkey
-c5ddb6ec6e852ea3bcc53e9a7ad83ff955d4b5dd bb21f2ad98bd63c85b113be1da34513e836422df Harvey <nqphu1998@gmail.com> 1714352874 +0700	commit: feat: add mini files
-bb21f2ad98bd63c85b113be1da34513e836422df e7f1f3bd8b93e76c32c398cf1dface84070e0238 Harvey <nqphu1998@gmail.com> 1714463404 +0700	commit: feat: add dial
-e7f1f3bd8b93e76c32c398cf1dface84070e0238 735c861dd419669fcd6691ac97b899ae7fccfbbb Harvey <nqphu1998@gmail.com> 1716277500 +0700	commit: feat: update config
-735c861dd419669fcd6691ac97b899ae7fccfbbb dd3fbb4b5b6adace7760175b089643588e5f068d Harvey <nqphu1998@gmail.com> 1716365487 +0700	commit: feat: update config
-dd3fbb4b5b6adace7760175b089643588e5f068d 43cf9ef1c31bbdc8dcd38e94761e665e979d7ab2 Harvey <nqphu1998@gmail.com> 1716798212 +0700	commit: feat: update config golang
-43cf9ef1c31bbdc8dcd38e94761e665e979d7ab2 505cdf2d0b84ef5def71542d8e12f00341796903 Harvey <nqphu1998@gmail.com> 1717055951 +0700	commit: fix: update settings
-505cdf2d0b84ef5def71542d8e12f00341796903 b14146ac0a2dd8c28ff36ee5affad40118d9b842 Harvey <nqphu1998@gmail.com> 1717057567 +0700	commit: fix: update signature
-b14146ac0a2dd8c28ff36ee5affad40118d9b842 5120f0d95ecad32dda7158d4337bba252f56d6ab Harvey <nqphu1998@gmail.com> 1717471071 +0700	commit: feat: update theme
-5120f0d95ecad32dda7158d4337bba252f56d6ab aea9c47ba12997e0d1f5963bad54ff5e84b02da4 Harvey <nqphu1998@gmail.com> 1717988593 +0700	commit: fix: update config
+0000000000000000000000000000000000000000 236dc20a7469526949a7a07384923d6068e5ee2f Harvey <harvey@Harveys-Macbook-3.local> 1718252848 +0700	clone: from github.com-nqp:nguyen-quang-phu/lazyvim-config.git
+236dc20a7469526949a7a07384923d6068e5ee2f 26492c34938758711ed96eff194df7954f6d5ad9 Harvey <harvey@Harveys-Macbook-7.local> 1719226997 +0700	commit: fix: add nvimlint for slim lint and reek
+26492c34938758711ed96eff194df7954f6d5ad9 bd1d34ffceee95dc653c6a3ee9d53775905b6736 Harvey <nqphu1998@gmail.com> 1719227029 +0700	commit (amend): fix: add nvimlint for slim lint and reek
+bd1d34ffceee95dc653c6a3ee9d53775905b6736 1b5c63643f26b2b41a02fb85115d2b81a7a2e3eb Harvey <nqphu1998@gmail.com> 1719736082 +0700	commit: fix: update config

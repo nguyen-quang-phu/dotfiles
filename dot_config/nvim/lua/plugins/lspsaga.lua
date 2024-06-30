@@ -1,5 +1,6 @@
 return {
   "nvimdev/lspsaga.nvim",
+  lazy = false,
   config = function()
     require("lspsaga").setup({
       code_action = {

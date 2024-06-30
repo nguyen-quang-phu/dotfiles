@@ -8,10 +8,6 @@ return {
     enabled = false,
   },
   {
-    "echasnovski/mini.surround",
-    enabled = false,
-  },
-  {
     "akinsho/bufferline.nvim",
     enabled = false
   }

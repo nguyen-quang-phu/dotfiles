@@ -4,7 +4,6 @@
 local Util = require("lazyvim.util")
 
 vim.keymap.del("n", "<leader>l")
-vim.keymap.del({ "n", "v" }, "<leader>cf")
 vim.api.nvim_set_keymap("t", "<ESC>", "<C-\\><C-n>", { noremap = true })
 
 local opts = { noremap = true, silent = true }
