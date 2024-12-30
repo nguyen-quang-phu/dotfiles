@@ -8,7 +8,7 @@ return {
   keys = {
     -- 👇 in this section, choose your own keymappings!
     {
-      "<leader>gy",
+      "<leader>e",
       function()
         require("yazi").yazi()
       end,
@@ -16,7 +16,7 @@ return {
     },
     {
       -- Open in the current working directory
-      "<leader>e",
+      "<leader>E",
       "<cmd>Yazi cwd<cr>",
       desc = "Open the file manager in nvim's working directory",
     },
