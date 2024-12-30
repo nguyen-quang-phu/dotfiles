@@ -1,0 +1,34 @@
+layout {
+  default_tab_template {
+    children
+    pane size=1 borderless=true {
+      plugin location="zellij:compact-bar"
+    }
+  }
+
+  cwd "/Users/dev/Code/keynold/keynold-blogs"
+  tab name="1. Auth services" cwd="backend/auth-svc"{
+    pane split_direction="vertical" {
+      pane command="nvim" size="65%"{
+        args "Gemfile"
+      }
+      pane split_direction="horizontal" size="35%" {
+        pane name="Server"
+        pane name="Database"
+        pane focus=true name="Terminal"
+      }
+    }
+  }
+
+  tab name="2. Proto" cwd="backend/proto"{
+    pane split_direction="vertical" {
+      pane command="nvim" size="65%"{
+        args "buf.yaml"
+      }
+      pane split_direction="horizontal" size="35%" {
+        pane focus=true name="Terminal"
+      }
+    }
+  }
+
+}

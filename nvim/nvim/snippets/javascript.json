@@ -1,0 +1,30 @@
+{
+  "declare_function": {
+    "body": [
+      "const ${1:functionName} = () => {",
+      "  $0",
+      "};"
+    ],
+    "prefix": "declare_function"
+  },
+  "declare_use_state": {
+    "body": "const [${1:value}, set${1/(.*)/${1:/capitalize}/}] = useState($2);$0",
+    "prefix": "declare_use_state"
+  },
+  "ifabc": {
+    "body": [
+      "if (${1:condition}) {",
+      "  $2",
+      "}"
+    ],
+    "prefix": "ifabc"
+  },
+  "lodash sort by order list": {
+    "body": [
+      "    const ${1:ORDER_LIST} = [];",
+      "",
+      "    return sortBy(${2:SORTED_LIST}, ({ ${3:key} }) => $1.indexOf($3));"
+    ],
+    "prefix": "lodash sort by order list"
+  }
+}

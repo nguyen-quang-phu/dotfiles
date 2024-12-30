@@ -1,0 +1,13 @@
+prepend_keymap = [
+{ on   = "p", run  = "plugin smart-paste", desc = "Paste into the hovered directory or CWD" },
+{ on = [ "g", "r" ], run = 'shell -- ya emit cd "$(git rev-parse --show-toplevel)"' },
+
+{ on = [ "e", "t" ], run = "plugin eza-preview",  desc = "Toggle tree/list dir preview" },
+{ on = [ "e", "-" ], run = "plugin eza-preview inc-level", desc = "Increment tree level" },
+{ on = [ "e", "_" ], run = "plugin eza-preview dec-level", desc = "Decrement tree level" },
+{ on = [ "e", "$" ], run = "plugin eza-preview toggle-follow-symlinks", desc = "Toggle tree follow symlinks" },
+{ on = [ "e", "*" ], run = "plugin eza-preview toggle-hidden", desc = "Toggle hidden files" },
+{ on = [ "e", "g", "i" ], run = "plugin eza-preview toggle-git-ignore", desc = "Toggle .gitignore files" },
+{ on = [ "e", "g", "s" ], run = "plugin eza-preview toggle-git-status", desc = "Toggle showing git status" },
+{ on = [ "'", ";" ], run = 'plugin custom-shell -- auto --interactive', desc = "custom-shell as default, interactive" }
+]

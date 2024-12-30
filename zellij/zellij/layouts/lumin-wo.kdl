@@ -1,0 +1,73 @@
+layout {
+  default_tab_template {
+    children
+    pane size=1 borderless=true {
+      plugin location="zellij:compact-bar"
+    }
+  }
+
+  cwd "~/Code/Lumin"
+  tab name="1. lumin-static" cwd="lumin-static/dev"{
+    pane split_direction="vertical" {
+      pane focus=true command="nvim" size="65%"{
+        args "package.json"
+      }
+      pane split_direction="horizontal" size="35%" {
+        pane name="Server"
+        pane name="Slices machine"
+        pane name="Git" command="lazygit" start_suspended=true
+        pane name="Terminal"
+      }
+    }
+  }
+
+  tab name="2. lumin-templates" cwd="lumin-templates/dev"{
+    pane split_direction="vertical" {
+      pane command="nvim" size="65%"{
+        args "package.json"
+      }
+      pane split_direction="horizontal" size="35%" {
+        pane name="Server"
+        pane name="Git"
+        pane focus=true name="Terminal"
+      }
+    }
+  }
+
+  tab name="3. templates-strapi" cwd="templates-strapi"{
+    pane split_direction="vertical"{
+      pane command="nvim" size="65%" {
+        args "package.json"
+      }
+      pane split_direction="horizontal" size="35%" {
+        pane name="Server"
+        pane name="Meilisearch"
+        pane focus=true name="Terminal"
+      }
+    }
+  }
+
+  tab name="4. lumin-scripts-cms" cwd="lumin-scripts-cms"{
+    pane split_direction="vertical"{
+      pane command="nvim" size="65%" {
+        args "deno.json"
+      }
+      pane split_direction="horizontal" size="35%" {
+        pane name="Server"
+        pane focus=true name="Terminal"
+      }
+    }
+  }
+
+  tab name="5. lumin-templates-backend" cwd="lumin-templates-backend"{
+    pane split_direction="vertical"{
+      pane command="nvim" size="65%" {
+        args "package.json"
+      }
+      pane split_direction="horizontal" size="35%" {
+        pane name="Server"
+        pane focus=true name="Terminal"
+      }
+    }
+  }
+}

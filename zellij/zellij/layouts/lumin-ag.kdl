@@ -1,0 +1,54 @@
+layout {
+  default_tab_template {
+    children
+    pane size=1 borderless=true {
+      plugin location="zellij:compact-bar"
+    }
+  }
+
+  cwd "~/Code/Lumin"
+  tab name="1. lumin-agreement-gen-web" cwd="lumin-agreement-gen-web"{
+    pane split_direction="vertical"{
+      pane command="nvim" size="65%" {
+        args "package.json"
+      }
+      pane split_direction="horizontal" size="35%" {
+        pane name="Server"
+        pane focus=true name="Terminal"
+      }
+    }
+  }
+  tab name="2. lumin-agreement-gen-backend" cwd="lumin-agreement-gen-backend"{
+    pane split_direction="vertical"{
+      pane command="nvim" size="65%" {
+        args "package.json"
+      }
+      pane split_direction="horizontal" size="35%" {
+        pane name="Server"
+        pane focus=true name="Terminal"
+      }
+    }
+  }
+  tab name="3. lumin-agreement-gen-llm" cwd="lumin-agreement-gen-llm"{
+    pane split_direction="vertical"{
+      pane command="nvim" size="65%" {
+        args "devenv.nix"
+      }
+      pane split_direction="horizontal" size="35%" {
+        pane name="Server"
+        pane focus=true name="Terminal"
+      }
+    }
+  }
+  tab name="4. lumin-agreement-gen-worker" cwd="lumin-agreement-gen-worker"{
+    pane split_direction="vertical"{
+      pane command="nvim" size="65%" {
+        args "devenv.nix"
+      }
+      pane split_direction="horizontal" size="35%" {
+        pane name="Server"
+        pane focus=true name="Terminal"
+      }
+    }
+  }
+}

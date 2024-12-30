@@ -1,0 +1,20 @@
+layout {
+  default_tab_template {
+    children
+    pane size=1 borderless=true {
+      plugin location="zellij:compact-bar"
+    }
+  }
+
+  cwd "~/Code/leetcode"
+  tab name="Leetcode" focus=true {
+    pane split_direction="vertical" {
+      pane command="nvim" borderless=true {
+        args "leetcode.nvim"
+      }
+      pane split_direction="horizontal" size="35%" {
+        pane focus=true name="Terminal"
+      }
+    }
+  }
+}

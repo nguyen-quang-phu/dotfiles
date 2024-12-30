@@ -1,0 +1,38 @@
+layout {
+  tab_template name="spotify" {
+    pane split_direction="vertical" {
+      pane split_direction="horizontal" {
+        pane command="nvim" borderless=true {
+          args "-c" "lua Snacks.terminal.open('spotify_player',{win= {height = 0.99, width = 0.99}})"
+        }
+      }
+      pane split_direction="horizontal" {
+        pane name="Bluetooth" command="bluetui"
+        pane name="Volume" command="pulsemixer"
+      }
+    }
+    pane size=1 borderless=true {
+      plugin location="zellij:compact-bar"
+    }
+
+  }
+  default_tab_template {
+    children
+    pane size=1 borderless=true {
+      plugin location="zellij:compact-bar"
+    }
+  }
+  tab name="Code" focus=true {
+    pane split_direction="vertical" {
+      pane command="nvim" borderless=true{
+        args "go.mod"
+      }
+      pane split_direction="horizontal" size="35%" {
+      pane name="Database"
+      pane name="Go Server"
+      pane focus=true name="Terminal"
+      }
+    }
+  }
+  spotify name="Spotify"
+}

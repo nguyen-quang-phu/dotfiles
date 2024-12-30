@@ -1,0 +1,29 @@
+[mgr]
+show_hidden = true
+sort_by = "mtime"
+sort_sensitive = true
+sort_dir_first = true
+show_symlink = true
+linemode = "size_and_mtime"
+[preview]
+[input]
+cursor_blink = false
+
+[[mgr.prepend_keymap]]
+on   = "l"
+run  = "plugin smart-enter"
+desc = "Enter the child directory, or open the file"
+
+[[plugin.prepend_fetchers]]
+id   = "git"
+name = "*"
+run  = "git"
+
+[[plugin.prepend_fetchers]]
+id   = "git"
+name = "*/"
+run  = "git"
+
+[[plugin.prepend_previewers]]
+name = "*/"
+run = "eza-preview"

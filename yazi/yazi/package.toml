@@ -1,0 +1,27 @@
+[[plugin.deps]]
+use = "yazi-rs/plugins:smart-enter"
+rev = "8f1d971"
+hash = "afb539b8877c08a04129af6d90aa395c"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:git"
+rev = "8f1d971"
+hash = "8372320741a15c08a43edf053c268ab1"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:smart-paste"
+rev = "8f1d971"
+hash = "75fd60b2df7115e0a6ca31a6a804d320"
+
+[[plugin.deps]]
+use = "ahkohd/eza-preview"
+rev = "a97cf55"
+hash = "cc3aef07a8b1c3fe820f1fbb9a5a2483"
+
+[[plugin.deps]]
+use = "AnirudhG07/custom-shell"
+rev = "b04213d"
+hash = "3efc7ddc9bac120c618462eb994edf75"
+
+[flavor]
+deps = []

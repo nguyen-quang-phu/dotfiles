@@ -1,0 +1,187 @@
+os:
+  editPreset: nvim-remote
+git:
+  localBranchSortOrder: recency
+gui:
+  nerdFontsVersion: '3'
+  customIcons:
+    filenames:
+      "CONTRIBUTING.md": {icon: "", color: "#FEDDEF"}
+      "HACKING.md": {icon: "", color: "#FEDDEF"}
+    extensions:
+      ".cat":
+        icon: "\U000F011B"
+        color: "#BC4009"
+      ".dog":
+        icon: "\U000F0A43"
+        color: "#B6977E"
+  parseEmoji: true
+customCommands:
+  - key: "C"
+    command: "npx better-commits"
+    description: "commit with better-commits"
+    context: "files"
+    loadingText: "opening better-commits tool"
+    output: "terminal"
+  - key: b
+    command: tig blame -- {{.SelectedFile.Name}}
+    context: files
+    description: blame file at tree
+    output: "terminal"
+  - key: b
+    command: tig blame {{.SelectedSubCommit.Sha}} -- {{.SelectedCommitFile.Name}}
+    context: commitFiles
+    description: blame file at revision
+    output: "terminal"
+  - key: B
+    command: tig blame -- {{.SelectedCommitFile.Name}}
+    context: commitFiles
+    description: blame file at tree
+    output: "terminal"
+  - key: t
+    command: tig show {{.SelectedSubCommit.Sha}}
+    context: subCommits
+    description: tig commit (`t` again to browse files at revision)
+    output: "terminal"
+  - key: t
+    command: tig show {{.SelectedLocalBranch.Name}}
+    context: localBranches
+    description: tig branch (`t` again to browse files at revision)
+    output: "terminal"
+  - key: t
+    command: tig show {{.SelectedRemoteBranch.RemoteName}}/{{.SelectedRemoteBranch.Name}}
+    context: remoteBranches
+    description: tig branch (`t` again to browse files at revision)
+    output: "terminal"
+  - key: t
+    command: tig {{.SelectedSubCommit.Sha}} -- {{.SelectedCommitFile.Name}}
+    context: commitFiles
+    description: tig file (history of commits affecting file)
+    output: "terminal"
+  - key: t
+    command: tig -- {{.SelectedFile.Name}}
+    context: files
+    description: tig file (history of commits affecting file)
+    output: "terminal"
+  - key: "<c-p>"
+    command: "git remote prune {{.SelectedRemote.Name}}"
+    context: "remotes"
+    loadingText: "Pruning..."
+    description: "prune deleted remote branches"
+  - key: "b"
+    command: "git branch --merged master | grep -v '^[ *]*master$' | xargs -r git branch -d"
+    context: "localBranches"
+    loadingText: "Pruning..."
+    description: "prune local branches that have been merged to master"
+  - key: "G"
+    command: |
+      git fetch -p && for branch in $(git for-each-ref --format '%(refname) %(upstream:track)' refs/heads | awk '$2 == "[gone]" {sub("refs/heads/", "", $1); print $1}'); do git branch -D $branch; done
+    context: "localBranches"
+    description: "Prune local branches no longer on its remote; (G)one."
+    loadingText: "Pruning gone..."
+  - key: '<c-a>'
+    description: 'amend the author of last commit'
+    command: 'git commit --amend --author="{{index .PromptResponses 0}} <{{index .PromptResponses 1}}>"'
+    context: 'commits'
+    prompts:
+      - type: 'input'
+        title: 'Author Name'
+        initialValue: ''
+      - type: 'input'
+        title: 'Email Address'
+    output: "terminal"
+  - key: "E"
+    command: git commit -m '{{ .Form.emoji }} {{ .Form.message }}'
+    context: files
+    description: Commit changes using gitmojis
+    prompts:
+      - command: gitmoji -c
+        filter: ^(.*?) - (:.*?:) - (.*)$
+        key: emoji
+        labelFormat: '{{ .group_1 }} - {{ .group_3 }}'
+        title: 'Select a gitmoji:'
+        type: menuFromCommand
+        valueFormat: '{{ .group_2 }}'
+      - key: message
+        title: 'Enter a commit message:'
+        type: input
+  # - key: "Y"
+  #   context: "global"
+  #   description: "Git Town sYnc"
+  #   command: "git town sync --all"
+  #   loadingText: "Syncing"
+  #   output: log
+  - key: "U"
+    context: "global"
+    description: "Git Town Undo (undo the last Git Town command)"
+    command: "git-town undo"
+    prompts:
+      - type: "confirm"
+        title: "Undo Last Command"
+        body: "Are you sure you want to Undo the last Git Town command?"
+    loadingText: "Undoing Git Town Command"
+    output: log
+  - key: "!"
+    context: "global"
+    description: "Git Town Repo (opens the repo link)"
+    command: "git-town repo"
+    loadingText: "Opening Repo Link"
+    output: log
+  - key: "a"
+    context: "localBranches"
+    description: "Git Town Append"
+    prompts:
+      - type: "input"
+        title: "Enter name of new child branch. Branches off of '{{.CheckedOutBranch.Name}}'"
+        key: "BranchName"
+    command: "git-town append {{.Form.BranchName}}"
+    loadingText: "Appending"
+    output: log
+  - key: "h"
+    context: "localBranches"
+    description: "Git Town Hack (creates a new branch)"
+    prompts:
+      - type: "input"
+        title: "Enter name of new branch. Branches off of 'Main'"
+        key: "BranchName"
+    command: "git-town hack {{.Form.BranchName}}"
+    loadingText: "Hacking"
+    output: log
+  # - key: "K"
+  #   context: "localBranches"
+  #   description: "Git Town Delete (deletes the current feature branch and sYnc)"
+  #   command: "git-town delete"
+  #   prompts:
+  #     - type: "confirm"
+  #       title: "Delete current feature branch"
+  #       body: "Are you sure you want to delete the current feature branch?"
+  #   loadingText: "Deleting Feature Branch"
+  #   output: log
+  # - key: "p"
+  #   context: "localBranches"
+  #   description: "Git Town Propose (creates a pull request)"
+  #   command: "git-town propose"
+  #   loadingText: "Creating pull request"
+  #   output: log
+  # - key: "P"
+  #   context: "localBranches"
+  #   description: "Git Town Prepend (creates a branch between the curent branch and its parent)"
+  #   prompts:
+  #     - type: "input"
+  #       title: "Enter name of the for child branch between '{{.CheckedOutBranch.Name}}' and its parent"
+  #       key: "BranchName"
+  #   command: "git-town prepend {{.Form.BranchName}}"
+  #   loadingText: "Prepending"
+  #   output: log
+  # - key: "S"
+  #   context: "localBranches"
+  #   description: "Git Town Skip (skip branch with merge conflicts when syncing)"
+  #   command: "git-town skip"
+  #   loadingText: "Skiping"
+  #   output: log
+  # - key: "G"
+  #   context: "files"
+  #   description: "Git Town GO aka:continue (continue after resolving merge conflicts)"
+  #   command: "git-town continue"
+  #   loadingText: "Continuing"
+  #   output: log

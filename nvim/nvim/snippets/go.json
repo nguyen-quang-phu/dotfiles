@@ -1,0 +1,138 @@
+{
+  "declare struct": {
+    "body": [
+      "type ${1:StructName} struct {",
+      "",
+      "}"
+    ],
+    "prefix": "declare_struct"
+  },
+  "declare_for": {
+    "body": [
+      "\tfor i := 0; i < n; i++ {",
+      "    ",
+      "\t}"
+    ],
+    "prefix": "declare_for"
+  },
+  "declare_function": {
+    "body": [
+      "func ${1:funcName}(${2:paramsName} ${3:paramsType}) ${4:returnType} {",
+      "\t$0",
+      "\treturn nil",
+      "}"
+    ],
+    "prefix": [
+      "declare_full_function",
+      "dff"
+    ]
+  },
+  "declare_function + df": {
+    "body": [
+      "func ${1:functionName}() ${2:returnType} {",
+      "  $0",
+      "\treturn nil",
+      "}"
+    ],
+    "prefix": [
+      "declare_function",
+      "df"
+    ]
+  },
+  "declare_gcd": {
+    "body": [
+      "func gcd(a, b int) int {",
+      "\tfor b != 0 {",
+      "\t\ta, b = b, a%b",
+      "\t}",
+      "\treturn a",
+      "}"
+    ],
+    "prefix": "declare_gcd"
+  },
+  "declare_interface + fi": {
+    "body": [
+      "type I${1:InterfaceName} interface {",
+      "  $0",
+      "}"
+    ],
+    "prefix": [
+      "declare_interface",
+      "di"
+    ]
+  },
+  "declare_is_vowel": {
+    "body": [
+      "func isVowel(b byte) bool {",
+      "\tif b < 'A' || (b > 'Z' && b < 'a') || b > 'z' {",
+      "\t\treturn false",
+      "\t}",
+      "",
+      "\tconst VOWELS = \"AEIOUaeiou\"",
+      "\tconst MASK= 0b11111",
+      "\tconst VOWELMASK =",
+      "\t\t(1 << ('A' & MASK)) |",
+      "\t\t(1 << ('E' & MASK)) |",
+      "\t\t(1 << ('I' & MASK)) |",
+      "\t\t(1 << ('O' & MASK)) |",
+      "\t\t(1 << ('U' & MASK))",
+      "",
+      "\treturn (VOWELMASK>>(b&MASK))&1 > 0",
+      "}"
+    ],
+    "prefix": "declare_is_vowel"
+  },
+  "declare_lcm": {
+    "body": [
+      "func gcd(a, b int) int {",
+      "\tfor b != 0 {",
+      "\t\ta, b = b, a%b",
+      "\t}",
+      "\treturn a",
+      "}",
+      "",
+      "func lcm(a, b int) int {",
+      "\treturn a / gcd(a, b) * b",
+      "}"
+    ],
+    "prefix": "declare_lcm"
+  },
+  "declare_loop": {
+    "body": [
+      "for ${1: indexName} := ${2:initValue}; ${1} < ${3:condition}; ${1}++ {",
+      "\t$0",
+      "}"
+    ],
+    "prefix": "declare_loop"
+  },
+  "declare_min_heap": {
+    "body": [
+      "type MinHeap []Cell",
+      "",
+      "func (h MinHeap) Len() int            { return len(h) }",
+      "func (h MinHeap) Less(i, j int) bool  { return h[i].h < h[j].h }",
+      "func (h MinHeap) Swap(i, j int)       { h[i], h[j] = h[j], h[i] }",
+      "func (h *MinHeap) Push(x interface{}) { *h = append(*h, x.(Cell)) }",
+      "func (h *MinHeap) Pop() interface{} {",
+      "\told := *h",
+      "\tn := len(old)",
+      "\tx := old[n-1]",
+      "\t*h = old[:n-1]",
+      "\treturn x",
+      "}"
+    ],
+    "prefix": "declare_min_heap"
+  },
+  "declare_type": {
+    "body": [
+      "type ${1:TypeName} struct {",
+      "\t${2:attribute} ${3:type}",
+      "}"
+    ],
+    "prefix": "declare_type"
+  },
+  "declare_variable": {
+    "body": "var ${1:varName} ${2:varType} = ${3:initValue}",
+    "prefix": "declare_variable"
+  }
+}

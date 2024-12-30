@@ -1,0 +1,38 @@
+layout {
+  default_tab_template {
+    children
+    pane size=1 borderless=true {
+      plugin location="zellij:compact-bar"
+    }
+  }
+
+  cwd "~/Code/GO/MERLIN/"
+  tab name="1. IAMMERLIN" cwd="tim/iammerlin"{
+    pane split_direction="vertical" {
+      pane command="nvim" size="65%" focus=true {
+        args "Gemfile"
+      }
+      pane split_direction="horizontal" size="35%" {
+        pane name="Rails server"
+        pane name="Rails frontend"
+        pane name="Database"
+        pane name="Rails console"
+        pane focus=true name="Terminal"
+      }
+    }
+  }
+  tab name="2. ASKMERLIN" cwd="tim/askmerlin"{
+    pane split_direction="vertical" {
+      pane command="nvim" size="65%" focus=true {
+        args "Gemfile"
+      }
+      pane split_direction="horizontal" size="35%" {
+        pane name="Rails server"
+        pane name="Rails frontend"
+        pane name="Database"
+        pane name="Rails console"
+        pane focus=true name="Terminal"
+      }
+    }
+  }
+}
