@@ -115,199 +115,263 @@ let name = "Keynold";
       listen_on = "unix:/tmp/kitty";
     };
   };
-  git = {
-    enable = true;
-    ignores = [ "*.swp" ];
-    userName = name;
-    userEmail = email;
-    lfs = {
+ git = {
+      enable = true;
+      lfs.enable = true;
+
+      includes = [
+        {
+          condition = "gitdir:~/.config/";
+          contents = {
+            user = {
+              email = email;
+              # email = builtins.readFile(config.sops.secrets.email.path);
+              name = name;
+            };
+          };
+        }
+        {
+          condition = "gitdir:~/Code/Personal/";
+          contents = {
+            user = {
+              email = email;
+              name = name;
+            };
+          };
+        }
+        {
+          condition = "gitdir:~/Code/GO/GIGADMIN/harvey/";
+          contents = {
+            user = {
+              email = "harvey.nguyen.goldenowl" + "@" + "gmail" + "." + "com";
+              name = "harvey-gig";
+            };
+          };
+        }
+        {
+          condition = "gitdir:~/Code/GO/GIGADMIN/sean/";
+          contents = {
+            user = {
+              email = "sean.tran.goldenowl" + "@" + "gmail" + "." + "com";
+              name = "sean-gig";
+            };
+          };
+        }
+        {
+          condition = "gitdir:~/Code/GO/GIGADMIN/troy/";
+          contents = {
+            user = {
+              email = "troy.tran.goldenowl" + "@" + "gmail" + "." + "com";
+              name = "troy-gig";
+            };
+          };
+        }
+        {
+          condition = "gitdir:~/Code/GO/EZYCAL/zane/";
+          contents = {
+            user = {
+              email = "zane.le.goldenowl" + "@" + "gmail" + "." + "com";
+              name = "Zane Le";
+            };
+          };
+        }
+        {
+          condition = "gitdir:~/Code/GO/ARINEX/charlie/";
+          contents = {
+            user = {
+              email = "charlie.nguyen.goldenowl" + "@" + "gmail" + "." + "com";
+              name = "Charlie";
+            };
+          };
+        }
+        {
+          condition = "gitdir:~/Code/GO/ARINEX/alan/";
+          contents = {
+            user = {
+              email = "alan.tran.goldenowl" + "@" + "gmail" + "." + "com";
+              name = "alan-tran-goldenowl";
+            };
+          };
+        }
+        {
+          condition = "gitdir:~/Code/GO/CREWCALL/zendy/";
+          contents = {
+            user = {
+              email = "keynold.nguyen.goldenowl" + "@" + "gmail" + "." + "com";
+              name = "Keynold Nguyễn";
+            };
+          };
+        }
+        {
+          condition = "gitdir:~/Code/GO/RESTORIFIC/marcus/";
+          contents = {
+            user = {
+              email = "marcus.nguyen.goldenowl" + "@" + "gmail" + "." + "com";
+              name = "Marcus Nguyễn";
+            };
+          };
+        }
+        {
+          condition = "gitdir:~/Code/GO/MERLIN/tim/";
+          contents = {
+            user = {
+              email = "tim.luong.goldenowl" + "@" + "gmail" + "." + "com";
+              name = "tim-merlin";
+            };
+          };
+        }
+        {
+          condition = "gitdir:~/Code/GO/AITIS/gavin";
+          contents = {
+            user = {
+              email = "gavin.tran.goldenowl" + "@" + "gmail" + "." + "com";
+              name = "Gavin-Tran-GoldenOwl";
+            };
+          };
+        }
+      ];
+
+      extraConfig = {
+        init.defaultBranch = "main";
+        repack.usedeltabaseoffset = "true";
+        color.ui = "auto";
+        diff.algorithm = "histogram"; # a much better diff
+        help.autocorrect = 10; # 1 second warning to a typo'd command
+        core.whitespace = "fix,-indent-with-non-tab,trailing-space,cr-at-eol";
+        branch = {
+          autosetupmerge = "true";
+          sort = "committerdate";
+        };
+        commit.verbose = true;
+
+        fetch.prune = true;
+        pull.ff = "only"; # equivalent to --ff-only
+        pull.rebase = true;
+        push = {
+          default = "current";
+          followTags = true;
+          autoSetupRemote = true;
+        };
+        merge = {
+          stat = "true";
+          conflictstyle = "zdiff3";
+          tool = "meld";
+        };
+        mergetool = {
+          meld = {
+            path = "/usr/local/bin/meld";
+          };
+        };
+
+        rebase = {
+          autoSquash = true;
+          autoStash = true;
+        };
+
+        rerere = {
+          enabled = true;
+          autoupdate = true;
+        };
+        diff.mnemonicprefix = true;
+
+        # prevent data corruption
+        transfer.fsckObjects = true;
+        fetch.fsckObjects = true;
+        receive.fsckObjects = true;
+        url = {
+          # "git@github.com:".insteadOf = "https://github.com/";
+          # "ssh://git@github.com".pushInsteadOf = "gh:";
+          # "git@gitlab.com:".insteadOf = "https://gitlab.com/";
+          # "ssh://git@gitlab.com".pushInsteadOf = "gl:";
+        };
+      };
+
+      # signing = {
+      #   key = "xxx";
+      #   signByDefault = true;
+      # };
+
+      delta = {
+        enable = true;
+        options = {
+          navigate = true;
+          side-by-side = true;
+          line-numbers = true;
+        };
+      };
+
+      aliases = {
+        email = "config --local user.email";
+        name = "config --local user.name";
+
+        br = "rev-parse --abbrev-ref HEAD";
+        can = "!git add . && git status && git commit --amend --no-edit";
+        cara = "!git commit --amend --reset-author --no-edit";
+        colast = "!git checkout -";
+        fsck = "fsck --unreachable | grep commit | cut -d' ' -f3 | xargs git log --merges --no-walk --grep=WIP";
+        hide = "update-index --skip-worktree";
+        pf = "push --force-with-lease";
+        rsho = "reset --hard ORIG_HEAD";
+        rss = "reset --soft HEAD~1";
+        s = "stash -u";
+        sp = "stash apply stash@{0}";
+        unhide = "update-index --no-skip-worktree";
+      };
+      ignores = [
+        ".DS_Store"
+        "Thumbs.db"
+        ".devenv"
+        ".direnv"
+        ".lazy.lua"
+        ".envrc"
+        "devenv.yaml"
+        "devenv.nix"
+        "justfile"
+        "vendor"
+        ".ignore"
+        "Gemfile.local"
+        "Gemfile.local.lock"
+        "bin"
+      ];
+    };
+
+    git-cliff = {
       enable = true;
     };
-    extraConfig = {
-      init.defaultBranch = "main";
-      core = {
-        editor = "vim";
-        autocrlf = "input";
-      };
-      pull.rebase = true;
-      rebase.autoStash = true;
-    };
-  };
 
-  vim = {
-    enable = true;
-    plugins = with pkgs.vimPlugins; [ vim-airline vim-airline-themes vim-startify vim-tmux-navigator ];
-    settings = { ignorecase = true; };
-    extraConfig = ''
-      "" General
-      set number
-      set history=1000
-      set nocompatible
-      set modelines=0
-      set encoding=utf-8
-      set scrolloff=3
-      set showmode
-      set showcmd
-      set hidden
-      set wildmenu
-      set wildmode=list:longest
-      set cursorline
-      set ttyfast
-      set nowrap
-      set ruler
-      set backspace=indent,eol,start
-      set laststatus=2
-      set clipboard=autoselect
-
-      " Dir stuff
-      set nobackup
-      set nowritebackup
-      set noswapfile
-      set backupdir=~/.config/vim/backups
-      set directory=~/.config/vim/swap
-
-      " Relative line numbers for easy movement
-      set relativenumber
-      set rnu
-
-      "" Whitespace rules
-      set tabstop=8
-      set shiftwidth=2
-      set softtabstop=2
-      set expandtab
-
-      "" Searching
-      set incsearch
-      set gdefault
-
-      "" Statusbar
-      set nocompatible " Disable vi-compatibility
-      set laststatus=2 " Always show the statusline
-      let g:airline_theme='bubblegum'
-      let g:airline_powerline_fonts = 1
-
-      "" Local keys and such
-      let mapleader=","
-      let maplocalleader=" "
-
-      "" Change cursor on mode
-      :autocmd InsertEnter * set cul
-      :autocmd InsertLeave * set nocul
-
-      "" File-type highlighting and configuration
-      syntax on
-      filetype on
-      filetype plugin on
-      filetype indent on
-
-      "" Paste from clipboard
-      nnoremap <Leader>, "+gP
-
-      "" Copy from clipboard
-      xnoremap <Leader>. "+y
-
-      "" Move cursor by display lines when wrapping
-      nnoremap j gj
-      nnoremap k gk
-
-      "" Map leader-q to quit out of window
-      nnoremap <leader>q :q<cr>
-
-      "" Move around split
-      nnoremap <C-h> <C-w>h
-      nnoremap <C-j> <C-w>j
-      nnoremap <C-k> <C-w>k
-      nnoremap <C-l> <C-w>l
-
-      "" Easier to yank entire line
-      nnoremap Y y$
-
-      "" Move buffers
-      nnoremap <tab> :bnext<cr>
-      nnoremap <S-tab> :bprev<cr>
-
-      "" Like a boss, sudo AFTER opening the file to write
-      cmap w!! w !sudo tee % >/dev/null
-
-      let g:startify_lists = [
-        \ { 'type': 'dir',       'header': ['   Current Directory '. getcwd()] },
-        \ { 'type': 'sessions',  'header': ['   Sessions']       },
-        \ { 'type': 'bookmarks', 'header': ['   Bookmarks']      }
-        \ ]
-
-      let g:startify_bookmarks = [
-        \ '~/.local/share/src',
-        \ ]
-
-      let g:airline_theme='bubblegum'
-      let g:airline_powerline_fonts = 1
-    '';
-  };
-
-  alacritty = {
-    enable = true;
-    settings = {
-      cursor = {
-        style = "Block";
-      };
-
-      window = {
-        opacity = 1.0;
-        padding = {
-          x = 24;
-          y = 24;
+    lazygit = {
+      enable = true;
+      settings = {
+        os = {
+          editPreset = "nvim-remote";
+          openLink = "open \"$(echo \"{{link}}\" | sed 's/%2F/\\//g')\"";
         };
-      };
-
-      font = {
-        normal = {
-          family = "MesloLGS NF";
-          style = "Regular";
-        };
-        size = lib.mkMerge [
-          (lib.mkIf pkgs.stdenv.hostPlatform.isLinux 10)
-          (lib.mkIf pkgs.stdenv.hostPlatform.isDarwin 14)
+        customCommands = [
+          {
+            key = "c";
+            command = "npx better-commits";
+            description = "commit with better-commits";
+            context = "files";
+            loadingText = "opening better-commits tool";
+            subprocess = true;
+          }
+          {
+            key = "n";
+            command = "npx -p better-commits better-branch";
+            description = "new branch with better-branch";
+            context = "localBranches";
+            loadingText = "opening better-branch tool";
+            subprocess = true;
+          }
         ];
       };
-
-      dynamic_padding = true;
-      decorations = "full";
-      title = "Terminal";
-      class = {
-        instance = "Alacritty";
-        general = "Alacritty";
-      };
-
-      colors = {
-        primary = {
-          background = "0x1f2528";
-          foreground = "0xc0c5ce";
-        };
-
-        normal = {
-          black = "0x1f2528";
-          red = "0xec5f67";
-          green = "0x99c794";
-          yellow = "0xfac863";
-          blue = "0x6699cc";
-          magenta = "0xc594c5";
-          cyan = "0x5fb3b3";
-          white = "0xc0c5ce";
-        };
-
-        bright = {
-          black = "0x65737e";
-          red = "0xec5f67";
-          green = "0x99c794";
-          yellow = "0xfac863";
-          blue = "0x6699cc";
-          magenta = "0xc594c5";
-          cyan = "0x5fb3b3";
-          white = "0xd8dee9";
-        };
-      };
     };
-  };
+    gh = {
+      enable = true;
+    };
+    gh-dash = {
+      enable = true;
+    };
 
   ssh = {
     enable = true;
@@ -386,15 +450,9 @@ let name = "Keynold";
       "vendor/"
     ];
   };
-  gh = {
-    enable = true;
-  };
   pyenv = {
     enable = true;
     enableZshIntegration = true;
-  };
-  lazygit = {
-    enable = true;
   };
   # aerc = {
   #   enable = true;

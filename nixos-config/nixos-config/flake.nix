@@ -81,7 +81,14 @@
           inherit system;
           specialArgs = inputs;
           modules = [
-            home-manager.darwinModules.home-manager
+            home-manager.darwinModules.home-manager{
+          home-manager = {
+            useGlobalPkgs = true;
+            useUserPackages = true;
+            backupFileExtension = "backup";
+          };
+
+            }
             nix-homebrew.darwinModules.nix-homebrew
             {
               nix-homebrew = {
@@ -110,6 +117,7 @@
             home-manager = {
               useGlobalPkgs = true;
               useUserPackages = true;
+              backupFileExtension = "backup";
               users.${user} = import ./modules/nixos/home-manager.nix;
             };
           }
