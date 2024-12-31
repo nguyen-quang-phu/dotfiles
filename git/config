@@ -1,1 +1,133 @@
-/nix/store/f07fbchrf312w9m43dxyg9c9il7vj0kw-home-manager-files/.config/git/config
+[alias]
+	br = "rev-parse --abbrev-ref HEAD"
+	can = "!git add . && git status && git commit --amend --no-edit"
+	cara = "!git commit --amend --reset-author --no-edit"
+	colast = "!git checkout -"
+	email = "config --local user.email"
+	fsck = "fsck --unreachable | grep commit | cut -d' ' -f3 | xargs git log --merges --no-walk --grep=WIP"
+	hide = "update-index --skip-worktree"
+	name = "config --local user.name"
+	pf = "push --force-with-lease"
+	rsho = "reset --hard ORIG_HEAD"
+	rss = "reset --soft HEAD~1"
+	s = "stash -u"
+	sp = "stash apply stash@{0}"
+	unhide = "update-index --no-skip-worktree"
+
+[branch]
+	autosetupmerge = "true"
+	sort = "committerdate"
+
+[color]
+	ui = "auto"
+
+[commit]
+	verbose = true
+
+[core]
+	pager = "/nix/store/6rmprh2wx0hfn0zlsfikf5l1m8awgjy4-delta-0.18.0/bin/delta"
+	whitespace = "fix,-indent-with-non-tab,trailing-space,cr-at-eol"
+
+[credential "https://gist.github.com"]
+	helper = "/nix/store/v08skvfjvpfy7qagjjghb17ppm50785k-gh-2.55.0/bin/gh auth git-credential"
+
+[credential "https://github.com"]
+	helper = "/nix/store/v08skvfjvpfy7qagjjghb17ppm50785k-gh-2.55.0/bin/gh auth git-credential"
+
+[delta]
+	line-numbers = true
+	navigate = true
+	side-by-side = true
+
+[diff]
+	algorithm = "histogram"
+	mnemonicprefix = true
+
+[fetch]
+	fsckObjects = true
+	prune = true
+
+[filter "lfs"]
+	clean = "git-lfs clean -- %f"
+	process = "git-lfs filter-process"
+	required = true
+	smudge = "git-lfs smudge -- %f"
+
+[help]
+	autocorrect = 10
+
+[init]
+	defaultBranch = "main"
+
+[interactive]
+	diffFilter = "/nix/store/6rmprh2wx0hfn0zlsfikf5l1m8awgjy4-delta-0.18.0/bin/delta --color-only"
+
+[merge]
+	conflictstyle = "zdiff3"
+	stat = "true"
+	tool = "meld"
+
+[mergetool "meld"]
+	path = "/usr/local/bin/meld"
+
+[pull]
+	ff = "only"
+	rebase = true
+
+[push]
+	autoSetupRemote = true
+	default = "current"
+	followTags = true
+
+[rebase]
+	autoSquash = true
+	autoStash = true
+
+[receive]
+	fsckObjects = true
+
+[repack]
+	usedeltabaseoffset = "true"
+
+[rerere]
+	autoupdate = true
+	enabled = true
+
+[transfer]
+	fsckObjects = true
+
+[includeIf "gitdir:~/.config/"]
+	path = "/nix/store/c6nfd2axxkkwaash8hz4x4yf17c0igcj-hm_gitconfig"
+
+[includeIf "gitdir:~/Code/Personal/"]
+	path = "/nix/store/c6nfd2axxkkwaash8hz4x4yf17c0igcj-hm_gitconfig"
+
+[includeIf "gitdir:~/Code/GO/GIGADMIN/harvey/"]
+	path = "/nix/store/pqfhhas7r86ibq17i3hlilrms85iiyg4-hm_gitconfig"
+
+[includeIf "gitdir:~/Code/GO/GIGADMIN/sean/"]
+	path = "/nix/store/5yabav1id5acq9gnk7aiib2hnbx2x6ip-hm_gitconfig"
+
+[includeIf "gitdir:~/Code/GO/GIGADMIN/troy/"]
+	path = "/nix/store/a7ipp97b9ckdkx8pdbhl4f2ljczvrh0l-hm_gitconfig"
+
+[includeIf "gitdir:~/Code/GO/EZYCAL/zane/"]
+	path = "/nix/store/pbhyxp3cb1r5xds55985n6paxy398c11-hm_gitconfig"
+
+[includeIf "gitdir:~/Code/GO/ARINEX/charlie/"]
+	path = "/nix/store/kvvp9kgv3fgkbxz7rr1ygqs2l0a30ra0-hm_gitconfig"
+
+[includeIf "gitdir:~/Code/GO/ARINEX/alan/"]
+	path = "/nix/store/vbpjp97j720mrxw8d31ali4f26k2rdl4-hm_gitconfig"
+
+[includeIf "gitdir:~/Code/GO/CREWCALL/zendy/"]
+	path = "/nix/store/pz5pr4i56n5pxyahpz0lqcq335dxr420-hm_gitconfig"
+
+[includeIf "gitdir:~/Code/GO/RESTORIFIC/marcus/"]
+	path = "/nix/store/kzxlnza9ilplq8v53ihqlgjaa0b11mls-hm_gitconfig"
+
+[includeIf "gitdir:~/Code/GO/MERLIN/tim/"]
+	path = "/nix/store/c021rgrc738lwbbjwshjnn6rbgla34jv-hm_gitconfig"
+
+[includeIf "gitdir:~/Code/GO/AITIS/gavin"]
+	path = "/nix/store/ahcgwci768nqn75ap4fz1291x1fp1rf7-hm_gitconfig"
