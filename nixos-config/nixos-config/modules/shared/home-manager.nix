@@ -393,6 +393,9 @@ let name = "Keynold";
     enable = true;
     enableZshIntegration = true;
   };
+  lazygit = {
+    enable = true;
+  };
   # aerc = {
   #   enable = true;
   # };
