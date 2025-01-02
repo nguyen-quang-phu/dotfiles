@@ -24,4 +24,5 @@ _:
   # Browsers
   "google-chrome"
   "visual-studio-code"
+  "ghostty"
 ]
