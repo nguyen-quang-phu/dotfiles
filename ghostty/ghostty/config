@@ -1,2 +1,5 @@
 theme = catppuccin-mocha
 macos-titlebar-proxy-icon = hidden
+title=""
+clipboard-trim-trailing-spaces = true
+copy-on-select = true

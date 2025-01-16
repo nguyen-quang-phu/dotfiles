@@ -324,8 +324,8 @@ let name = "Keynold";
         ".direnv"
         ".lazy.lua"
         ".envrc"
-        "devenv.yaml"
-        "devenv.nix"
+        # "devenv.yaml"
+        # "devenv.nix"
         "justfile"
         "vendor"
         ".ignore"
@@ -453,6 +453,13 @@ let name = "Keynold";
   pyenv = {
     enable = true;
     enableZshIntegration = true;
+  };
+  yazi = {
+    enable = true;
+    enableZshIntegration = true;
+    keymap = {
+
+    };
   };
   # aerc = {
   #   enable = true;

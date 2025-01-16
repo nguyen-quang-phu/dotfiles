@@ -33,6 +33,7 @@ with pkgs; [
 
   # rust
   rustup
+  # cargo
 
   #node
   nodePackages.yarn
@@ -72,6 +73,6 @@ with pkgs; [
   universal-ctags
   docker
   fzf
-  yazi
+  # yazi
   # Encryption and security tools
 ]

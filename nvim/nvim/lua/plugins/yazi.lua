@@ -32,5 +32,9 @@ return {
   ---@type YaziConfig
   opts = {
     open_for_directories = false,
+    keymap = {
+      open = "<leader>e",
+      open_cwd = "<leader>E",
+    },
   },
 }

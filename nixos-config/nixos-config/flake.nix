@@ -81,14 +81,7 @@
           inherit system;
           specialArgs = inputs;
           modules = [
-            home-manager.darwinModules.home-manager{
-          home-manager = {
-            useGlobalPkgs = true;
-            useUserPackages = true;
-            backupFileExtension = "backup";
-          };
-
-            }
+            home-manager.darwinModules.home-manager
             nix-homebrew.darwinModules.nix-homebrew
             {
               nix-homebrew = {
