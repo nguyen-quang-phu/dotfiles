@@ -3,3 +3,7 @@ macos-titlebar-proxy-icon = hidden
 title=""
 clipboard-trim-trailing-spaces = true
 copy-on-select = true
+window-decoration = false
+fullscreen = true
+clipboard-read = allow
+clipboard-write = allow
