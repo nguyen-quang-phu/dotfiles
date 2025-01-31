@@ -262,7 +262,7 @@ return {
           mason = false,
         },
         kulala_ls = {},
-        ctags_lsp = {},
+        -- ctags_lsp = {},
         typos_lsp = {
           mason = true,
         },
