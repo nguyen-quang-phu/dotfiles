@@ -63,6 +63,7 @@ return {
           },
         },
         phpactor = {},
+        texlab = {},
         volar = {
           settings = {
             volar = {
@@ -262,7 +263,7 @@ return {
           mason = false,
         },
         kulala_ls = {},
-        -- ctags_lsp = {},
+        ctags_lsp = {},
         typos_lsp = {
           mason = true,
         },

@@ -24,7 +24,10 @@ return {
       completion = {
         menu = {
           draw = {
-            columns = { { "label", "label_description", gap = 1 }, { "kind_icon", "kind" } },
+            columns = {
+              { "label",     "label_description", gap = 1, },
+              { "kind_icon", "kind", }
+            },
             -- components = {
             --   kind_icon = {
             --     ellipsis = false,
@@ -42,6 +45,13 @@ return {
           },
         },
       },
+      sources = {
+        providers = {
+          lsp = {
+            score_offset = 150,
+          }
+        }
+      }
       -- enable completion sources
       -- 'path' for file system paths
     },

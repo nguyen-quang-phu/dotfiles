@@ -19,3 +19,7 @@ vim.filetype.add({
 })
 vim.g.lazyvim_ruby_lsp = "solargraph"
 vim.g.lazyvim_ruby_formatter = "rubocop"
+
+-- latex
+vim.g.vimtex_view_method = "zathura"
+vim.g.maplocalleader = ","

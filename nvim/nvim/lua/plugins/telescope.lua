@@ -1,5 +1,6 @@
 return {
   "nvim-telescope/telescope.nvim",
+  enabled = false,
   opts = {
     defaults = {
       path_display = { "truncate" },

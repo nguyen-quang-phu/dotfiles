@@ -6,16 +6,15 @@ layout {
     }
   }
   tab name="Code" focus=true {
-    pane split_direction="horizontal" focus=true {
+    pane split_direction="vertical" {
       pane command="nvim" borderless=true{
         args "package.json"
       }
-    }
-  }
-  tab name="React Server"{
-    pane split_direction="vertical" {
-      pane name="React Server"
+      pane split_direction="horizontal" size="35%" {
+      pane name="Database"
+      pane name="Nest Server"
       pane focus=true name="Terminal"
+      }
     }
   }
 }
