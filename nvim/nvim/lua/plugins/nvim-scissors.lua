@@ -5,7 +5,7 @@ return {
       "nvim-telescope/telescope.nvim",
     }, -- optional
     opts = {
-      snippetDir = "~/.config/nix-darwin/home/dotfiles/nvim/snippets",
+      snippetDir = "/home/keynold/dotfiles/nvim/nvim/snippets",
       jsonFormatter = "jq",
     },
   },

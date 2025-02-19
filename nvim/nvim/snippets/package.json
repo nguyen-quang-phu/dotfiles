@@ -24,6 +24,12 @@
           "json"
         ],
         "path": "./json.json"
+      },
+      {
+        "language": [
+          "go"
+        ],
+        "path": "./go.json"
       }
     ]
   },

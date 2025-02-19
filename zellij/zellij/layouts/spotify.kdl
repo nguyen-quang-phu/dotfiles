@@ -6,6 +6,8 @@ layout {
     }
   }
   tab name="Spotify" focus=true {
-    pane command="spotify_player" borderless=true
+    pane command="nvim" borderless=true {
+      args "-c" "lua Snacks.terminal.open('spotify_player',{win= {height = 0.99, width = 0.99}})"
+    }
   }
 }

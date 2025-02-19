@@ -1,0 +1,10 @@
+{
+  "df": {
+    "body": [
+      "func ${1:FunctionName}(${2:ParameterName} ${3:ParameterType}) {",
+      "\t$0",
+      "}"
+    ],
+    "prefix": "df"
+  }
+}
