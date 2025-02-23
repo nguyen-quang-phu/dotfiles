@@ -6,8 +6,8 @@ return {
       local Keys = require("lazyvim.plugins.lsp.keymaps").get()
       -- stylua: ignore
       vim.list_extend(Keys, {
-        { "gr", false, desc = "References", nowait = true },
-        { "gR", false, desc = "References", nowait = true },
+        { "gr", false, desc = "References",            nowait = true },
+        { "gR", false, desc = "References",            nowait = true },
         { "gI", false, desc = "Goto Implementation" },
         { "gy", false, desc = "Goto T[y]pe Definition" },
       })
@@ -51,18 +51,28 @@ return {
         css_variables = {},
         cssls = {
           settings = {
-            css = { validate = true, lint = {
-              unknownAtRules = "ignore",
-            } },
-            scss = { validate = true, lint = {
-              unknownAtRules = "ignore",
-            } },
-            less = { validate = true, lint = {
-              unknownAtRules = "ignore",
-            } },
+            css = {
+              validate = true,
+              lint = {
+                unknownAtRules = "ignore",
+              }
+            },
+            scss = {
+              validate = true,
+              lint = {
+                unknownAtRules = "ignore",
+              }
+            },
+            less = {
+              validate = true,
+              lint = {
+                unknownAtRules = "ignore",
+              }
+            },
           },
         },
         phpactor = {},
+        markdown_oxide = {},
         texlab = {},
         volar = {
           settings = {
@@ -185,11 +195,11 @@ return {
               classAttributes = { ":class", "class", "className" },
               experimental = {
                 classRegex = {
-                  { "cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]" },
-                  { "cx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)" },
-                  { "clsx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)" },
+                  { "cva\\(([^)]*)\\)",                                      "[\"'`]([^\"'`]*).*?[\"'`]" },
+                  { "cx\\(([^)]*)\\)",                                       "(?:'|\"|`)([^']*)(?:'|\"|`)" },
+                  { "clsx\\(([^)]*)\\)",                                     "(?:'|\"|`)([^']*)(?:'|\"|`)" },
                   { "(?:enter|leave)(?:From|To)?=\\s*(?:\"|')([^(?:\"|')]*)" },
-                  { "cn\\(([^)]*)\\)", "'([^']*)'" },
+                  { "cn\\(([^)]*)\\)",                                       "'([^']*)'" },
                   { ":class?=\\s*(?:\"|'|{`)([^(?:\"|'|`})]*)" },
                 },
               },
