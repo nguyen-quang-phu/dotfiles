@@ -73,6 +73,7 @@ return {
         },
         phpactor = {},
         markdown_oxide = {},
+        marksman = { enabled = false },
         texlab = {},
         volar = {
           settings = {

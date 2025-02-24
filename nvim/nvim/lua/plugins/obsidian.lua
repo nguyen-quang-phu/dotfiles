@@ -13,10 +13,12 @@ return {
   dependencies = {
     -- Required.
     "nvim-lua/plenary.nvim",
+    "nvim-telescope/telescope.nvim"
 
     -- see below for full list of optional dependencies 👇
   },
   opts = {
+    ui = { enable = false },
     workspaces = {
       {
         name = "personal",
