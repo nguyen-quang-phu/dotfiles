@@ -6,9 +6,9 @@ layout {
     }
   }
 
-  cwd "~/Code"
-  tab name="1. LeetCode" focus=true cwd="gigadmin-api"{
-    pane command="nvim" borderless=true{
+  cwd "~/Code/leetcode"
+  tab name="Leetcode" focus=true {
+    pane command="nvim" borderless=true {
       args "leetcode.nvim"
     }
   }

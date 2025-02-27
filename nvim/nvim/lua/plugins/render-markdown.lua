@@ -129,4 +129,13 @@ return {
       highlight = 'RenderMarkdownBullet',
     },
   },
+  config = function(opts)
+    vim.api.nvim_set_hl(0, 'RenderMarkdownH1Bg', { bg = '#313244' })
+    vim.api.nvim_set_hl(0, 'RenderMarkdownH2Bg', { bg = '#313244' })
+    vim.api.nvim_set_hl(0, 'RenderMarkdownH3Bg', { bg = '#313244' })
+    vim.api.nvim_set_hl(0, 'RenderMarkdownH4Bg', { bg = '#313244' })
+    vim.api.nvim_set_hl(0, 'RenderMarkdownH5Bg', { bg = '#313244' })
+    vim.api.nvim_set_hl(0, 'RenderMarkdownH6Bg', { bg = '#313244' })
+    require('render-markdown').setup(opts)
+  end,
 }

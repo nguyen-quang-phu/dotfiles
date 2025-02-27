@@ -2,16 +2,16 @@ return {
   "stevearc/conform.nvim",
   enabled = true,
   keys = {
-    { "<leader>cf", false },
-    {
-      -- Customize or remove this keymap to your liking
-      "<leader>lf",
-      function()
-        require("conform").format({ async = true, lsp_fallback = true })
-      end,
-      mode = "",
-      desc = "Format buffer with comform.nvim",
-    },
+    -- { "<leader>cf", false },
+    -- {
+    --   -- Customize or remove this keymap to your liking
+    --   "<leader>lf",
+    --   function()
+    --     require("conform").format({ async = true, lsp_fallback = true })
+    --   end,
+    --   mode = "",
+    --   desc = "Format buffer with comform.nvim",
+    -- },
   },
   opts = {
     log_level = vim.log.levels.DEBUG,
@@ -21,6 +21,7 @@ return {
     formatters_by_ft = {
       json = { "jq" },
       nix = { "alejandra" },
+      proto = { "clang-format" },
       go = { "gofumpt", "goimports-reviser", "golines" },
       ruby = { "rubocop" },
       slim = { "rubocop" },

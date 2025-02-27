@@ -14,6 +14,7 @@ return {
   -- cmd = "Leet",
   opts = {
     lang = "golang",
+    picker = { provider = "telescope" },
     -- configuration goes here
   },
 }

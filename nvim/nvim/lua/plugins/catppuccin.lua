@@ -5,6 +5,7 @@ return {
     priority = 1000,
     opts = {
       integrations = {
+        render_markdown = true,
         aerial = true,
         alpha = true,
         cmp = true,

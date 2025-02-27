@@ -93,9 +93,19 @@ return {
         cyclic = true,
       })
 
+      local boolean = augend.constant.new({
+        elements = {
+          "True",
+          "False",
+        },
+        word = true,
+        cyclic = true,
+      })
+
       return {
         dials_by_ft = {
           css = "css",
+          nix = "nix",
           javascript = "typescript",
           javascriptreact = "typescript",
           json = "json",
@@ -110,13 +120,13 @@ return {
         },
         groups = {
           default = {
-            augend.integer.alias.decimal, -- nonnegative decimal number (0, 1, 2, 3, ...)
-            augend.integer.alias.hex, -- nonnegative hex number  (0x01, 0x1a1f, etc.)
+            augend.integer.alias.decimal,  -- nonnegative decimal number (0, 1, 2, 3, ...)
+            augend.integer.alias.hex,      -- nonnegative hex number  (0x01, 0x1a1f, etc.)
             augend.date.alias["%Y/%m/%d"], -- date (2022/02/19, etc.)
           },
           typescript = {
             augend.integer.alias.decimal, -- nonnegative and negative decimal number
-            augend.constant.alias.bool, -- boolean value (true <-> false)
+            augend.constant.alias.bool,   -- boolean value (true <-> false)
             logical_alias,
             augend.constant.new({ elements = { "let", "const" } }),
             ordinal_numbers,
@@ -140,47 +150,47 @@ return {
           },
           json = {
             augend.integer.alias.decimal, -- nonnegative and negative decimal number
-            augend.semver.alias.semver, -- versioning (v1.1.2)
+            augend.semver.alias.semver,   -- versioning (v1.1.2)
           },
           ruby = {
             logical_alias,
             augend.constant.new({
               elements = { "belongs_to", "has_one", "has_many" },
-              word = true, -- if false, "sand" is incremented into "sor", "doctor" into "doctand", etc.
+              word = true,   -- if false, "sand" is incremented into "sor", "doctor" into "doctand", etc.
               cyclic = true, -- "or" is incremented into "and".
             }),
             augend.constant.new({
               elements = { "true", "false" },
-              word = true, -- if false, "sand" is incremented into "sor", "doctor" into "doctand", etc.
+              word = true,   -- if false, "sand" is incremented into "sor", "doctor" into "doctand", etc.
               cyclic = true, -- "or" is incremented into "and".
             }),
             augend.constant.new({
               elements = { "present", "blank" },
-              word = true, -- if false, "sand" is incremented into "sor", "doctor" into "doctand", etc.
+              word = true,   -- if false, "sand" is incremented into "sor", "doctor" into "doctand", etc.
               cyclic = true, -- "or" is incremented into "and".
             }),
             augend.constant.new({
               elements = { "if", "unless" },
-              word = true, -- if false, "sand" is incremented into "sor", "doctor" into "doctand", etc.
+              word = true,   -- if false, "sand" is incremented into "sor", "doctor" into "doctand", etc.
               cyclic = true, -- "or" is incremented into "and".
             }),
             augend.constant.new({
-              elements = { "nil",":".."destroy" },
-              word = true, -- if false, "sand" is incremented into "sor", "doctor" into "doctand", etc.
+              elements = { "nil", ":" .. "destroy" },
+              word = true,   -- if false, "sand" is incremented into "sor", "doctor" into "doctand", etc.
               cyclic = true, -- "or" is incremented into "and".
             }),
           },
           lua = {
             augend.integer.alias.decimal, -- nonnegative and negative decimal number
-            augend.constant.alias.bool, -- boolean value (true <-> false)
+            augend.constant.alias.bool,   -- boolean value (true <-> false)
             augend.constant.new({
               elements = { "and", "or" },
-              word = true, -- if false, "sand" is incremented into "sor", "doctor" into "doctand", etc.
+              word = true,   -- if false, "sand" is incremented into "sor", "doctor" into "doctand", etc.
               cyclic = true, -- "or" is incremented into "and".
             }),
             augend.constant.new({
               elements = { "true", "false" },
-              word = true, -- if false, "sand" is incremented into "sor", "doctor" into "doctand", etc.
+              word = true,   -- if false, "sand" is incremented into "sor", "doctor" into "doctand", etc.
               cyclic = true, -- "or" is incremented into "and".
             }),
 
@@ -196,6 +206,9 @@ return {
             weekdays,
             months,
           },
+          nix = {
+            augend.constant.alias.bool, -- boolean value (true <-> false)
+          }
         },
       }
     end,

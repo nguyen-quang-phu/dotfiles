@@ -2,14 +2,39 @@
 keybinds {
   normal clear-defaults=true {
     bind "Ctrl b" { SwitchToMode "Tmux"; }
+    bind "Super h" { MoveFocus "Left"; SwitchToMode "Normal"; }
+    bind "Super l" { MoveFocus "Right"; SwitchToMode "Normal"; }
+    bind "Super j" { MoveFocus "Down"; SwitchToMode "Normal"; }
+    bind "Super k" { MoveFocus "Up"; SwitchToMode "Normal"; }
+    bind "Super Enter" { ToggleFocusFullscreen; SwitchToMode "Normal"; }
+    bind "Super 1" {GoToTab 1; SwitchToMode "Normal";}
+    bind "Super 2" {GoToTab 2; SwitchToMode "Normal";}
+    bind "Super 3" {GoToTab 3; SwitchToMode "Normal";}
+    bind "Super 4" {GoToTab 4; SwitchToMode "Normal";}
+    bind "Super 5" {GoToTab 5; SwitchToMode "Normal";}
+    bind "Super 6" {GoToTab 6; SwitchToMode "Normal";}
+    bind "Super 7" {GoToTab 7; SwitchToMode "Normal";}
+    bind "Super 8" {GoToTab 8; SwitchToMode "Normal";}
+    bind "Super 9" {GoToTab 9; SwitchToMode "Normal";}
   }
   locked {
-    bind "Ctrl g" { SwitchToMode "Normal"; }
+    bind "Ctrl g" "Esc" { SwitchToMode "Normal"; }
   }
-  resize {
+  resize clear-defaults=true{
+    bind "Esc" { SwitchToMode "Normal"; }
+    bind "h" "Left" { Resize "Increase Left"; }
+    bind "j" "Down" { Resize "Increase Down"; }
+    bind "k" "Up" { Resize "Increase Up"; }
+    bind "l" "Right" { Resize "Increase Right"; }
+    bind "H" { Resize "Decrease Left"; }
+    bind "J" { Resize "Decrease Down"; }
+    bind "K" { Resize "Decrease Up"; }
+    bind "L" { Resize "Decrease Right"; }
+    bind "=" "+" { Resize "Increase"; }
+    bind "-" { Resize "Decrease"; }
   }
   pane {
-    bind "Ctrl p" { SwitchToMode "Normal"; }
+    bind "Esc" { SwitchToMode "Normal"; }
     bind "x" { CloseFocus; SwitchToMode "Normal"; }
     bind "f" { ToggleFocusFullscreen; SwitchToMode "Normal"; }
     bind "z" { TogglePaneFrames; SwitchToMode "Normal"; }
@@ -18,13 +43,13 @@ keybinds {
     bind "r" { SwitchToMode "RenamePane"; PaneNameInput 0;}
   }
   move {
-    bind "Ctrl h" { SwitchToMode "Normal"; }
+    bind "Esc" { SwitchToMode "Normal"; }
     bind "n" "Tab" { MovePane; }
     bind "p" { MovePaneBackwards; }
-    bind "h" "Left" { MovePane "Left"; SwitchToMode "Normal";}
-    bind "j" "Down" { MovePane "Down"; SwitchToMode "Normal";}
-    bind "k" "Up" { MovePane "Up"; SwitchToMode "Normal";}
-    bind "l" "Right" { MovePane "Right"; SwitchToMode "Normal";}
+    bind "h" "Left" { MovePane "Left";}
+    bind "j" "Down" { MovePane "Down";}
+    bind "k" "Up" { MovePane "Up";}
+    bind "l" "Right" { MovePane "Right";}
   }
   tab {
     bind "Ctrl t" { SwitchToMode "Normal"; }
@@ -104,10 +129,6 @@ keybinds {
   tmux clear-defaults=true{
     bind "s" { SwitchToMode "Pane";NewPane "Down"; SwitchToMode "Normal";}
     bind "v" { SwitchToMode "Pane";NewPane "Right"; SwitchToMode "Normal";}
-    bind "h" { MoveFocus "Left"; SwitchToMode "Normal"; }
-    bind "l" { MoveFocus "Right"; SwitchToMode "Normal"; }
-    bind "j" { MoveFocus "Down"; SwitchToMode "Normal"; }
-    bind "k" { MoveFocus "Up"; SwitchToMode "Normal"; }
     bind "x" { CloseFocus; SwitchToMode "Normal"; }
     bind "d" { Detach; }
     bind "z" { ToggleFocusFullscreen; SwitchToMode "Normal"; }
@@ -124,20 +145,12 @@ keybinds {
           floating true; move_to_focused_tab true;
       }
     }
-    bind "1" {GoToTab 1; SwitchToMode "Normal";}
-    bind "2" {GoToTab 2; SwitchToMode "Normal";}
-    bind "3" {GoToTab 3; SwitchToMode "Normal";}
-    bind "4" {GoToTab 4; SwitchToMode "Normal";}
-    bind "5" {GoToTab 5; SwitchToMode "Normal";}
-    bind "6" {GoToTab 6; SwitchToMode "Normal";}
-    bind "7" {GoToTab 7; SwitchToMode "Normal";}
-    bind "8" {GoToTab 8; SwitchToMode "Normal";}
-    bind "9" {GoToTab 9; SwitchToMode "Normal";}
-    bind "m" {SwitchToMode "Move";}
-    bind "g" { SwitchToMode "Locked"; }
+    bind "M" {SwitchToMode "Move";}
+    bind "R" {SwitchToMode "Resize";}
+    bind "G" { SwitchToMode "Locked"; }
     bind "e" { SwitchToMode "Scroll"; EditScrollback; SwitchToMode "Normal";}
-    bind "p" { SwitchToMode "Pane"; }
-    bind "t" { SwitchToMode "Tab"; }
+    bind "P" { SwitchToMode "Pane"; }
+    bind "T" { SwitchToMode "Tab"; }
   }
   shared_except "locked" {
     bind "Ctrl g" { SwitchToMode "Locked"; }

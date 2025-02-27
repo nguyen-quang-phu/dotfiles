@@ -3,6 +3,7 @@ return {
   opts = {
     dashboard = { enabled = true },
     input = { enabled = true },
-    explorer = { enabled = true }
+    explorer = { enabled = true },
+    image = { enabled = true }
   },
 }

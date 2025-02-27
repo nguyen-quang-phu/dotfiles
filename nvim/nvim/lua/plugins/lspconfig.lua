@@ -49,6 +49,8 @@ return {
         emmet_language_server = {},
         sqls = {},
         css_variables = {},
+        buf_ls = {},
+        protols = {},
         cssls = {
           settings = {
             css = {
@@ -93,11 +95,26 @@ return {
         gopls = {
           settings = {
             gopls = {
-              completeUnimported = true,
-              usePlaceholders = true,
               analyses = {
-                unusedvariable = true,
+                ST1003 = true,
+                fieldalignment = false,
+                fillreturns = true,
+                nilness = true,
+                nonewvars = true,
+                shadow = true,
+                undeclaredname = true,
+                unreachable = true,
+                unusedparams = true,
+                unusedwrite = true,
                 useany = true,
+              },
+              codelenses = {
+                generate = true, -- show the `go generate` lens.
+                regenerate_cgo = true,
+                test = true,
+                tidy = true,
+                upgrade_dependency = true,
+                vendor = true,
               },
               hints = {
                 assignVariableTypes = true,
@@ -108,6 +125,15 @@ return {
                 parameterNames = true,
                 rangeVariableTypes = true,
               },
+              buildFlags = { "-tags", "integration" },
+              completeUnimported = true,
+              diagnosticsDelay = "500ms",
+              gofumpt = true,
+              matcher = "Fuzzy",
+              semanticTokens = true,
+              staticcheck = true,
+              symbolMatcher = "fuzzy",
+              usePlaceholders = true,
             },
           },
         },
