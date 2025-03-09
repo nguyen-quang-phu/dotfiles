@@ -14,9 +14,13 @@ return {
     linters_by_ft = {
       nix = { "statix", "deadnix" },
       lua = { "luacheck" },
+      markdown = { "markdownlint-cli2" },
       ruby = { "rubocop", "reek" },
+      go = {"golangcilint"},
+      proto={"buf-lint"},
       eruby = { "erb_lint" },
       slim = { "slimlint" },
+      dockerfile = { "hadolint" },
       -- javascript = { "eslint" },
       -- javascriptreact = { "eslint" },
       -- typescript = { "eslint" },

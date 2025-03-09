@@ -299,7 +299,26 @@ return {
         nil_ls = {
           mason = false,
         },
+        angularls = {
+          mason = false,
+        },
+        volar = {
+          mason = false,
+        },
+        svelte = {
+          mason = false,
+        },
         kulala_ls = {},
+        docker_compose_language_service = {
+          mason = true,
+        },
+        dockerls = {
+          mason = true,
+        },
+        graphql = {
+          mason = true,
+          cmd = { "npx", "graphql-language-service-cli", "server", "-m", "stream" }
+        },
         -- ctags_lsp = {},
         typos_lsp = {
           mason = true,

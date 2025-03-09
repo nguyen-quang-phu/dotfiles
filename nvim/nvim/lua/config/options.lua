@@ -17,6 +17,11 @@ vim.filetype.add({
     yml = "yaml",
   },
 })
+vim.filetype.add({
+  extension = {
+    ["docker-compose.yaml"] = "yaml.docker-compose",
+  },
+})
 vim.g.lazyvim_ruby_lsp = "solargraph"
 vim.g.lazyvim_ruby_formatter = "rubocop"
 

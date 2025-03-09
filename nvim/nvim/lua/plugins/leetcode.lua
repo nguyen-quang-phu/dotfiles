@@ -15,6 +15,16 @@ return {
   opts = {
     lang = "golang",
     picker = { provider = "telescope" },
+    ---@type lc.storage
+    storage = {
+      home ="/home/keynold/.config/nvim/leetcode"
+    },
     -- configuration goes here
+    injector = { ---@type table<lc.lang, lc.inject>
+      ["golang"] = {
+        before = "package leetcode",
+        after="// Keynold"
+      },
+    }
   },
 }
