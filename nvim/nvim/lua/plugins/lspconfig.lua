@@ -45,6 +45,7 @@ return {
           },
         },
         cssmodules_ls = {},
+        textlsp = {},
         golangci_lint_ls = {},
         emmet_language_server = {},
         sqls = {},
