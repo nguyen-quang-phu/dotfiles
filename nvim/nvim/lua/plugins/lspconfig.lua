@@ -29,56 +29,32 @@ return {
           end,
         },
       },
-      ---@type lspconfig.options
       servers = {
-        ---@type lspconfig.options.lua_ls
-        lua_ls = {
-          settings = {
-            Lua = {
-              hint = {
-                enable = true,
-                paramName = "All",
-                paramType = true,
-                setType = true,
-              },
-            },
-          },
-        },
-        cssmodules_ls = {},
-        textlsp = {},
+        lua_ls = require("lsp.lua_ls"),
+        cssmodules_ls = require("lsp.cssmodules_ls"),
+        textlsp = require('lsp.textlsp'),
         golangci_lint_ls = {},
         emmet_language_server = {},
         sqls = {},
         css_variables = {},
-        buf_ls = {},
-        protols = {},
-        cssls = {
-          settings = {
-            css = {
-              validate = true,
-              lint = {
-                unknownAtRules = "ignore",
-              }
-            },
-            scss = {
-              validate = true,
-              lint = {
-                unknownAtRules = "ignore",
-              }
-            },
-            less = {
-              validate = true,
-              lint = {
-                unknownAtRules = "ignore",
-              }
-            },
-          },
+        bashls = {
+          mason = false,
         },
+        buf_ls = {},
+        pyright = {
+          mason = false,
+        },
+        protols = {},
+        cssls = require("lsp.cssls"),
         phpactor = {},
         markdown_oxide = {},
+        jsonls = {
+          mason = false,
+        },
         marksman = { enabled = false },
         texlab = {},
         volar = {
+          mason = false,
           settings = {
             volar = {
               filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue", "json" },
@@ -92,180 +68,13 @@ return {
             stimulus_ls = {},
           },
         },
-        ---@type lspconfig.options.gopls
-        gopls = {
-          settings = {
-            gopls = {
-              analyses = {
-                ST1003 = true,
-                fieldalignment = false,
-                fillreturns = true,
-                nilness = true,
-                nonewvars = true,
-                shadow = true,
-                undeclaredname = true,
-                unreachable = true,
-                unusedparams = true,
-                unusedwrite = true,
-                useany = true,
-              },
-              codelenses = {
-                generate = true, -- show the `go generate` lens.
-                regenerate_cgo = true,
-                test = true,
-                tidy = true,
-                upgrade_dependency = true,
-                vendor = true,
-              },
-              hints = {
-                assignVariableTypes = true,
-                compositeLiteralFields = true,
-                compositeLiteralTypes = true,
-                constantValues = true,
-                functionTypeParameters = true,
-                parameterNames = true,
-                rangeVariableTypes = true,
-              },
-              buildFlags = { "-tags", "integration" },
-              completeUnimported = true,
-              diagnosticsDelay = "500ms",
-              gofumpt = true,
-              matcher = "Fuzzy",
-              semanticTokens = true,
-              staticcheck = true,
-              symbolMatcher = "fuzzy",
-              usePlaceholders = true,
-            },
-          },
-        },
-        -- ---@type lspconfig.options.tsserver
-        -- tsserver = {
-        --   settings = {
-        --     tsserver = {
-        --       completions = {
-        --         completeFunctionCalls = true,
-        --       },
-        --     },
-        --     typescript = {
-        --       inlayHints = {
-        --         includeCompletionsWithInsertText = true,
-        --         includeInlayParameterNameHints = "all",
-        --         includeInlayParameterNameHintsWhenArgumentMatchesName = false,
-        --         includeInlayFunctionParameterTypeHints = true,
-        --         includeInlayVariableTypeHints = true,
-        --         includeInlayPropertyDeclarationTypeHints = true,
-        --         includeInlayFunctionLikeReturnTypeHints = true,
-        --         includeInlayEnumMemberValueHints = true,
-        --       },
-        --     },
-        --     javascript = {
-        --       suggest = {
-        --         autoImports = true,
-        --         completeFunctionCalls = true,
-        --         includeAutomaticOptionalChainCompletions=true
-        --       },
-        --       experimental = {
-        --         updateImportsOnPaste = true,
-        --       },
-        --       format = {
-        --         semicolons = "insert",
-        --       },
-        --       inlayHints = {
-        --         includeCompletionsWithInsertText = true,
-        --         includeInlayParameterNameHints = "all",
-        --         includeInlayParameterNameHintsWhenArgumentMatchesName = false,
-        --         includeInlayFunctionParameterTypeHints = true,
-        --         includeInlayVariableTypeHints = true,
-        --         includeInlayPropertyDeclarationTypeHints = true,
-        --         includeInlayFunctionLikeReturnTypeHints = true,
-        --         includeInlayEnumMemberValueHints = true,
-        --         enumMemberValues = {
-        --           enabled = true,
-        --         },
-        --         functionLikeReturnTypes = {
-        --           enabled = true,
-        --         },
-        --         parameterNames = {
-        --           enabled = "all",
-        --           suppressWhenArgumentMatchesName = "all",
-        --         },
-        --         parameterTypes = {
-        --           enabled = true,
-        --         },
-        --         propertyDeclarationTypes = {
-        --           enabled = true,
-        --         },
-        --         variableTypes = {
-        --           enabled = true,
-        --           suppressWhenTypeMatchesName = "all",
-        --         },
-        --       },
-        --       referencesCodeLens = {
-        --         enabled = true,
-        --         showOnAllFunctions = true,
-        --       },
-        --     },
-        --   },
-        -- },
-        ---@type lspconfig.options.vtsls
-        vtsls = {
-          settings = {
-            inlayHints = {
-              variableTypes = { enabled = true },
-              parameterNames = { enabled = "all" },
-            },
-          },
-        },
-        ---@type lspconfig.options.tailwindcss
-        tailwindcss = {
-          settings = {
-            tailwindCSS = {
-              classAttributes = { ":class", "class", "className" },
-              experimental = {
-                classRegex = {
-                  { "cva\\(([^)]*)\\)",                                      "[\"'`]([^\"'`]*).*?[\"'`]" },
-                  { "cx\\(([^)]*)\\)",                                       "(?:'|\"|`)([^']*)(?:'|\"|`)" },
-                  { "clsx\\(([^)]*)\\)",                                     "(?:'|\"|`)([^']*)(?:'|\"|`)" },
-                  { "(?:enter|leave)(?:From|To)?=\\s*(?:\"|')([^(?:\"|')]*)" },
-                  { "cn\\(([^)]*)\\)",                                       "'([^']*)'" },
-                  { ":class?=\\s*(?:\"|'|{`)([^(?:\"|'|`})]*)" },
-                },
-              },
-            },
-          },
-        },
-        ---@type lspconfig.options.eslint
-        eslint = {
-          mason = true,
-          -- root_dir = require("lspconfig.util").root_pattern("package.json"),
-          settings = {
-            eslint = {
-              workingDirectory = { mode = "auto" },
-            },
-          },
-        },
-        -- ---@type lspconfig.options.ruby_lsp
-        -- ruby_lsp = {
-        --   mason = false,
-        --   settings = {
-        --     rubyLsp = {
-        --       featuresConfiguration = {
-        --         inlayHint = {
-        --           enableAll = true,
-        --         },
-        --       },
-        --     },
-        --   },
-        -- },
-        ---@type lspconfig.options.solargraph
-        solargraph = {
+        gopls = require("lsp.gopls"),
+        vtsls = require("lsp.vtsls"),
+        tailwindcss = require("lsp.tailwindcss"),
+        eslint = require("lsp.eslint"),
+        solargraph = require("lsp.solargraph"),
+        ansiblels = {
           mason = false,
-          settings = {
-            solargraph = {
-              diagnostics = false,
-              useBundler = true,
-            },
-          },
         },
         ruby_lsp = {
           mason = false,
@@ -274,26 +83,7 @@ return {
           enabled = false,
           mason = false,
         },
-        yamlls = {
-          mason = false,
-          settings = {
-            yaml = {
-              schemaStore = {
-                enable = true,
-              },
-              schemas = {
-                kubernetes = "k8s-*.yaml",
-                ["http://json.schemastore.org/github-workflow"] = ".github/workflows/*",
-                ["http://json.schemastore.org/github-action"] = ".github/action.{yml,yaml}",
-                ["http://json.schemastore.org/ansible-stable-2.9"] = "roles/tasks/**/*.{yml,yaml}",
-                ["http://json.schemastore.org/prettierrc"] = ".prettierrc.{yml,yaml}",
-                ["http://json.schemastore.org/kustomization"] = "kustomization.{yml,yaml}",
-                ["http://json.schemastore.org/chart"] = "Chart.{yml,yaml}",
-                ["http://json.schemastore.org/circleciconfig"] = ".circleci/**/*.{yml,yaml}",
-              },
-            },
-          },
-        },
+        yamlls = require("lsp.yamlls"),
         nixd = {
           mason = false,
         },
@@ -301,9 +91,6 @@ return {
           mason = false,
         },
         angularls = {
-          mason = false,
-        },
-        volar = {
           mason = false,
         },
         svelte = {
@@ -318,33 +105,14 @@ return {
         },
         graphql = {
           mason = true,
-          cmd = { "npx", "graphql-language-service-cli", "server", "-m", "stream" }
+          cmd = { "npx", "graphql-language-service-cli", "server", "-m", "stream" },
         },
         -- ctags_lsp = {},
         typos_lsp = {
           mason = true,
         },
-        ---@type lspconfig.options.standardrb
-        -- standardrb = {
-        --   mason = false,
-        -- },
       },
     },
-    -- config = function()
-    --   require("lspconfig").efm.setup({
-    --     init_options = { documentFormatting = true },
-    --     filetypes = { "lua" },
-    --     settings = {
-    --       rootMarkers = { ".git/" },
-    --       languages = {
-    --         lua = {
-    --           require("efmls-configs.linters.luacheck"),
-    --           require("efmls-configs.formatters.stylua"),
-    --         },
-    --       },
-    --     },
-    --   })
-    -- end, }
   },
   -- lazy.nvim
 }
