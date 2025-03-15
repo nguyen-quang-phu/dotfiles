@@ -28,3 +28,4 @@ vim.g.lazyvim_ruby_formatter = "rubocop"
 -- latex
 vim.g.vimtex_view_method = "zathura"
 vim.g.maplocalleader = ","
+vim.g.lazyvim_blink_main = true

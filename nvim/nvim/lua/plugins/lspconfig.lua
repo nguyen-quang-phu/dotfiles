@@ -32,10 +32,13 @@ return {
       servers = {
         lua_ls = require("lsp.lua_ls"),
         cssmodules_ls = require("lsp.cssmodules_ls"),
-        textlsp = require('lsp.textlsp'),
+        textlsp = require("lsp.textlsp"),
         golangci_lint_ls = {},
         emmet_language_server = {},
         sqls = {},
+        harper_ls = {
+          mason = false,
+        },
         css_variables = {},
         bashls = {
           mason = false,
