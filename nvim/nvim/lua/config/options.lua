@@ -11,6 +11,7 @@ vim.opt.swapfile = false
 vim.opt.eof = true
 vim.opt.eol = true
 vim.opt.wrap = true
+vim.opt.spelllang = {}
 
 vim.filetype.add({
   extension = {

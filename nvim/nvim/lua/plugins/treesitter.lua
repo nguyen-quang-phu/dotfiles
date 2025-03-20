@@ -5,6 +5,7 @@ return {
     ensure_installed = { "kdl", "markdown", "markdown_inline" },
     highlight = {
       enable = true,
+      disable = { "latex"},
     },
     endwise = { enable = true },
     autotag = {

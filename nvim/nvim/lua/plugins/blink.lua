@@ -44,6 +44,9 @@ return {
           lsp = {
             score_offset = 150,
           },
+          path = {
+            score_offset = 150,
+          },
         },
       },
       -- enable completion sources
