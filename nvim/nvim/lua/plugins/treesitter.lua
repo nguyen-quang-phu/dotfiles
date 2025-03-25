@@ -2,10 +2,10 @@ return {
   "nvim-treesitter/nvim-treesitter",
   dependencies = { "RRethy/nvim-treesitter-endwise" },
   opts = {
-    ensure_installed = { "kdl", "markdown", "markdown_inline" },
+    ensure_installed = { "kdl", "markdown", "markdown_inline", "dap_repl" },
     highlight = {
       enable = true,
-      disable = { "latex"},
+      disable = { "latex" },
     },
     endwise = { enable = true },
     autotag = {

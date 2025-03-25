@@ -1,4 +1,5 @@
 return {
+  enabled = lsp == "solargraph",
   mason = false,
   settings = {
     solargraph = {

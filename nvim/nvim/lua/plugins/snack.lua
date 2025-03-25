@@ -11,6 +11,9 @@ return {
       enabled = true,
       math = {
         enabled = true, -- enable math expression rendering
+        latex = {
+          font_size = "small",
+        },
       },
       doc = {
         -- enable image viewer for documents

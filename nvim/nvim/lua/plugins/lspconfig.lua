@@ -79,8 +79,14 @@ return {
         ansiblels = {
           mason = false,
         },
+        omnisharp = {
+          mason = false,
+        },
         ruby_lsp = {
           mason = false,
+        },
+        jdtls = {
+          mason = true,
         },
         rubocop = {
           enabled = false,
