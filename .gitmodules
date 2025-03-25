@@ -1,6 +1,6 @@
 [submodule "nixos/nixos"]
 	path = nixos/nixos
-	url = git@github.com-nqp:nguyen-quang-phu/nixos.git
+	url = git@github.com-nqp:nguyen-quang-phu/nixos-hyprland.git
 [submodule "nvim/nvim/leetcode"]
 	path = nvim/nvim/leetcode
 	url = git@github.com-nqp:nguyen-quang-phu/leetcode.git
