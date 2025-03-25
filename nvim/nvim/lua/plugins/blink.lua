@@ -15,6 +15,12 @@ return {
     ---@module 'blink.cmp'
     ---@type blink.cmp.Config
     opts = {
+      fuzzy = {
+        implementation = "prefer_rust_with_warning",
+        prebuilt_binaries = {
+          download = true,
+        },
+      },
       signature = { enabled = true },
       keymap = { preset = "enter" },
       completion = {
