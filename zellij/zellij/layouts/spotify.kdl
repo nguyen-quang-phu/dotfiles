@@ -6,8 +6,16 @@ layout {
     }
   }
   tab name="Spotify" focus=true {
-    pane command="nvim" borderless=true {
-      args "-c" "lua Snacks.terminal.open('spotify_player',{win= {height = 0.99, width = 0.99}})"
+    pane split_direction="vertical" {
+      pane split_direction="horizontal" {
+        pane command="nvim" borderless=true {
+          args "-c" "lua Snacks.terminal.open('spotify_player',{win= {height = 0.99, width = 0.99}})"
+        }
+      }
+      pane split_direction="horizontal" {
+        pane name="Bluetooth" command="bluetui"
+        pane name="Volume" command="pulsemixer"
+      }
     }
   }
 }

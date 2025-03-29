@@ -6,7 +6,23 @@ return {
     words = { enabled = true },
     input = { enabled = true },
     explorer = { enabled = true },
-    scratch = { enabled = true },
+    scratch = {
+      enabled = true,
+      win = {
+        style = "scratch",
+        width = 100,
+        height = 30,
+        bo = { buftype = "", buflisted = false, bufhidden = "hide", swapfile = false },
+        minimal = false,
+        noautocmd = false,
+        -- position = "right",
+        zindex = 20,
+        wo = { winhighlight = "NormalFloat:Normal" },
+        border = "rounded",
+        title_pos = "center",
+        footer_pos = "center",
+      },
+    },
     image = {
       enabled = true,
       math = {

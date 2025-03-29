@@ -82,11 +82,14 @@ return {
         omnisharp = {
           mason = false,
         },
+        clangd = {
+          mason = false,
+        },
         ruby_lsp = {
           mason = false,
         },
         jdtls = {
-          mason = true,
+          mason = false,
         },
         rubocop = {
           enabled = false,
