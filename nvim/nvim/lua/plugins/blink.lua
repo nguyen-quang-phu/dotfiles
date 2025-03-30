@@ -49,8 +49,25 @@ return {
         },
       },
       sources = {
-        default = { "dictionary", "lsp", "path" },
+        default = {
+          "dictionary",
+          "lsp",
+          "path",
+          "lazydev",
+          "supermaven",
+          "codeium",
+          "minuet",
+        },
+        -- transform_items = function(_, items)
+        --   return vim.tbl_filter(function(item)
+        --     return item.kind ~= require("blink.cmp.types").CompletionItemKind.Snippet
+        --   end, items)
+        -- end,
         providers = {
+          snippets = {
+            enabled = false,
+            score_offset = 100,
+          },
           lsp = {
             score_offset = 150,
           },

@@ -33,7 +33,9 @@ return {
         lua_ls = require("lsp.lua_ls"),
         cssmodules_ls = require("lsp.cssmodules_ls"),
         textlsp = require("lsp.textlsp"),
-        golangci_lint_ls = {},
+        golangci_lint_ls = {
+          mason = false,
+        },
         emmet_language_server = {},
         sqls = {},
         harper_ls = {

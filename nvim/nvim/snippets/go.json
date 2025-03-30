@@ -6,7 +6,10 @@
       "\treturn nil",
       "}"
     ],
-    "prefix": ["declare_function","df"]
+    "prefix": [
+      "declare_function",
+      "df"
+    ]
   },
   "declare_loop": {
     "body": [
@@ -19,5 +22,5 @@
   "declare_variable": {
     "body": "var ${1:varName} ${2:varType} = ${3:initValue}",
     "prefix": "declare_variable"
-  },
+  }
 }
