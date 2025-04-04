@@ -1,4 +1,5 @@
 return {
+  mason = false,
   settings = {
     gopls = {
       analyses = {

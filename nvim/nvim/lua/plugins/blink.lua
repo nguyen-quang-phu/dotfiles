@@ -9,6 +9,7 @@ return {
         "Kaiser-Yang/blink-cmp-dictionary",
         dependencies = { "nvim-lua/plenary.nvim" },
       },
+      { "Kaiser-Yang/blink-cmp-avante" },
       -- ... Other dependencies
     },
     version = "v0.*",
@@ -57,6 +58,7 @@ return {
           "supermaven",
           "codeium",
           "minuet",
+          "avante",
         },
         -- transform_items = function(_, items)
         --   return vim.tbl_filter(function(item)
@@ -64,6 +66,13 @@ return {
         --   end, items)
         -- end,
         providers = {
+          avante = {
+            module = "blink-cmp-avante",
+            name = "Avante",
+            opts = {
+              -- options for blink-cmp-avante
+            },
+          },
           snippets = {
             enabled = false,
             score_offset = 100,
