@@ -1,4 +1,20 @@
 {
+  "declare struct": {
+    "body": [
+      "type ${1:StructName} struct {",
+      "",
+      "}"
+    ],
+    "prefix": "declare_struct"
+  },
+  "declare_for": {
+    "body": [
+      "\tfor i := 0; i < n; i++ {",
+      "    ",
+      "\t}"
+    ],
+    "prefix": "declare_for"
+  },
   "declare_function": {
     "body": [
       "func ${1:funcName}(${2:paramsName} ${3:paramsType}) ${4:returnType} {",
@@ -7,8 +23,31 @@
       "}"
     ],
     "prefix": [
+      "declare_full_function",
+      "dff"
+    ]
+  },
+  "declare_function + df": {
+    "body": [
+      "func ${1:functionName}() ${2:returnType} {",
+      "  $0",
+      "\treturn nil",
+      "}"
+    ],
+    "prefix": [
       "declare_function",
       "df"
+    ]
+  },
+  "declare_interface + fi": {
+    "body": [
+      "type I${1:InterfaceName} interface {",
+      "  $0",
+      "}"
+    ],
+    "prefix": [
+      "declare_interface",
+      "di"
     ]
   },
   "declare_loop": {

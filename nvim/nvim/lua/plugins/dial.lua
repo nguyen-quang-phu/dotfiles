@@ -111,6 +111,7 @@ return {
           json = "json",
           lua = "lua",
           ruby = "ruby",
+          go = "go",
           markdown = "markdown",
           python = "python",
           sass = "css",
@@ -151,6 +152,9 @@ return {
           json = {
             augend.integer.alias.decimal, -- nonnegative and negative decimal number
             augend.semver.alias.semver,   -- versioning (v1.1.2)
+          },
+          go = {
+            logical_alias
           },
           ruby = {
             logical_alias,

@@ -8,10 +8,13 @@ return {
         special = { reload = "require" },
       },
       workspace = {
+        checkThirdParty = false,
         library = {
+          vim.env.VIMRUNTIME .. "/lua",
           vim.fn.expand("$VIMRUNTIME/lua"),
           vim.fn.expand("$VIMRUNTIME/lua/vim/lsp"),
           vim.fn.stdpath("data") .. "/lazy/lazy.nvim/lua/lazy",
+          vim.fn.stdpath("config") .. "/lua",
         },
       },
       codeLens = {

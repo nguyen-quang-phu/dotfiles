@@ -20,6 +20,7 @@ return {
     },
     formatters_by_ft = {
       json = { "jq" },
+      sql = { "sqlfluff" },
       nix = { "alejandra" },
       proto = { "clang-format" },
       go = { "gofumpt", "goimports-reviser", "golines" },

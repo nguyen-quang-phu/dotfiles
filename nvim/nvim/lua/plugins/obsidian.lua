@@ -1,7 +1,8 @@
 return {
-  "epwalsh/obsidian.nvim",
+  "obsidian-nvim/obsidian.nvim",
   version = "*", -- recommended, use latest release instead of latest commit
   lazy = false,
+  enabled = true,
   -- ft = "markdown",
   -- Replace the above line with this if you only want to load obsidian.nvim for markdown files in your vault:
   -- event = {
@@ -13,11 +14,15 @@ return {
   dependencies = {
     -- Required.
     "nvim-lua/plenary.nvim",
-    "nvim-telescope/telescope.nvim"
+    "nvim-telescope/telescope.nvim",
 
     -- see below for full list of optional dependencies 👇
   },
   opts = {
+    completion = {
+      nvim_cmp = false,
+      blink = true,
+    },
     templates = {
       subdir = "Templates",
       date_format = "%Y-%m-%d",
@@ -46,12 +51,12 @@ return {
       -- Optional, default tags to add to each new daily note created.
       default_tags = { "daily-notes" },
       -- Optional, if you want to automatically insert a template from your template directory like 'daily.md'
-      template = "Templates/00. Daily Notes/Daily.md"
+      template = "Templates/00. Daily Notes/Daily.md",
     },
 
     picker = {
       -- Set your preferred picker. Can be one of 'telescope.nvim', 'fzf-lua', or 'mini.pick'.
-      name = "telescope.nvim",
+      name = "snacks.pick",
       -- Optional, configure key mappings for the picker. These are the defaults.
       -- Not all pickers support all mappings.
       note_mappings = {
