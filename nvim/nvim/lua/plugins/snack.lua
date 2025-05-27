@@ -9,9 +9,9 @@ return {
         files = {
           hidden = true,
           ignored = true,
-          -- exclude = {
-          -- "**/.git/*",
-          --},
+          exclude = {
+          "**/node_modules/*",
+          },
         },
       },
     },
