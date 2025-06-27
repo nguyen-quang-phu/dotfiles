@@ -2,13 +2,7 @@ local utils = require("new-file-template.utils")
 
 local function base_template(relative_path, filename)
   return [[
-import? 'remote.just'
-
-default:
-  just --list
-
-fetch:
-  curl https://raw.githubusercontent.com/nguyen-quang-phu/just-templates/refs/heads/master/lumin-static/dev/remote.just > remote.just
+test test
   ]]
 end
 
@@ -19,7 +13,7 @@ end
 ---   - `filename` (string): The filename of the new file, e.g., "init.lua".
 return function(opts)
   local template = {
-    { pattern = ".*", content = base_template },
+    { pattern = "templates/.*", content = base_template },
   }
 
 	return utils.find_entry(template, opts)

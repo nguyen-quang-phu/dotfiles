@@ -3,15 +3,25 @@ return {
   ---@type snacks.Config
   opts = {
     picker = {
+      exclude = {
+        ".git",
+        "node_modules",
+        ".cache",
+        "dist",
+        ".next"
+      },
+
+      grep = {},
       hidden = true,
       ignored = true,
       sources = {
         files = {
           hidden = true,
           ignored = true,
-          exclude = {
-          "**/node_modules/*",
-          },
+          -- exclude = {
+          --   "**/node_modules/*",
+          --   ".cache/*",
+          -- },
         },
       },
     },

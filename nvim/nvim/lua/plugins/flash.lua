@@ -5,8 +5,13 @@ return {
   opts = {
     modes = {
       char = {
-        jump_labels = true,
+        jump_labels = false,
+        multi_line = false,
+        -- autohide = true,
       },
+      jump={
+        autojump = true,
+      }
     },
   },
   keys = {
@@ -14,7 +19,7 @@ return {
       "s",
       mode = { "n", "x", "o" },
       function()
-        return false
+  return false
       end,
       desc = "Flash",
     },
@@ -22,7 +27,7 @@ return {
       "S",
       mode = { "n", "x", "o" },
       function()
-        return false
+  return false
       end,
       desc = "Flash",
     },
@@ -30,7 +35,7 @@ return {
       "s",
       mode = { "n" },
       function()
-        require("flash").jump()
+  require("flash").jump()
       end,
       desc = "Flash",
     },
@@ -38,7 +43,7 @@ return {
       "S",
       mode = { "n" },
       function()
-        require("flash").treesitter()
+  require("flash").treesitter()
       end,
       desc = "Flash Treesitter",
     },
@@ -46,7 +51,7 @@ return {
       "gr",
       mode = "o",
       function()
-        require("flash").remote()
+  require("flash").remote()
       end,
       desc = "Remote Flash",
     },
@@ -54,7 +59,7 @@ return {
       "gR",
       mode = { "o", "x" },
       function()
-        require("flash").treesitter_search()
+  require("flash").treesitter_search()
       end,
       desc = "Treesitter Search",
     },

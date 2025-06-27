@@ -2,16 +2,23 @@ return {
   "stevearc/conform.nvim",
   enabled = true,
   keys = {
-    -- { "<leader>cf", false },
-    -- {
-    --   -- Customize or remove this keymap to your liking
-    --   "<leader>lf",
-    --   function()
-    --     require("conform").format({ async = true, lsp_fallback = true })
-    --   end,
-    --   mode = "",
-    --   desc = "Format buffer with comform.nvim",
-    -- },
+    { "<leader>cf", false },
+    {
+      -- Customize or remove this keymap to your liking
+      "<leader>cf",
+      function()
+        require("conform").format({ async = true, lsp_fallback = true }, function(err)
+          if not err then
+            local mode = vim.api.nvim_get_mode().mode
+            if vim.startswith(string.lower(mode), "v") then
+              vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<Esc>", true, false, true), "n", true)
+            end
+          end
+        end)
+      end,
+      mode = "v",
+      desc = "Format buffer with comform.nvim",
+    },
   },
   opts = {
     log_level = vim.log.levels.DEBUG,
@@ -27,10 +34,10 @@ return {
       ruby = { "rubocop" },
       slim = { "rubocop" },
       eruby = { "erb_lint", "erb_formatter" },
-      javascript = { "eslint_d", "prettier" },
-      javascriptreact = { "eslint_d", "prettier" },
-      typescript = { "eslint_d", "prettier" },
-      typescriptreact = { "eslint_d", "prettier" },
+      javascript = { "eslint_d"},
+      javascriptreact = { "eslint_d" },
+      typescript = { "eslint_d"},
+      typescriptreact = { "eslint_d"},
       vue = { "eslint_d", "prettier" },
     },
     formatters = {

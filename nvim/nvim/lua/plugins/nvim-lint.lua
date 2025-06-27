@@ -21,6 +21,7 @@ return {
       eruby = { "erb_lint" },
       slim = { "slimlint" },
       dockerfile = { "hadolint" },
+      -- scss = { "stylelint" },
       -- javascript = { "eslint" },
       -- javascriptreact = { "eslint" },
       -- typescript = { "eslint" },

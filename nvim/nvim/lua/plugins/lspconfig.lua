@@ -55,6 +55,14 @@ return {
         markdown_oxide = {},
         jsonls = {
           mason = false,
+          settings = {
+            json = {
+              format = {
+                enable = false,
+              },
+              validate = { enable = true },
+            },
+          },
         },
         marksman = { enabled = false },
         texlab = {},
@@ -81,6 +89,7 @@ return {
         ansiblels = {
           mason = false,
         },
+        stylelint_lsp={},
         omnisharp = {
           mason = false,
         },

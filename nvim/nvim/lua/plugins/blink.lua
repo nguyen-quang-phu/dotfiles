@@ -75,13 +75,13 @@ return {
           },
           snippets = {
             enabled = false,
-            score_offset = 100,
+            -- score_offset = 100,
           },
           lsp = {
-            score_offset = 150,
+            -- score_offset = 150,
           },
           path = {
-            score_offset = 150,
+            -- score_offset = 150,
           },
           dictionary = {
             module = "blink-cmp-dictionary",

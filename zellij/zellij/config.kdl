@@ -14,6 +14,11 @@ keybinds clear-defaults=true {
         bind "Alt 7" { GoToTab 7; SwitchToMode "locked"; }
         bind "Alt 8" { GoToTab 8; SwitchToMode "locked"; }
         bind "Alt 9" { GoToTab 9; SwitchToMode "locked"; }
+        bind "Alt h" { MoveFocusOrTab "left"; }
+        bind "Alt j" { MoveFocus "down"; }
+        bind "Alt k" { MoveFocus "up"; }
+        bind "Alt l" { MoveFocusOrTab "right"; }
+        bind "Alt f" { ToggleFocusFullscreen; SwitchToMode "locked"; }
     }
     pane {
         bind "left" { MoveFocus "left"; }
@@ -403,9 +408,8 @@ pane_frames true
 //
 // copy_command "xclip -selection clipboard" // x11
 // copy_command "wl-copy"                    // wayland
-// copy_command "pbcopy"                     // osx
+copy_command "pbcopy"                     // osx
 //
-copy_command "xclip -selection clipboard"
 
 // Choose the destination for copied text
 // Allows using the primary selection buffer (on x11/wayland) instead of the system clipboard.
@@ -419,7 +423,7 @@ copy_command "xclip -selection clipboard"
 // Enable automatic copying (and clearing) of selection when releasing mouse
 // Default: true
 //
-// copy_on_select true
+copy_on_select true
 
 // Path to the default editor to use to edit pane scrollbuffer
 // Default: $EDITOR or $VISUAL
