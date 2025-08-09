@@ -23,11 +23,11 @@ return {
       nvim_cmp = false,
       blink = true,
     },
-    templates = {
-      subdir = "Templates",
-      date_format = "%Y-%m-%d",
-      time_format = "%H:%M",
-    },
+    -- templates = {
+    --   subdir = "Templates",
+    --   date_format = "%Y-%m-%d",
+    --   time_format = "%H:%M",
+    -- },
 
     ui = { enable = false },
     workspaces = {

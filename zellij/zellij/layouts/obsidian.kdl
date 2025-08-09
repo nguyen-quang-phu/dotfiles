@@ -6,13 +6,10 @@ layout {
     }
   }
 
-  cwd "/home/keynold/vaults/personal"
-  tab name="Code" focus=true {
-    pane split_direction="vertical" {
-      pane command="nvim" borderless=true{
-        args "temp.md"
-      }
-      pane focus=true name="Terminal"
-      }
+  cwd "~/Code/obsidian"
+  tab name="Obsidian" focus=true {
+    pane command="nvim" borderless=true {
+      args "."
+    }
   }
 }

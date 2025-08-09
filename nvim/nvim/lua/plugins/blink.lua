@@ -12,22 +12,10 @@ return {
       { "Kaiser-Yang/blink-cmp-avante" },
       -- ... Other dependencies
     },
-    version = "v0.*",
     ---@module 'blink.cmp'
     ---@type blink.cmp.Config
     opts = {
-      fuzzy = {
-        implementation = "prefer_rust_with_warning",
-        prebuilt_binaries = {
-          download = true,
-        },
-      },
-      signature = { enabled = true },
-      keymap = { preset = "enter" },
       completion = {
-        keyword = { range = "prefix" },
-        accept = { auto_brackets = { enabled = false } },
-        ghost_text = { enabled = false },
         list = { selection = { preselect = false, auto_insert = false } },
         menu = {
           auto_show = true,
@@ -50,22 +38,7 @@ return {
         },
       },
       sources = {
-        default = {
-          "dictionary",
-          "lsp",
-          "path",
-          "lazydev",
-          "supermaven",
-          "codeium",
-          "minuet",
-          "avante",
-        },
-        -- transform_items = function(_, items)
-        --   return vim.tbl_filter(function(item)
-        --     return item.kind ~= require("blink.cmp.types").CompletionItemKind.Snippet
-        --   end, items)
-        -- end,
-        providers = {
+        providers= {
           avante = {
             module = "blink-cmp-avante",
             name = "Avante",
@@ -73,30 +46,21 @@ return {
               -- options for blink-cmp-avante
             },
           },
-          snippets = {
-            enabled = false,
-            -- score_offset = 100,
-          },
-          lsp = {
-            -- score_offset = 150,
-          },
-          path = {
-            -- score_offset = 150,
-          },
-          dictionary = {
-            module = "blink-cmp-dictionary",
-            name = "Dict",
-            -- Make sure this is at least 2.
-            -- 3 is recommended
-            min_keyword_length = 3,
-            opts = {
-              -- options for blink-cmp-dictionary
-            },
-          },
         },
+        transform_items = function(_, items)
+          return vim.tbl_filter(function(item)
+            return item.kind ~= require("blink.cmp.types").CompletionItemKind.Snippet
+              and item.kind ~= require("blink.cmp.types").CompletionItemKind.Text
+          end, items)
+        end,
+        per_filetype = {
+          scss = {
+            inherit_defaults = false,
+            'lsp'
+          },
+        }
       },
-      -- enable completion sources
-      -- 'path' for file system paths
+
     },
     opts_extend = {
       "sources.completion.enabled_providers",

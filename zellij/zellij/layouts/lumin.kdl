@@ -20,7 +20,7 @@ layout {
     }
   }
 
-  tab name="2. lumin-templates" cwd="lumin-templates"{
+  tab name="2. lumin-templates" cwd="lumin-templates/dev"{
     pane split_direction="vertical" {
       pane command="nvim" size="65%"{
         args "package.json"
@@ -105,7 +105,19 @@ layout {
     }
   }
 
-  tab name="9. background services" {
+  tab name="9. lumin-agreement-gen-backend" cwd="lumin-agreement-gen-backend"{
+    pane split_direction="vertical"{
+      pane command="nvim" size="65%" {
+        args "package.json"
+      }
+      pane split_direction="horizontal" size="35%" {
+        pane name="Server"
+        pane focus=true name="Terminal"
+      }
+    }
+  }
+
+  tab name="10. background services" {
     pane split_direction="vertical"{
       pane split_direction="horizontal" size="50%" {
         pane name="Redis"

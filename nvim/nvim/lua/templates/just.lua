@@ -4,11 +4,13 @@ local function base_template(relative_path, filename)
   return [[
 import? 'remote.just'
 
+repo := "lumin-templates/dev"
+
 default:
   just --list
 
 fetch:
-  curl https://raw.githubusercontent.com/nguyen-quang-phu/just-templates/refs/heads/master/lumin-static/dev/remote.just > remote.just
+  curl https://raw.githubusercontent.com/nguyen-quang-phu/just-templates/refs/heads/master/{{repo}}/remote.just > remote.just
   ]]
 end
 

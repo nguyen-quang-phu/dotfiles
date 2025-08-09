@@ -14,10 +14,10 @@ return {
   -- cmd = "Leet",
   opts = {
     lang = "golang",
-    picker = { provider = "telescope" },
+    picker = { provider = "snacks-picker" },
     ---@type lc.storage
     storage = {
-      home ="/home/keynold/.config/nvim/leetcode"
+      home ="~/.config/nvim/leetcode"
     },
     -- configuration goes here
     injector = { ---@type table<lc.lang, lc.inject>

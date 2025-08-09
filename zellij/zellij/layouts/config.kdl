@@ -16,6 +16,9 @@ layout {
         pane name="Zellij" cwd="zellij" command="nvim" {
           args "config.kdl"
         }
+        pane name="espanso" command="espanso" {
+          args "edit" "lumin"
+        }
       }
       pane split_direction="horizontal" {
         pane name="Nixos" cwd="nix-darwin" command="nvim" {

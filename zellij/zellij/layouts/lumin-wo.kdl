@@ -1,0 +1,71 @@
+layout {
+  default_tab_template {
+    children
+    pane size=1 borderless=true {
+      plugin location="zellij:compact-bar"
+    }
+  }
+
+  cwd "~/Code/Lumin"
+  tab name="1. lumin-static" cwd="lumin-static/dev"{
+    pane split_direction="vertical" {
+      pane command="nvim" size="65%"{
+        args "package.json"
+      }
+      pane split_direction="horizontal" size="35%" {
+        pane name="Server"
+        pane name="Slices machine"
+        pane focus=true name="Terminal"
+      }
+    }
+  }
+
+  tab name="2. lumin-templates" cwd="lumin-templates/dev"{
+    pane split_direction="vertical" {
+      pane command="nvim" size="65%"{
+        args "package.json"
+      }
+      pane split_direction="horizontal" size="35%" {
+        pane name="Server"
+        pane focus=true name="Terminal"
+      }
+    }
+  }
+
+  tab name="3. templates-strapi" cwd="templates-strapi"{
+    pane split_direction="vertical"{
+      pane command="nvim" size="65%" {
+        args "package.json"
+      }
+      pane split_direction="horizontal" size="35%" {
+        pane name="Server"
+        pane name="Meilisearch"
+        pane focus=true name="Terminal"
+      }
+    }
+  }
+
+  tab name="4. static-font-icomoon" cwd="static-font-icomoon"{
+    pane split_direction="vertical"{
+      pane command="nvim" size="65%" {
+        args "package.json"
+      }
+      pane split_direction="horizontal" size="35%" {
+        pane name="Server"
+        pane focus=true name="Terminal"
+      }
+    }
+  }
+
+  tab name="5. lumin-templates migrate" cwd="lumin-templates/migrate"{
+    pane split_direction="vertical" {
+      pane command="nvim" size="65%"{
+        args "package.json"
+      }
+      pane split_direction="horizontal" size="35%" {
+        pane name="Server"
+        pane focus=true name="Terminal"
+      }
+    }
+  }
+}

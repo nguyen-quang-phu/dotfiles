@@ -4,11 +4,12 @@ return {
   opts = {
     picker = {
       exclude = {
-        ".git",
+        -- ".git",
         "node_modules",
         ".cache",
         "dist",
-        ".next"
+        ".next",
+        "public"
       },
 
       grep = {},
@@ -18,17 +19,21 @@ return {
         files = {
           hidden = true,
           ignored = true,
-          -- exclude = {
-          --   "**/node_modules/*",
-          --   ".cache/*",
-          -- },
+          exclude = {
+            "node_modules",
+            ".cache/*",
+          },
         },
       },
     },
     dashboard = { enabled = true },
     words = { enabled = true },
     input = { enabled = true },
-    explorer = { enabled = true },
+    explorer = {
+      hidden = true,
+      ignored = true,
+      enabled = true,
+    },
     scratch = {
       enabled = true,
       win = {

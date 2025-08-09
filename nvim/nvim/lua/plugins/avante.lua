@@ -12,7 +12,12 @@ return {
         -- add any opts here
         -- for example
         provider = "copilot",
-        auto_suggestions_provider = "copilot",
+        providers = {
+          copilot = {
+            model = "claude-sonnet-4",
+          },
+        },
+        auto_suggestions_provider = "aihubmix",
         system_prompt = function()
           local hub = require("mcphub").get_hub_instance()
           return hub and hub:get_active_servers_prompt() or ""
@@ -51,7 +56,7 @@ return {
           support_paste_from_clipboard = false,
           minimize_diff = true, -- Whether to remove unchanged lines when applying a code block
           enable_token_counting = true, -- Whether to enable token counting. Default to true.
-          auto_approve_tool_permissions = false, -- Default: show permission prompts for all tools
+          auto_approve_tool_permissions = true, -- Default: show permission prompts for all tools
           -- Examples:
           -- auto_approve_tool_permissions = true,                -- Auto-approve all tools (no prompts)
           -- auto_approve_tool_permissions = {"bash", "replace_in_file"}, -- Auto-approve specific tools only
