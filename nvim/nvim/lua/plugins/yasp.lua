@@ -22,7 +22,7 @@ return {
       -- 💀 WARNING: the following must be provided by the user
       -- the paths to the package.json files, no default given, must be provided
       paths = {
-        vim.fn.stdpath("config") .. "/snippets/package.json",
+        "/Users/dev/dotfiles/nvim/nvim/snippets/package.json",
       },
       descs = { "keynold snippets" },
     },

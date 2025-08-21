@@ -1,0 +1,10 @@
+{
+  "@desktop": {
+    "body": [
+      "@include media-query-up(xl) {",
+      "",
+      "}"
+    ],
+    "prefix": "@desktop"
+  }
+}

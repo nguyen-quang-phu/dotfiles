@@ -30,6 +30,12 @@
           "go"
         ],
         "path": "./go.json"
+      },
+      {
+        "language": [
+          "scss"
+        ],
+        "path": "./scss.json"
       }
     ]
   },

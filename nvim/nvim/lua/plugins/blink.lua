@@ -38,7 +38,11 @@ return {
         },
       },
       sources = {
+        default = { 'lsp', 'path' },
         providers= {
+          snippets = {
+            enabled = false;
+          },
           avante = {
             module = "blink-cmp-avante",
             name = "Avante",
@@ -47,16 +51,16 @@ return {
             },
           },
         },
-        transform_items = function(_, items)
-          return vim.tbl_filter(function(item)
-            return item.kind ~= require("blink.cmp.types").CompletionItemKind.Snippet
-              and item.kind ~= require("blink.cmp.types").CompletionItemKind.Text
-          end, items)
-        end,
+        -- transform_items = function(_, items)
+        --   -- return vim.tbl_filter(function(item)
+        --   --   return item.kind ~= require("blink.cmp.types").CompletionItemKind.Snippet
+        --   --     and item.kind ~= require("blink.cmp.types").CompletionItemKind.Text
+        --   -- end, items)
+        -- end,
         per_filetype = {
           scss = {
             inherit_defaults = false,
-            'lsp'
+            'lsp',
           },
         }
       },

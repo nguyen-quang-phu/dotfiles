@@ -16,12 +16,12 @@ return {
     "nvim-tree/nvim-web-devicons",
   },
   keys = {
-    -- {
-    --   "<leader>la",
-    --   "<cmd>Lspsaga code_action<CR>",
-    --   mode = "n",
-    --   desc = "LSPSAGA: Code Action",
-    -- },
+    {
+      "<leader>ca",
+      "<cmd>Lspsaga code_action<CR>",
+      mode = "n",
+      desc = "LSPSAGA: Code Action",
+    },
     -- {
     --   "<leader>lr",
     --   "<cmd>Lspsaga rename<CR>",

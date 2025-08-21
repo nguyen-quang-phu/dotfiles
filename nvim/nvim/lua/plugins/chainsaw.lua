@@ -12,7 +12,7 @@ return {
   opts = {
     logStatements = {
       variableLog = {
-        javascript = 'console.log("{{marker}} ~ {{filename}}:{{lnum}} ~ {{var}}:", {{var}});',
+        javascript = "console.log('{{marker}} ~ {{filename}}:{{lnum}} ~ {{var}}:', {{var}});",
       },
       -- the same for the other log statement operations
     },

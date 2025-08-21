@@ -2,13 +2,14 @@ return {
   {
     {
       "yetone/avante.nvim",
+      enabled = false,
       -- if you want to build from source then do `make BUILD_FROM_SOURCE=true`
       build = "make",  -- ⚠️ must add this line! ! !
       -- build = "powershell -ExecutionPolicy Bypass -File Build.ps1 -BuildFromSource false" -- for windows
       event = "VeryLazy",
       version = false, -- Never set this value to "*"! Never!
       opts = {
-        mode = "legacy",
+        -- mode = "legacy",
         -- add any opts here
         -- for example
         provider = "copilot",

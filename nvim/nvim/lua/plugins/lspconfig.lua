@@ -17,6 +17,15 @@ return {
     "neovim/nvim-lspconfig",
     ---@class PluginLspOpts
     opts = {
+      capabilities = {
+        textDocument = {
+          completion = {
+            completionItem = {
+              snippetSupport = false,
+            },
+          },
+        },
+      },
       ---@type vim.diagnostic.Opts
       diagnostics = {
         virtual_text = {
