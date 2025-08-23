@@ -1,47 +1,25 @@
+---@type LazySpec
 return {
-  {
-    "gbprod/substitute.nvim",
-    lazy = false,
-    opts = {
-      on_substitute = require("yanky.integration").substitute(),
-    },
-    keys = {
-      {
-        "gr",
-        function()
-          require("substitute").operator()
-        end,
-        mode = "n",
-        silent = true,
-        remap = false,
-        desc = "SUBSTITUTE: operator",
-      },
-      {
-        "grr",
-        function()
-          require("substitute").line()
-        end,
-        mode = "n",
-        desc = "SUBSTITUTE: line",
-      },
-      {
-        "gr",
-        function()
-          require("substitute").visual()
-        end,
-        mode = "v",
-        desc = "SUBSTITUTE: visual",
-      },
-    },
-  },
-  -- {
-  --   "kylechui/nvim-surround",
-  --   version = "*", -- Use for stability; omit to use `main` branch for the latest features
-  --   event = "VeryLazy",
-  --   opts = {},
-  -- },
-  -- {
-  --   "michaeljsmith/vim-indent-object",
-  --   event = "VeryLazy",
-  -- },
+  "echasnovski/mini.operators",
+  keys = function(_, keys)
+    local plugin = require("lazy.core.config").spec.plugins["mini.operators"]
+    local opts = require("lazy.core.plugin").values(plugin, "opts", false)
+    for operator, default in pairs {
+      evaluate = "g=",
+      exchange = "gx",
+      multiply = "gm",
+      replace = "gr",
+      sort = "gs",
+    } do
+      local prefix = vim.tbl_get(opts, operator, "prefix") or default
+      local line_lhs = prefix .. vim.fn.strcharpart(prefix, vim.fn.strchars(prefix) - 1, 1)
+      local name = operator:sub(1, 1):upper() .. operator:sub(2)
+      vim.list_extend(keys, {
+        { line_lhs, desc = name .. " line" },
+        { prefix, desc = name .. " operator" },
+        { prefix, mode = "x", desc = name .. " selection" },
+      })
+    end
+  end,
+  opts = {},
 }
