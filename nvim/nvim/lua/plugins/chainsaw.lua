@@ -10,6 +10,7 @@ return {
     { "<leader>lv", "<cmd>lua require('chainsaw').variableLog()<CR>", desc = "Log Variable" },
   },
   opts = {
+    marker = "♌️ Keynold 🗝️",
     logStatements = {
       variableLog = {
         javascript = "console.log('{{marker}} ~ {{filename}}:{{lnum}} ~ {{var}}:', {{var}});",

@@ -1,10 +1,22 @@
 {
-  "@desktop": {
+  "declare_desktop": {
     "body": [
       "@include media-query-up(xl) {",
       "",
       "}"
     ],
-    "prefix": "@desktop"
+    "prefix": "declare_desktop"
+  },
+  "declare_font": {
+    "body": "@include koala-typography-headline-lg;",
+    "prefix": "declare_font"
+  },
+  "declare_tablet": {
+    "body": [
+      "  @include media-query-up(md) {",
+      "",
+      "  }"
+    ],
+    "prefix": "declare_tablet"
   }
 }

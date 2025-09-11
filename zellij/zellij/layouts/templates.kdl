@@ -1,0 +1,31 @@
+layout {
+  default_tab_template {
+    children
+    pane size=1 borderless=true {
+      plugin location="zellij:compact-bar"
+    }
+  }
+
+  cwd "~/Code/keynold"
+  tab name="1. copier-templates" cwd="copier-templates"{
+    pane split_direction="vertical" {
+      pane command="nvim" size="65%"{
+        args "."
+      }
+      pane split_direction="horizontal" size="35%" {
+        pane focus=true name="Terminal"
+      }
+    }
+  }
+
+  tab name="2. just-templates" cwd="just-templates"{
+    pane split_direction="vertical" {
+      pane command="nvim" size="65%"{
+        args "."
+      }
+      pane split_direction="horizontal" size="35%" {
+        pane focus=true name="Terminal"
+      }
+    }
+  }
+}

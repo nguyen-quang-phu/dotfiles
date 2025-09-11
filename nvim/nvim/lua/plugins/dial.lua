@@ -3,20 +3,22 @@ return {
     "monaqa/dial.nvim",
     lazy = false,
     -- stylua: ignore
-    -- keys = {
-    --   {
-    --     "ga",
-    --     function() return require("dial.map").manipulate("increment", "normal") end,
-    --     expr = true,
-    --     desc = "Increment",
-    --   },
-    --   {
-    --     "gx",
-    --     function() return require("dial.map").manipulate("decrement", "normal") end,
-    --     expr = true,
-    --     desc = "Decrement",
-    --     mode = {"n", "v"},
-    --   },
+    keys = {
+      {
+      "<M-C-S-D-S>a",
+        function() return require("dial.map").manipulate("increment", "normal") end,
+        expr = true,
+        desc = "Increment",
+        mode = {"n", "v"},
+      },
+      {
+        "<M-C-S-D-S>x",
+        function() return require("dial.map").manipulate("decrement", "normal") end,
+        expr = true,
+        desc = "Decrement",
+        mode = {"n", "v"},
+      },
+    },
     --   -- { "g<C-a>", function() return M.dial(true, true) end, expr = true, desc = "Increment", mode = {"n", "v"} },
     --   -- { "g<C-x>", function() return M.dial(false, true) end, expr = true, desc = "Decrement", mode = {"n", "v"} },
     -- },
