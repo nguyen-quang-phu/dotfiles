@@ -6,11 +6,11 @@ layout {
     }
   }
 
-  cwd "~/Code/leetcode"
-  tab name="Leetcode" focus=true {
+  cwd "/Users/dev/dotfiles"
+  tab name="Dotfiles" focus=true {
     pane split_direction="vertical" {
       pane command="nvim" borderless=true {
-        args "leetcode.nvim"
+        args ".stowrc"
       }
       pane split_direction="horizontal" size="35%" {
         pane focus=true name="Terminal"

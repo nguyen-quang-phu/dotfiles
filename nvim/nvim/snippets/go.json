@@ -50,6 +50,23 @@
       "di"
     ]
   },
+  "declare_is_vowel": {
+    "body": [
+      "func isVowel(b byte) bool {",
+      "\tconst VOWELS = \"AEIOUaeiou\"",
+      "\tconst MASK= 0b11111",
+      "\tconst VOWELMASK =",
+      "\t\t(1 << ('A' & MASK)) |",
+      "\t\t(1 << ('E' & MASK)) |",
+      "\t\t(1 << ('I' & MASK)) |",
+      "\t\t(1 << ('O' & MASK)) |",
+      "\t\t(1 << ('U' & MASK))",
+      "",
+      "\treturn (VOWELMASK>>(b&MASK))&1 > 0",
+      "}"
+    ],
+    "prefix": "declare_is_vowel"
+  },
   "declare_loop": {
     "body": [
       "for ${1: indexName} := ${2:initValue}; ${1} < ${3:condition}; ${1}++ {",
