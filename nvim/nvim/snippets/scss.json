@@ -8,7 +8,7 @@
     "prefix": "declare_desktop"
   },
   "declare_font": {
-    "body": "@include koala-typography-headline-lg;",
+    "body": "@include koala-typography-${1:paragraph}-${2:size};",
     "prefix": "declare_font"
   },
   "declare_tablet": {

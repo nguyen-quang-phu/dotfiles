@@ -39,6 +39,17 @@
       "df"
     ]
   },
+  "declare_gcd": {
+    "body": [
+      "func gcd(a, b int) int {",
+      "\tfor b != 0 {",
+      "\t\ta, b = b, a%b",
+      "\t}",
+      "\treturn a",
+      "}"
+    ],
+    "prefix": "declare_gcd"
+  },
   "declare_interface + fi": {
     "body": [
       "type I${1:InterfaceName} interface {",

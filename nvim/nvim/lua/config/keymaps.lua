@@ -11,7 +11,6 @@ vim.keymap.del("n", "gra")
 vim.api.nvim_set_keymap("t", "<ESC>", "<C-\\><C-n>", { noremap = true })
 
 local opts = { noremap = true, silent = true }
-vim.api.nvim_set_keymap("n", "<Leader>nf", ":lua require('neogen').generate()<CR>", opts)
 vim.api.nvim_set_keymap("n", "<Leader>gR", "<cmd>Telescope lsp_references<cr>", opts)
 vim.api.nvim_set_keymap("n", "<Leader>tv", "<cmd>Pantran source=en target=vi<cr>", opts)
 -- vim.keymap.set("n", "<Leader>e", function()
