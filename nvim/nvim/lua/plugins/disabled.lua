@@ -1,5 +1,5 @@
 return {
-  { "echasnovski/mini.comment",    enabled = false },
+  { "nvim-mini/mini.comment",    enabled = false },
   { "kylechui/nvim-surround",      enabled = true },
   { "nvim-neo-tree/neo-tree.nvim", enabled = false },
   -- {

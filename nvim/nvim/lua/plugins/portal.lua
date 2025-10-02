@@ -1,6 +1,7 @@
 return {
   "cbochs/portal.nvim",
   cmd = "Portal",
+  enable = false,
   lazy = false,
   opts = {},
   keys = {

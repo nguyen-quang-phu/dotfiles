@@ -1,6 +1,17 @@
-gui:
-  nerdFontsVersion: '3'
 os:
   editPreset: nvim-remote
 git:
   localBranchSortOrder: recency
+gui:
+  nerdFontsVersion: '3'
+  customIcons:
+    filenames:
+      "CONTRIBUTING.md": { icon: "\uede2", color: "#FEDDEF" }
+      "HACKING.md": { icon: "\uede2", color: "#FEDDEF" }
+    extensions:
+      ".cat":
+        icon: "\U000f011b"
+        color: "#BC4009"
+      ".dog":
+        icon: "\U000f0a43"
+        color: "#B6977E"

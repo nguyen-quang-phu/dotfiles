@@ -2,7 +2,7 @@
   "declare_desktop": {
     "body": [
       "@include media-query-up(xl) {",
-      "",
+      "  ${1}",
       "}"
     ],
     "prefix": "declare_desktop"
@@ -14,7 +14,7 @@
   "declare_tablet": {
     "body": [
       "  @include media-query-up(md) {",
-      "",
+      "    ${1}",
       "  }"
     ],
     "prefix": "declare_tablet"

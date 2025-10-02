@@ -78,6 +78,21 @@
     ],
     "prefix": "declare_is_vowel"
   },
+  "declare_lcm": {
+    "body": [
+      "func gcd(a, b int) int {",
+      "\tfor b != 0 {",
+      "\t\ta, b = b, a%b",
+      "\t}",
+      "\treturn a",
+      "}",
+      "",
+      "func lcm(a, b int) int {",
+      "\treturn a / gcd(a, b) * b",
+      "}"
+    ],
+    "prefix": "declare_lcm"
+  },
   "declare_loop": {
     "body": [
       "for ${1: indexName} := ${2:initValue}; ${1} < ${3:condition}; ${1}++ {",

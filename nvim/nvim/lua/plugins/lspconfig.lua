@@ -7,8 +7,9 @@ return {
       -- stylua: ignore
       vim.list_extend(Keys, {
         { "gr", false, desc = "References",            nowait = true },
+        -- { "gd", false, desc = "References",            nowait = true },
         { "gR", false, desc = "References",            nowait = true },
-        { "gI", false, desc = "Goto Implementation" },
+        -- { "gI", false, desc = "Goto Implementation" },
         { "gy", false, desc = "Goto T[y]pe Definition" },
       })
     end,
@@ -47,6 +48,7 @@ return {
         },
         emmet_language_server = {},
         sqls = {},
+        oxlint = {},
         harper_ls = {
           mason = false,
         },
@@ -58,7 +60,9 @@ return {
         pyright = {
           mason = false,
         },
-        protols = {},
+        protols = {
+          mason = false,
+        },
         cssls = require("lsp.cssls"),
         phpactor = {},
         markdown_oxide = {},
