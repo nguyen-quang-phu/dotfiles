@@ -40,113 +40,52 @@ return {
         },
       },
       servers = {
-        lua_ls = require("lsp.lua_ls"),
-        cssmodules_ls = require("lsp.cssmodules_ls"),
-        textlsp = require("lsp.textlsp"),
-        golangci_lint_ls = {
-          mason = false,
-        },
-        emmet_language_server = {},
-        sqls = {},
-        oxlint = {},
-        harper_ls = {
-          mason = false,
-        },
-        css_variables = {},
-        bashls = {
-          mason = false,
-        },
-        buf_ls = {},
-        pyright = {
-          mason = false,
-        },
-        protols = {
-          mason = false,
-        },
-        cssls = require("lsp.cssls"),
-        phpactor = {},
-        markdown_oxide = {},
-        jsonls = {
-          mason = false,
-          settings = {
-            json = {
-              format = {
-                enable = false,
-              },
-              validate = { enable = true },
-            },
-          },
-        },
-        marksman = { enabled = false },
-        texlab = {},
-        volar = {
-          mason = false,
-          settings = {
-            volar = {
-              filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue", "json" },
-            },
-          },
-        },
-        stimulus_ls = {
-          filetypes = { "html", "ruby", "eruby", "blade", "php", "slim" },
-
-          settings = {
-            stimulus_ls = {},
-          },
-        },
-        gopls = require("lsp.gopls"),
-        vtsls = require("lsp.vtsls"),
-        tailwindcss = require("lsp.tailwindcss"),
-        eslint = require("lsp.eslint"),
-        solargraph = require("lsp.solargraph"),
-        ansiblels = {
-          mason = false,
-        },
-        stylelint_lsp={},
-        omnisharp = {
-          mason = false,
-        },
-        clangd = {
-          mason = false,
-        },
-        ruby_lsp = {
-          mason = false,
-        },
-        jdtls = {
-          mason = false,
-        },
-        rubocop = {
-          enabled = false,
-          mason = false,
-        },
-        yamlls = require("lsp.yamlls"),
-        nixd = {
-          mason = false,
-        },
-        nil_ls = {
-          mason = false,
-        },
-        angularls = {
-          mason = false,
-        },
-        svelte = {
-          mason = false,
-        },
-        kulala_ls = {},
-        docker_compose_language_service = {
-          mason = true,
-        },
-        dockerls = {
-          mason = true,
-        },
-        graphql = {
-          mason = true,
-          cmd = { "npx", "graphql-language-service-cli", "server", "-m", "stream" },
-        },
         -- ctags_lsp = {},
-        typos_lsp = {
-          mason = true,
-        },
+        angularls = { mason = false, },
+        ansiblels = { mason = false, },
+        bashls = require("lsp.bashls"),
+        bufls = {},
+        clangd = { mason = false, },
+        css_variables = {},
+        cssls = require("lsp.cssls"),
+        cssmodules_ls = require("lsp.cssmodules_ls"),
+        docker_compose_language_service = { mason = true, },
+        dockerls = { mason = true, },
+        emmet_language_server = {},
+        eslint = require("lsp.eslint"),
+        golangci_lint_ls = require("lsp.golangci_lint_ls"),
+        gopls = require("lsp.gopls"),
+        graphql = require("lsp.graphql"),
+        harper_ls = require("lsp.harper_ls"),
+        jdtls = { mason = false, },
+        jsonls = require("lsp.jsonls"),
+        kulala_ls = {},
+        lua_ls = require("lsp.lua_ls"),
+        markdown_oxide = {},
+        marksman = { enabled = false },
+        nginx_language_server = {},
+        nil_ls = { mason = false, },
+        nixd = { mason = false, },
+        omnisharp = { mason = false, },
+        oxlint = {},
+        phpactor = {},
+        -- protols = { mason = false, },
+        pyright = { mason = false, },
+        quick_lint_js = {},
+        rubocop = { mason = false, },
+        ruby_lsp = { mason = false, },
+        solargraph = require("lsp.solargraph"),
+        sqls = {},
+        stimulus_ls= require("lsp.stimulus_ls"),
+        stylelint_lsp={},
+        svelte = { mason = false, },
+        tailwindcss = require("lsp.tailwindcss"),
+        texlab = {},
+        textlsp = require("lsp.textlsp"),
+        typos_lsp = { mason = true, },
+        volar = require("lsp.volar"),
+        vtsls = require("lsp.vtsls"),
+        yamlls = require("lsp.yamlls"),
       },
     },
   },

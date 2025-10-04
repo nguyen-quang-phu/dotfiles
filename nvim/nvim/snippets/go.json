@@ -101,6 +101,24 @@
     ],
     "prefix": "declare_loop"
   },
+  "declare_min_heap": {
+    "body": [
+      "type MinHeap []Cell",
+      "",
+      "func (h MinHeap) Len() int            { return len(h) }",
+      "func (h MinHeap) Less(i, j int) bool  { return h[i].h < h[j].h }",
+      "func (h MinHeap) Swap(i, j int)       { h[i], h[j] = h[j], h[i] }",
+      "func (h *MinHeap) Push(x interface{}) { *h = append(*h, x.(Cell)) }",
+      "func (h *MinHeap) Pop() interface{} {",
+      "\told := *h",
+      "\tn := len(old)",
+      "\tx := old[n-1]",
+      "\t*h = old[:n-1]",
+      "\treturn x",
+      "}"
+    ],
+    "prefix": "declare_min_heap"
+  },
   "declare_variable": {
     "body": "var ${1:varName} ${2:varType} = ${3:initValue}",
     "prefix": "declare_variable"

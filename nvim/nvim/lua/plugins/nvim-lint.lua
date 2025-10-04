@@ -17,7 +17,7 @@ return {
       markdown = { "markdownlint-cli2" },
       ruby = { "rubocop", "reek" },
       -- go = { "golangcilint" },
-      proto = { "buf-lint" },
+      -- proto = { "buf-lint" },
       eruby = { "erb_lint" },
       slim = { "slimlint" },
       dockerfile = { "hadolint" },

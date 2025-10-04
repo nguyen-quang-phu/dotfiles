@@ -9,7 +9,8 @@ return {
         ".cache",
         "dist",
         ".next",
-        "public"
+        "public",
+        "tmp"
       },
 
       grep = {},
