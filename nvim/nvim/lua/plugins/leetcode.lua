@@ -19,6 +19,13 @@ return {
       end,
     },
     {
+      "3rd/image.nvim",
+      build = false, -- so that it doesn't build the rock https://github.com/3rd/image.nvim/issues/91#issuecomment-2453430239
+      opts = {
+        processor = "magick_cli",
+      }
+    },
+    {
       "AstroNvim/astrocore",
       ---@type AstroCoreOpts
       opts = {
@@ -56,7 +63,7 @@ return {
         after="// Keynold"
       },
     },
-    image_support = true
+    image_support = false
 
   },
 }

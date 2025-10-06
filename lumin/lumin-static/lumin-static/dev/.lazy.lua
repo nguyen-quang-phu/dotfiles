@@ -1,0 +1,157 @@
+local severities = {
+  warning = vim.diagnostic.severity.WARN,
+  error = vim.diagnostic.severity.ERROR,
+}
+
+local stylelint = {
+  cmd = function()
+    local local_stylelint = vim.fn.fnamemodify("/Users/dev/Code/keynold/linters/lumin/lumin-static/stylelint/node_modules/.bin/stylelint", ":p")
+    local stat = vim.loop.fs_stat(local_stylelint)
+    if stat then
+      return local_stylelint
+    end
+    return "stylelint"
+  end,
+  stdin = true,
+  args = {
+    "-f",
+    "json",
+    "-c",
+    "/Users/dev/Code/keynold/linters/lumin/lumin-static/stylelint/stylelint.config.mjs",
+    "--stdin",
+    "--stdin-filename",
+    function()
+      return vim.fn.expand("%:p")
+    end,
+  },
+  stream = "both",
+  ignore_exitcode = true,
+  parser = function (output)
+    local status, decoded = pcall(vim.json.decode, output)
+    if status then
+      decoded = decoded[1]
+    else
+      decoded = {
+        warnings = {
+          {
+            line = 1,
+            column = 1,
+            text = "Stylelint error, run `stylelint " .. vim.fn.expand("%") .. "` for more info.",
+            severity = "error",
+            rule = "none",
+          },
+        },
+        errored = true,
+      }
+    end
+    local diagnostics = {}
+    for _, message in ipairs(decoded.warnings) do
+      table.insert(diagnostics, {
+        lnum = message.line - 1,
+        col = message.column - 1,
+        end_lnum = message.line - 1,
+        end_col = message.column - 1,
+        message = message.text,
+        code = message.rule,
+        user_data = {
+          lsp = {
+            code = message.rule,
+          },
+        },
+        severity = severities[message.severity],
+        source = "stylelint",
+      })
+    end
+    return diagnostics
+  end
+}
+
+return {
+  {
+    "neovim/nvim-lspconfig",
+    opts = {
+      servers = {
+        eslint = {
+          mason = false,
+          cmd ={
+            "vscode-eslint-language-server",
+            "--stdio",
+          },
+          settings = {
+            nodePath = "/Users/dev/Code/keynold/linters/lumin/lumin-static/eslint/node_modules",
+            options = {
+              overrideConfigFile = "/Users/dev/Code/keynold/linters/lumin/lumin-static/eslint/eslint.config.mjs",
+            }
+          }
+        },
+        -- stylelint_lsp = {
+        --   mason = false,
+        --   filetypes = { "scss" },
+        --   settings = {
+        --     stylelintplus = {
+        --       configFile = "/Users/dev/Code/keynold/linters/lumin/lumin-static/stylelint/stylelint.config.mjs",
+        --       -- config = "/Users/dev/Code/keynold/linters/lumin/lumin-static/stylelint/node_modules",
+        --     }
+        --   }
+        -- }
+      }
+    }
+  },
+  {
+    "mfussenegger/nvim-lint",
+    opts = {
+      linters_by_ft = {
+        scss = { "stylelint" },
+      },
+      linters = {
+        stylelint = stylelint,
+      }
+    }
+  },
+  {
+    "stevearc/conform.nvim",
+    opts = {
+      formatters_by_ft = {
+        scss = { "stylelint"},
+      },
+      formatters = {
+        stylelint = {
+          command = "/Users/dev/Code/keynold/linters/lumin/lumin-static/stylelint/node_modules/.bin/stylelint",
+          args = {
+            "-c",
+            "/Users/dev/Code/keynold/linters/lumin/lumin-static/stylelint/stylelint.config.mjs",
+            "--stdin",
+            "--stdin-filename",
+            "$FILENAME",
+            "--fix",
+          },
+          exit_codes = { 0, 2 }, -- code 2 is given when trying file includees some non-autofixable errors
+          stdin = true,
+        }
+      }
+    }
+  },
+  {
+    "folke/snacks.nvim",
+    keys = {
+      { "<leader>ff", function()
+        require("snacks").picker.files({
+          exclude={
+            "tmp",
+            "bin",
+            "jest",
+            "types",
+            "coverage",
+            "node_modules",
+            ".cache",
+            "gengo",
+            "public"
+          }
+        })
+      end, desc = "Find Files (Root Dir)" },
+    },
+    opts = {
+    }
+  },
+
+}
