@@ -8,7 +8,10 @@ return {
       "markdown_inline",
       -- "dap_repl",
     },
-    highlight = { enable = true, disable = { "latex" } },
+    highlight = {
+      enable = true,
+      disable = { "latex", "markdown" },
+    },
     endwise = { enable = true },
     autotag = { enable = true, enable_rename = true, enable_close = true },
   },

@@ -5,7 +5,10 @@ local severities = {
 
 local stylelint = {
   cmd = function()
-    local local_stylelint = vim.fn.fnamemodify("/Users/dev/Code/keynold/linters/lumin/lumin-static/stylelint/node_modules/.bin/stylelint", ":p")
+    local local_stylelint = vim.fn.fnamemodify(
+      "/Users/dev/Code/keynold/linters/lumin/lumin-static/stylelint/node_modules/.bin/stylelint",
+      ":p"
+    )
     local stat = vim.loop.fs_stat(local_stylelint)
     if stat then
       return local_stylelint
@@ -26,7 +29,7 @@ local stylelint = {
   },
   stream = "both",
   ignore_exitcode = true,
-  parser = function (output)
+  parser = function(output)
     local status, decoded = pcall(vim.json.decode, output)
     if status then
       decoded = decoded[1]
@@ -63,7 +66,7 @@ local stylelint = {
       })
     end
     return diagnostics
-  end
+  end,
 }
 
 return {
@@ -136,7 +139,7 @@ return {
     keys = {
       { "<leader>ff", function()
         require("snacks").picker.files({
-          exclude={
+          exclude = {
             "tmp",
             "bin",
             "jest",
@@ -145,8 +148,25 @@ return {
             "node_modules",
             ".cache",
             "gengo",
-            "public"
-          }
+            "public",
+          },
+        })
+      end, desc = "Find Files (Root Dir)" },
+      { "<leader>fw", function()
+        require("snacks").picker.grep({
+          regex = false,
+          args = {
+            "--glob=!coverage/**",
+            "--glob=!node_modules/**",
+            "--glob=!dist/**",
+            "--glob=!build/**",
+            "--glob=!gengo/**",
+            "--glob=!types/**",
+            "--glob=!.cache/**",
+            "--glob=!.slicemachine/**",
+
+            "--glob=!pnpm-lock.yaml",
+          },
         })
       end, desc = "Find Files (Root Dir)" },
     },

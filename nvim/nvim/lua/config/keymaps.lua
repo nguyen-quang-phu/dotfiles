@@ -20,13 +20,13 @@ vim.keymap.set("n", "<C-t>", function()
   require("menu").open("default")
 end, {})
 
-vim.keymap.set("n", "<leader>fw", function()
-  require("snacks").picker.grep({ regex = false })
-end, {})
-
-vim.keymap.set("n", "<leader>fw", function()
-  require("snacks").picker.grep({ regex = false, hidden = true, ignored = true })
-end, {})
+-- vim.keymap.set("n", "<leader>fw", function()
+--   require("snacks").picker.grep({ regex = false })
+-- end, {})
+--
+-- vim.keymap.set("n", "<leader>fw", function()
+--   require("snacks").picker.grep({ regex = false, hidden = true, ignored = true })
+-- end, {})
 
 -- vim.keymap.set('n', 'gd', function()
 --   -- Jump from an i18n key usage to its definition

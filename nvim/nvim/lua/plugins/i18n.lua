@@ -1,5 +1,6 @@
 return {
   'yelog/i18n.nvim',
+  enabled = false,
   dependencies = {
     'nvim-telescope/telescope.nvim',
   },

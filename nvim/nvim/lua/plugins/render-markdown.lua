@@ -2,7 +2,7 @@ return {
   "MeanderingProgrammer/render-markdown.nvim",
   ---@module 'render-markdown'
   ---@type render.md.UserConfig
-  -- enabled = false,
+  enabled = false,
   opts = {
     latex = { enabled = false },
     code = {

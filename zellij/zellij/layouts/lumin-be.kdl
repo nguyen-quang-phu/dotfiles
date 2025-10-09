@@ -7,19 +7,21 @@ layout {
   }
 
   cwd "~/Code/Lumin"
-  tab name="1. lumin-templates-backend" cwd="lumin-templates-backend"{
+
+  tab name="1. lumin-web-backend" cwd="lumin-web-backend-2.0"{
     pane split_direction="vertical"{
       pane command="nvim" size="65%" {
         args "package.json"
       }
       pane split_direction="horizontal" size="35%" {
         pane name="Server"
+        pane name="Cloudflared"
         pane focus=true name="Terminal"
       }
     }
   }
 
-  tab name="2. lumin-web-backend" cwd="lumin-web-backend-2.0"{
+  tab name="2. lumin-templates-backend" cwd="lumin-templates-backend"{
     pane split_direction="vertical"{
       pane command="nvim" size="65%" {
         args "package.json"
