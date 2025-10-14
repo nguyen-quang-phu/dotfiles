@@ -64,6 +64,10 @@
   "declare_is_vowel": {
     "body": [
       "func isVowel(b byte) bool {",
+      "\tif b < 'A' || (b > 'Z' && b < 'a') || b > 'z' {",
+      "\t\treturn false",
+      "\t}",
+      "",
       "\tconst VOWELS = \"AEIOUaeiou\"",
       "\tconst MASK= 0b11111",
       "\tconst VOWELMASK =",
@@ -118,6 +122,14 @@
       "}"
     ],
     "prefix": "declare_min_heap"
+  },
+  "declare_type": {
+    "body": [
+      "type ${1:TypeName} struct {",
+      "\t${2:attribute} ${3:type}",
+      "}"
+    ],
+    "prefix": "declare_type"
   },
   "declare_variable": {
     "body": "var ${1:varName} ${2:varType} = ${3:initValue}",

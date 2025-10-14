@@ -9,7 +9,6 @@ return {
         ".cache",
         "dist",
         ".next",
-        "public",
         "tmp"
       },
 

@@ -148,7 +148,8 @@ return {
             "node_modules",
             ".cache",
             "gengo",
-            "public",
+            -- "public",
+            "static-font-icomoon",
           },
         })
       end, desc = "Find Files (Root Dir)" },
@@ -164,6 +165,10 @@ return {
             "--glob=!types/**",
             "--glob=!.cache/**",
             "--glob=!.slicemachine/**",
+            "--glob=!__tests__/**",
+            "--glob=!__mocks__/**",
+            "--glob=!static-font-icomoon/**",
+            "--glob=!customtypes/**",
 
             "--glob=!pnpm-lock.yaml",
           },

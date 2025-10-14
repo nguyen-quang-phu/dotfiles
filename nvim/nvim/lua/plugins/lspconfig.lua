@@ -8,7 +8,7 @@ return {
       vim.list_extend(Keys, {
         { "gr", false, desc = "References",            nowait = true },
         -- { "gd", false, desc = "References",            nowait = true },
-        { "gR", false, desc = "References",            nowait = true },
+        -- { "gR", false, desc = "References",            nowait = true },
         -- { "gI", false, desc = "Goto Implementation" },
         { "gy", false, desc = "Goto T[y]pe Definition" },
       })
@@ -38,6 +38,9 @@ return {
             return string.format("[%s]: %s (%s)", diagnostic.source, diagnostic.message, diagnostic.code)
           end,
         },
+      },
+      codelens = {
+        enabled = true,
       },
       servers = {
         -- ctags_lsp = {},
