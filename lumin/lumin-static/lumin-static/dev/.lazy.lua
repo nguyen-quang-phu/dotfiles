@@ -187,7 +187,7 @@ return {
       require("neotest").setup({
         adapters = {
           require("neotest-jest")({
-            jestCommand = "npx jest --",
+            jestCommand = "npx jest",
             jestArguments = function(defaultArguments, context)
               return defaultArguments
             end,

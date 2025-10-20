@@ -15,3 +15,10 @@ gui:
       ".dog":
         icon: "\U000f0a43"
         color: "#B6977E"
+customCommands:
+  - key: "C"
+    command: "npx better-commits"
+    description: "commit with better-commits"
+    context: "files"
+    loadingText: "opening better-commits tool"
+    output: "terminal"
