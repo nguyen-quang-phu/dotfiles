@@ -25,36 +25,36 @@ return {
     --   },
     -- },
   },
-  config = function(opts)
-    require("neotest").setup({
-      adapters = {
-        require("neotest-playwright").adapter({
-          options = {
-            persist_project_selection = true,
-            enable_dynamic_test_discovery = true,
-            is_test_file = function(file_path)
-              return string.match(file_path, "e2e")
-            end,
-          },
-        }),
-        require("neotest-vitest")({
-          filter_dir = function(name, rel_path, root)
-            return name ~= "node_modules"
-          end,
-          is_test_file = function(file_path)
-            return string.match(file_path, "__test__")
-          end,
-        }),
-        require("neotest-rspec")({
-          rspec_cmd = function()
-            return vim.tbl_flatten({
-              "bundle",
-              "exec",
-              "rspec",
-            })
-          end,
-        }),
-      },
-    })
-  end,
+  -- config = function(opts)
+  --   require("neotest").setup({
+  --     adapters = {
+  --       require("neotest-playwright").adapter({
+  --         options = {
+  --           persist_project_selection = true,
+  --           enable_dynamic_test_discovery = true,
+  --           is_test_file = function(file_path)
+  --             return string.match(file_path, "e2e")
+  --           end,
+  --         },
+  --       }),
+  --       require("neotest-vitest")({
+  --         filter_dir = function(name, rel_path, root)
+  --           return name ~= "node_modules"
+  --         end,
+  --         is_test_file = function(file_path)
+  --           return string.match(file_path, "__test__")
+  --         end,
+  --       }),
+  --       require("neotest-rspec")({
+  --         rspec_cmd = function()
+  --           return vim.tbl_flatten({
+  --             "bundle",
+  --             "exec",
+  --             "rspec",
+  --           })
+  --         end,
+  --       }),
+  --     },
+  --   })
+  -- end,
 }
