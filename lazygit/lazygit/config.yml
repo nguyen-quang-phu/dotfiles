@@ -79,3 +79,14 @@ customCommands:
     context: "localBranches"
     description: "Prune local branches no longer on its remote; (G)one."
     loadingText: "Pruning gone..."
+  - key: '<c-a>'
+    description: 'amend the author of last commit'
+    command: 'git commit --amend --author="{{index .PromptResponses 0}} <{{index .PromptResponses 1}}>"'
+    context: 'commits'
+    prompts:
+      - type: 'input'
+        title: 'Author Name'
+        initialValue: ''
+      - type: 'input'
+        title: 'Email Address'
+    output: "terminal"
