@@ -15,10 +15,51 @@ gui:
       ".dog":
         icon: "\U000f0a43"
         color: "#B6977E"
+
 customCommands:
   - key: "C"
     command: "npx better-commits"
     description: "commit with better-commits"
     context: "files"
     loadingText: "opening better-commits tool"
+    output: "terminal"
+  - key: b
+    command: tig blame -- {{.SelectedFile.Name}}
+    context: files
+    description: blame file at tree
+    output: "terminal"
+  - key: b
+    command: tig blame {{.SelectedSubCommit.Sha}} -- {{.SelectedCommitFile.Name}}
+    context: commitFiles
+    description: blame file at revision
+    output: "terminal"
+  - key: B
+    command: tig blame -- {{.SelectedCommitFile.Name}}
+    context: commitFiles
+    description: blame file at tree
+    output: "terminal"
+  - key: t
+    command: tig show {{.SelectedSubCommit.Sha}}
+    context: subCommits
+    description: tig commit (`t` again to browse files at revision)
+    output: "terminal"
+  - key: t
+    command: tig show {{.SelectedLocalBranch.Name}}
+    context: localBranches
+    description: tig branch (`t` again to browse files at revision)
+    output: "terminal"
+  - key: t
+    command: tig show {{.SelectedRemoteBranch.RemoteName}}/{{.SelectedRemoteBranch.Name}}
+    context: remoteBranches
+    description: tig branch (`t` again to browse files at revision)
+    output: "terminal"
+  - key: t
+    command: tig {{.SelectedSubCommit.Sha}} -- {{.SelectedCommitFile.Name}}
+    context: commitFiles
+    description: tig file (history of commits affecting file)
+    output: "terminal"
+  - key: t
+    command: tig -- {{.SelectedFile.Name}}
+    context: files
+    description: tig file (history of commits affecting file)
     output: "terminal"

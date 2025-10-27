@@ -1,0 +1,110 @@
+# espanso match file
+
+# For a complete introduction, visit the official docs at: https://espanso.org/docs/
+
+# You can use this file to define the base matches (aka snippets)
+# that will be available in every application when using espanso.
+
+# Matches are substitution rules: when you type the "trigger" string
+# it gets replaced by the "replace" string.
+matches:
+  # Simple text replacement
+  # - trigger: "@@hi"
+  #   replace: "Hi there!"
+
+  # NOTE: espanso uses YAML to define matches, so pay attention to the indentation!
+
+  # But matches can also be dynamic:
+
+  # Print the current date
+  - trigger: "@@date"
+    replace: "{{mydate}}"
+    vars:
+      - name: mydate
+        type: date
+        params:
+          format: "%m/%d/%Y"
+
+  # Print the output of a shell command
+  - trigger: ":shell"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "echo 'Hello from your shell'"
+
+  # And much more! For more information, visit the docs: https://espanso.org/docs/
+
+  # Work
+  - trigger: "@@review"
+    replace: |
+      @devwo nào mn rảnh review giúp mình pr này nha:
+      - static:
+      - templates:
+
+  - trigger: "@@verify-staging"
+    replace: "@qcwo [Card]() này có trên staging rồi, nào mn rảnh verify giúp em nha"
+
+  - trigger: "@@verify-dev"
+    replace: "@qcwo [Card]() này có trên dev rồi, nào mn rảnh verify giúp em nha"
+
+  - trigger: "@@tag"
+    replace: "luminoptimization-"
+
+  - trigger: "@@boon"
+    replace: "/boon @phongnh2 @trungdd @thinhtran @longhn @hienbtt @khangdt @vytat @vyvt 6 \"  :point_right:  :point_left:  \""
+
+  - trigger: "@@deploy"
+    replace: |
+      Dạ em xin gửi @devops, @trungdd PR release nha:
+      * Static:
+      * Templates:
+
+  - trigger: "@@task_static"
+    replace: |
+      --- Tasks
+      * [open]
+      * [open] Create slide in prismic
+      * [open] Update code logic display
+      * [open] Add slice to all custom type
+      * [open] Add slice to all templates
+      * [open] Check multiple languages
+      * [open] Check responsive
+      * [open] Check prismic
+      * [open] Push slice-machine
+      * [open] Build local
+
+  - trigger: "@@release"
+    replace: |
+      @devwo Mình gửi trước pr release hôm nay nha:
+      - lumin-templates: https://bitbucket.org/nitrolabs/lumin-templates/pull-requests/702
+      - lumin-static: https://bitbucket.org/nitrolabs/lumin-static/pull-requests/2678
+      - lumin-backend: https://bitbucket.org/nitrolabs/lumin-web-backend-2.0/pull-requests/4425
+      - Deployment plan: https://lumin.atlassian.net/wiki/spaces/LT/pages/2587689006/5.74.0+-+Release+Notes+-+Lumin+Templates
+      - Release: https://lumin.atlassian.net/projects/LT/versions/16039/tab/release-report-all-issues
+
+  - trigger: "@@titlerelease"
+    replace: Release/lumin web optimization 5.x.0
+
+  - trigger: "@@task_template"
+    replace: |
+      --- Tasks
+      * [open]
+      * [open] Check responsive
+      * [open] Build
+
+  - trigger: "@@release_checklist"
+    replace: |
+      [Lumin Static]: Select the necessary commits and create a release PR
+      [Lumin Static]: Disable the webhook during release and enable it afterward
+      [Lumin Static]: Push the new slice machine to Prismic Production.
+      [Lumin Template]: Select the necessary commits and create a release PR
+      [Strapi Template]: Select the necessary commits and create a release PR
+      []: Check version after swapping
+
+  - trigger: "@@email_lumin"
+    replace: phunq@luminpdf.com
+
+  - trigger: "@@datadog_event_tracking"
+    replace: "@attributes.attributes.elementName:*"

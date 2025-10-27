@@ -1,32 +1,32 @@
 return {
-  {
-    "neovim/nvim-lspconfig",
-    dependencies = "netmute/ctags-lsp.nvim",
-    opts = function()
-      local Keys = require("lazyvim.plugins.lsp.keymaps").get()
-      -- stylua: ignore
-      vim.list_extend(Keys, {
-        { "gr", false, desc = "References",            nowait = true },
-        -- { "gd", false, desc = "References",            nowait = true },
-        -- { "gR", false, desc = "References",            nowait = true },
-        -- { "gI", false, desc = "Goto Implementation" },
-        { "gy", false, desc = "Goto T[y]pe Definition" },
-      })
-    end,
-  },
+  -- {
+  --   "neovim/nvim-lspconfig",
+  --   dependencies = "netmute/ctags-lsp.nvim",
+  --   opts = function()
+  --     local Keys = require("lazyvim.plugins.lsp.keymaps").get()
+  --     -- stylua: ignore
+  --     vim.list_extend(Keys, {
+  --       { "gr", false, desc = "References",            nowait = true },
+  --       -- { "gd", false, desc = "References",            nowait = true },
+  --       -- { "gR", false, desc = "References",            nowait = true },
+  --       -- { "gI", false, desc = "Goto Implementation" },
+  --       { "gy", false, desc = "Goto T[y]pe Definition" },
+  --     })
+  --   end,
+  -- },
   {
     "neovim/nvim-lspconfig",
     ---@class PluginLspOpts
     opts = {
-      capabilities = {
-        textDocument = {
-          completion = {
-            completionItem = {
-              snippetSupport = false,
-            },
-          },
-        },
-      },
+      -- capabilities = {
+      --   textDocument = {
+      --     completion = {
+      --       completionItem = {
+      --         snippetSupport = false,
+      --       },
+      --     },
+      --   },
+      -- },
       ---@type vim.diagnostic.Opts
       diagnostics = {
         virtual_text = {
@@ -43,6 +43,24 @@ return {
         enabled = true,
       },
       servers = {
+        ['*'] = {
+          keys = {
+            { "gr", false, desc = "References",            nowait = true },
+            -- { "gd", false, desc = "References",            nowait = true },
+            -- { "gR", false, desc = "References",            nowait = true },
+            -- { "gI", false, desc = "Goto Implementation" },
+            { "gy", false, desc = "Goto T[y]pe Definition" },
+          },
+          capabilities = {
+            textDocument = {
+              completion = {
+                completionItem = {
+                  snippetSupport = false,
+                },
+              },
+            },
+          },
+        },
         -- ctags_lsp = {},
         angularls = { mason = false, },
         ansiblels = { mason = false, },
@@ -66,7 +84,7 @@ return {
         lua_ls = require("lsp.lua_ls"),
         markdown_oxide = {},
         marksman = { enabled = false },
-        nginx_language_server = {},
+        nginx_language_server = { mason = false},
         nil_ls = { mason = false, },
         nixd = { mason = false, },
         omnisharp = { mason = false, },
