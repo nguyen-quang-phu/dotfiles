@@ -53,7 +53,7 @@ matches:
     replace: "luminoptimization-"
 
   - trigger: "@@boon"
-    replace: "/boon @phongnh2 @trungdd @thinhtran @longhn @hienbtt @khangdt @vytat @vyvt 6 \"  :point_right:  :point_left:  \""
+    replace: "/boon @phongnh2 @trungdd @thinhtran @longhn @huyentt @hault2 @vytat @vyvt 1 \"  wo  \""
 
   - trigger: "@@deploy"
     replace: |
