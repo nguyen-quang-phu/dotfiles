@@ -29,6 +29,7 @@ return {
       -- },
       ---@type vim.diagnostic.Opts
       diagnostics = {
+        signs = false,
         virtual_text = {
           format = function(diagnostic)
             if diagnostic.code == nil then
