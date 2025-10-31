@@ -140,6 +140,12 @@ run = ["move-node-to-workspace 9"]
 app-id = "app.zen-browser.zen"
 
 [[on-window-detected]]
+run = ["move-node-to-workspace 9"]
+
+[on-window-detected.if]
+app-id = "app.cattr"
+
+[[on-window-detected]]
 run = ["move-node-to-workspace T"]
 
 [on-window-detected.if]

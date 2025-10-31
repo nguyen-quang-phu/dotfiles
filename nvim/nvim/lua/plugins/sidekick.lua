@@ -3,7 +3,7 @@ return {
   opts = {
     cli = {
       mux = {
-        enabled = true,
+        enabled = false,
         backend = "zellij", -- or "zellij"
       },
     },

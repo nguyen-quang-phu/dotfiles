@@ -28,4 +28,8 @@ vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" }, {
   command = "setfiletype=make",
 })
 
-vim.diagnostic.config({ signs = false })
+vim.api.nvim_create_autocmd({ "BufEnter", "BufWinEnter" }, {
+  callback = function()
+    vim.diagnostic.config({ signs = false })
+  end,
+})

@@ -5,6 +5,7 @@ layout {
       plugin location="zellij:compact-bar"
     }
   }
+  cwd "~/Code/keynold/english"
   tab name="Zathura" focus=true {
     pane split_direction="horizontal" focus=true {
       pane command="zathura" borderless=true{
