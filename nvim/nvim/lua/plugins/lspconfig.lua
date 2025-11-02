@@ -70,6 +70,7 @@ return {
         clangd = { mason = false, },
         css_variables = {},
         cssls = require("lsp.cssls"),
+        somesass_ls = {},
         cssmodules_ls = require("lsp.cssmodules_ls"),
         docker_compose_language_service = { mason = true, },
         dockerls = { mason = true, },
