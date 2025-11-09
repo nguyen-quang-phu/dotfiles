@@ -42,13 +42,24 @@ layout {
       pane split_direction="horizontal" size="35%" {
         pane name="Server"
         pane name="Meilisearch"
-        pane name="Gemini"
         pane focus=true name="Terminal"
       }
     }
   }
 
-  tab name="4. lumin-templates-backend" cwd="lumin-templates-backend"{
+  tab name="4. lumin-scripts-cms" cwd="lumin-scripts-cms"{
+    pane split_direction="vertical"{
+      pane command="nvim" size="65%" {
+        args "deno.json"
+      }
+      pane split_direction="horizontal" size="35%" {
+        pane name="Server"
+        pane focus=true name="Terminal"
+      }
+    }
+  }
+
+  tab name="5. lumin-templates-backend" cwd="lumin-templates-backend"{
     pane split_direction="vertical"{
       pane command="nvim" size="65%" {
         args "package.json"

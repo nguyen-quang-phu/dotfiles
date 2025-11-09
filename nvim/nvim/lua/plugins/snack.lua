@@ -2,30 +2,30 @@ return {
   "folke/snacks.nvim",
   ---@type snacks.Config
   opts = {
-    -- picker = {
-    --   exclude = {
-    --     -- ".git",
-    --     "node_modules",
-    --     ".cache",
-    --     "dist",
-    --     ".next",
-    --     "tmp"
-    --   },
-    --
-    --   grep = {},
-    --   hidden = true,
-    --   ignored = true,
-    --   sources = {
-    --     files = {
-    --       hidden = true,
-    --       ignored = true,
-    --       exclude = {
-    --         "node_modules",
-    --         ".cache/*",
-    --       },
-    --     },
-    --   },
-    -- },
+    picker = {
+      exclude = {
+        -- ".git",
+        "node_modules",
+        ".cache",
+        "dist",
+        ".next",
+        "tmp"
+      },
+
+      grep = {},
+      hidden = true,
+      ignored = true,
+      sources = {
+        files = {
+          hidden = true,
+          ignored = true,
+          exclude = {
+            "node_modules",
+            ".cache/*",
+          },
+        },
+      },
+    },
     dashboard = { enabled = true },
     words = { enabled = true },
     input = { enabled = true },

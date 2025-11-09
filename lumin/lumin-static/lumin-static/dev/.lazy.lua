@@ -71,9 +71,25 @@ local stylelint = {
 
 return {
   {
+    "folke/lazy.nvim",
+    opts = {
+      spec = {
+        {
+          import = "lazyvim.plugins.extras.lang.typescript",
+        },
+        {
+          import = "lazyvim.plugins.extras.lang.json",
+        }
+      },
+    }
+  },
+  {
     "neovim/nvim-lspconfig",
     opts = {
       servers = {
+        jsonls = {
+          enabled = true,
+        },
         eslint = {
           mason = false,
           cmd ={

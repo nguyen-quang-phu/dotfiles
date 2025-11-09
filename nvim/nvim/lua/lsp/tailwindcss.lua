@@ -1,4 +1,5 @@
 return {
+  enabled = false,
   settings = {
     tailwindCSS = {
       classAttributes = { ":class", "class", "className" },

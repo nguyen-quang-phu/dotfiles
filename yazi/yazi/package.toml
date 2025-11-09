@@ -13,5 +13,10 @@ use = "yazi-rs/plugins:smart-paste"
 rev = "8f1d971"
 hash = "75fd60b2df7115e0a6ca31a6a804d320"
 
+[[plugin.deps]]
+use = "ahkohd/eza-preview"
+rev = "a97cf55"
+hash = "cc3aef07a8b1c3fe820f1fbb9a5a2483"
+
 [flavor]
 deps = []

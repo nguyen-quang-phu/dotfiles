@@ -32,6 +32,7 @@ return {
         signs = false,
         virtual_text = {
           format = function(diagnostic)
+            -- vim.notify(vim.inspect(diagnostic), nil, { title = "♌️ Keynold 🗝️ diagnostic", ft = "lua" })
             if diagnostic.code == nil then
               return string.format("[%s]: %s", diagnostic.source, diagnostic.message)
             end
@@ -43,6 +44,8 @@ return {
       codelens = {
         enabled = true,
       },
+      ---@alias lazyvim.lsp.Config vim.lsp.Config|{mason?:boolean, enabled?:boolean, keys?:LazyKeysLspSpec[]}
+      ---@type table<string, lazyvim.lsp.Config|boolean>
       servers = {
         ['*'] = {
           keys = {
@@ -70,18 +73,27 @@ return {
         clangd = { mason = false, },
         css_variables = {},
         cssls = require("lsp.cssls"),
-        somesass_ls = {},
+        -- somesass_ls = {},
+        codebook = {},
+        cspell_cspell_lsls = {},
         cssmodules_ls = require("lsp.cssmodules_ls"),
         docker_compose_language_service = { mason = true, },
         dockerls = { mason = true, },
         emmet_language_server = {},
+        emmylua_ls = {},
         eslint = require("lsp.eslint"),
         golangci_lint_ls = require("lsp.golangci_lint_ls"),
         gopls = require("lsp.gopls"),
+        hthtmlml = {},
         graphql = require("lsp.graphql"),
         harper_ls = require("lsp.harper_ls"),
         jdtls = { mason = false, },
         jsonls = require("lsp.jsonls"),
+        just = {},
+        tsgo = {
+          enabled = false
+        },
+        statix = {},
         kulala_ls = {},
         lua_ls = require("lsp.lua_ls"),
         markdown_oxide = {},

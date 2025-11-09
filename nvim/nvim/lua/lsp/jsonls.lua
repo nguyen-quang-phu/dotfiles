@@ -1,5 +1,6 @@
 return {
   mason = false,
+  enabled = false,
   settings = {
     json = {
       format = {

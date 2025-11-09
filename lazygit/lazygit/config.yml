@@ -15,6 +15,7 @@ gui:
       ".dog":
         icon: "\U000f0a43"
         color: "#B6977E"
+  parseEmoji: true
 
 customCommands:
   - key: "C"
@@ -90,3 +91,18 @@ customCommands:
       - type: 'input'
         title: 'Email Address'
     output: "terminal"
+  - key: "E"
+    command: git commit -m '{{ .Form.emoji }} {{ .Form.message }}'
+    context: files
+    description: Commit changes using gitmojis
+    prompts:
+    - command: gitmoji -l
+      filter: ^(.*?) - (:.*?:) - (.*)$
+      key: emoji
+      labelFormat: '{{ .group_1 }} - {{ .group_3 }}'
+      title: 'Select a gitmoji:'
+      type: menuFromCommand
+      valueFormat: '{{ .group_2 }}'
+    - key: message
+      title: 'Enter a commit message:'
+      type: input

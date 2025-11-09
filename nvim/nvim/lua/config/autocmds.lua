@@ -33,3 +33,10 @@ vim.api.nvim_create_autocmd({ "BufEnter", "BufWinEnter" }, {
     vim.diagnostic.config({ signs = false })
   end,
 })
+
+vim.api.nvim_create_autocmd("TabNew", {
+  callback = function()
+    vim.cmd("tabclose")
+    vim.notify("Only one tab allowed!", vim.log.levels.WARN)
+  end
+})

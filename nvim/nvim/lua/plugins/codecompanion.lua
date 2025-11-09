@@ -1,6 +1,7 @@
 return {
   {
     "olimorris/codecompanion.nvim",
+    enabled = false,
     opts = {
       extensions = {
         mcphub = {
