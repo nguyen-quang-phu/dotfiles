@@ -96,7 +96,7 @@ customCommands:
     context: files
     description: Commit changes using gitmojis
     prompts:
-    - command: gitmoji -l
+    - command: gitmoji -c
       filter: ^(.*?) - (:.*?:) - (.*)$
       key: emoji
       labelFormat: '{{ .group_1 }} - {{ .group_3 }}'
