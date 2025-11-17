@@ -7,7 +7,7 @@ layout {
   }
 
   cwd "/Users/dev/Code/keynold/keynold-blogs"
-  tab name="1. Auth services" cwd="backend/auth-service"{
+  tab name="1. Auth services" cwd="backend/auth-svc"{
     pane split_direction="vertical" {
       pane command="nvim" size="65%"{
         args "Gemfile"

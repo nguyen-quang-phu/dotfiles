@@ -52,6 +52,16 @@ return {
   opts = {
     lang = "golang",
     picker = { provider = "snacks-picker" },
+    hooks = {
+      ---@type fun()[]
+      ["enter"] = {},
+
+      ---@type fun(question: lc.ui.Question)[]
+      ["question_enter"] = {},
+
+      ---@type fun()[]
+      ["leave"] = {},
+    },
     ---@type lc.storage
     storage = {
       home ="/Users/dev/Code/keynold/leetcode"

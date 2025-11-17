@@ -100,15 +100,20 @@ return {
         marksman = { enabled = false },
         nginx_language_server = { mason = false},
         nil_ls = { mason = false, },
-        nixd = { mason = false, },
+        nixd = require("lsp.nixd"),
         omnisharp = { mason = false, },
         oxlint = {},
         phpactor = {},
         -- protols = { mason = false, },
         pyright = { mason = false, },
-        quick_lint_js = {},
-        rubocop = { mason = false, },
-        ruby_lsp = { mason = false, },
+        quick_lint_js = {
+          enabled = false
+        },
+        ember = {
+          enabled = false
+        },
+        -- rubocop = { mason = false, },
+        -- ruby_lsp = { mason = false, },
         solargraph = require("lsp.solargraph"),
         sqls = {},
         stimulus_ls= require("lsp.stimulus_ls"),

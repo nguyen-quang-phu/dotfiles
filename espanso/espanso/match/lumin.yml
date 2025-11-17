@@ -108,3 +108,15 @@ matches:
 
   - trigger: "@@datadog_event_tracking"
     replace: "@attributes.attributes.elementName:*"
+
+  - trigger: "@@datadog_ignore"
+    replace: |
+      -message:"Cannot read properties of null (reading 'addEventListener')"
+      -message:"Fetch error GET https://js.hs-banner.com/cookie-banner-public/v2/cf-location"
+      -message:"Fetch error GET https://js.hs-banner.com/v2/cf-location"
+      -message:"Fetch error GET https://www.googleadservices.com"
+      -message:"Fetch error POST https://www.google.com"
+      -message:"Fetch error POST https://www.google.com" -message:"Fetch error GET https://www.googleadservices.com"
+      -message:"console error: [GSI_LOGGER]: FedCM get() rejects with NetworkError: Error retrieving a token."
+      -message:"console error: [GSI_LOGGER]: FedCM get() rejects with NetworkError: Error retrieving a token."
+      -message:"console error: [GSI_LOGGER]: Missing required parameter: client_id."

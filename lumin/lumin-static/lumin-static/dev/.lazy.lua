@@ -185,7 +185,8 @@ return {
             "--glob=!__mocks__/**",
             "--glob=!static-font-icomoon/**",
             "--glob=!customtypes/**",
-
+            "--glob=!public/**",
+            "--glob=!public/**",
             "--glob=!pnpm-lock.yaml",
           },
         })
