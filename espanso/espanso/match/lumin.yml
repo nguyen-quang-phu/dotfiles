@@ -57,9 +57,10 @@ matches:
 
   - trigger: "@@deploy"
     replace: |
-      Dạ em xin gửi @devops, @trungdd PR release nha:
+      Dạ em xin gửi @toantv , @trungdd PR release nha:
       * Static:
       * Templates:
+      Note: static cho team em lên testing + disable auto sync ạ.
 
   - trigger: "@@task_static"
     replace: |
@@ -99,6 +100,7 @@ matches:
       [Lumin Static]: Select the necessary commits and create a release PR
       [Lumin Static]: Disable the webhook during release and enable it afterward
       [Lumin Static]: Push the new slice machine to Prismic Production.
+      [Lumin Static]: Prepare documents prismic
       [Lumin Template]: Select the necessary commits and create a release PR
       [Strapi Template]: Select the necessary commits and create a release PR
       []: Check version after swapping
@@ -116,7 +118,6 @@ matches:
       -message:"Fetch error GET https://js.hs-banner.com/v2/cf-location"
       -message:"Fetch error GET https://www.googleadservices.com"
       -message:"Fetch error POST https://www.google.com"
-      -message:"Fetch error POST https://www.google.com" -message:"Fetch error GET https://www.googleadservices.com"
-      -message:"console error: [GSI_LOGGER]: FedCM get() rejects with NetworkError: Error retrieving a token."
+      -message:"Fetch error GET https://www.googleadservices.com"
       -message:"console error: [GSI_LOGGER]: FedCM get() rejects with NetworkError: Error retrieving a token."
       -message:"console error: [GSI_LOGGER]: Missing required parameter: client_id."

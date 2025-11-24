@@ -113,7 +113,7 @@ return {
           enabled = false
         },
         -- rubocop = { mason = false, },
-        -- ruby_lsp = { mason = false, },
+        ruby_lsp = require("lsp.ruby_lsp"),
         solargraph = require("lsp.solargraph"),
         sqls = {},
         stimulus_ls= require("lsp.stimulus_ls"),

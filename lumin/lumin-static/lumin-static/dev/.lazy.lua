@@ -186,7 +186,7 @@ return {
             "--glob=!static-font-icomoon/**",
             "--glob=!customtypes/**",
             "--glob=!public/**",
-            "--glob=!public/**",
+            "--glob=!.gemini/**",
             "--glob=!pnpm-lock.yaml",
           },
         })
