@@ -16,7 +16,20 @@ return {
     ---@type blink.cmp.Config
     opts = {
       completion = {
-        list = { selection = { preselect = false, auto_insert = false } },
+        accept = {
+          auto_brackets = {
+            enabled = false,
+          },
+        },
+        documentation = {
+          auto_show = true,
+        },
+        list = {
+          selection = {
+            preselect = false,
+            auto_insert = false,
+          },
+        },
         menu = {
           auto_show = true,
           draw = {

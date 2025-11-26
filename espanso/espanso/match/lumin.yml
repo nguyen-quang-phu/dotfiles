@@ -39,7 +39,7 @@ matches:
   # Work
   - trigger: "@@review"
     replace: |
-      @devwo nào mn rảnh review giúp mình pr này nha:
+      @devwo nào mn rảnh review giúp em/mình pr này nha:
       - static:
       - templates:
 
