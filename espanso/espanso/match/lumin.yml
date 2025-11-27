@@ -57,7 +57,7 @@ matches:
 
   - trigger: "@@deploy"
     replace: |
-      Dạ em xin gửi @toantv , @trungdd PR release nha:
+      Dạ em/mình xin gửi @taihnc , @trungdd PR release nha:
       * Static:
       * Templates:
       Note: static cho team em lên testing + disable auto sync ạ.
@@ -78,12 +78,12 @@ matches:
 
   - trigger: "@@release"
     replace: |
-      @devwo Mình gửi trước pr release hôm nay nha:
-      - lumin-templates: https://bitbucket.org/nitrolabs/lumin-templates/pull-requests/702
-      - lumin-static: https://bitbucket.org/nitrolabs/lumin-static/pull-requests/2678
-      - lumin-backend: https://bitbucket.org/nitrolabs/lumin-web-backend-2.0/pull-requests/4425
-      - Deployment plan: https://lumin.atlassian.net/wiki/spaces/LT/pages/2587689006/5.74.0+-+Release+Notes+-+Lumin+Templates
-      - Release: https://lumin.atlassian.net/projects/LT/versions/16039/tab/release-report-all-issues
+      @devwo Em/Mình gửi trước pr release hôm nay nha:
+      - lumin-templates:
+      - lumin-static:
+      - lumin-backend:
+      - Deployment plan:
+      - Release:
 
   - trigger: "@@titlerelease"
     replace: Release/lumin web optimization 5.x.0
