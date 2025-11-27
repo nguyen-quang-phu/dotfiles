@@ -102,6 +102,7 @@ matches:
       [Lumin Static]: Push the new slice machine to Prismic Production.
       [Lumin Static]: Prepare documents prismic
       [Lumin Template]: Select the necessary commits and create a release PR
+      [Lumin Template]: Publish templates on strapi production
       [Strapi Template]: Select the necessary commits and create a release PR
       []: Check version after swapping
 
