@@ -23,5 +23,7 @@ use = "AnirudhG07/custom-shell"
 rev = "b04213d"
 hash = "3efc7ddc9bac120c618462eb994edf75"
 
-[flavor]
-deps = []
+[[flavor.deps]]
+use = "BennyOe/tokyo-night"
+rev = "8e6296f"
+hash = "d9da921c3bd37ba32ee27a8a7a40461f"
