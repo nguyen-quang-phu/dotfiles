@@ -53,7 +53,7 @@ matches:
     replace: "luminoptimization-"
 
   - trigger: "@@boon"
-    replace: "/boon @phongnh2 @trungdd @thinhtran @longhn @huyentt @hault2 @vytat @vyvt 1 \"  wo  \""
+    replace: "/boon @phongnh2 @tientm  @thinhtran @longhn @huyentt @vytat @vyvt 1 \"  wo  \""
 
   - trigger: "@@deploy"
     replace: |
@@ -122,3 +122,15 @@ matches:
       -message:"Fetch error GET https://www.googleadservices.com"
       -message:"console error: [GSI_LOGGER]: FedCM get() rejects with NetworkError: Error retrieving a token."
       -message:"console error: [GSI_LOGGER]: Missing required parameter: client_id."
+
+  - trigger: "@@remind"
+    replace: "/remind ~lumin-templates \"@phongnh2 turn on prismic hook\" at 17:00pm"
+
+  - trigger: "@@daily-report"
+    replace: |
+      ✅ Yesterday:
+      - 
+      🎯 Today:
+      - 
+      🚧 Blockers:
+      - None

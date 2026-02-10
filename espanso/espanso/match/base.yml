@@ -44,6 +44,9 @@ matches:
   - trigger: "@@commit"
     replace: "generate commit with staged file"
 
+  - trigger: "@@clear_mac"
+    replace: "npx mac-cleaner-cli"
+
   - trigger: "@@optimize_prompt"
     replace: |
       <role>
