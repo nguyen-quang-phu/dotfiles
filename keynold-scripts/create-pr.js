@@ -5,9 +5,9 @@ const DEFAULT_BRANCH = 'develop';
 const JIRA_DOMAIN = 'https://lumin.atlassian.net/browse';
 
 const reviewers = [
-  {
-    uuid: '{b63f2198-083e-49fe-a447-e2b72b310dcd}', // Phong
-  },
+  // {
+  //   uuid: '{b63f2198-083e-49fe-a447-e2b72b310dcd}', // Phong
+  // },
   {
     uuid: '{d8451525-bd59-40dc-8a70-40e472244869}', // Thịnh
   },
