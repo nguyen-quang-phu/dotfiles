@@ -44,10 +44,10 @@ matches:
       - templates:
 
   - trigger: "@@verify-staging"
-    replace: "@qcwo [Card]() này có trên staging rồi, nào mn rảnh verify giúp em nha"
+    replace: "@qcwo [Card]() này có trên staging rồi, nào mn rảnh verify giúp mình nha"
 
   - trigger: "@@verify-dev"
-    replace: "@qcwo [Card]() này có trên dev rồi, nào mn rảnh verify giúp em nha"
+    replace: "@qcwo [Card]() này có trên dev rồi, nào mn rảnh verify giúp mình nha"
 
   - trigger: "@@tag"
     replace: "luminoptimization-"
@@ -57,7 +57,7 @@ matches:
 
   - trigger: "@@deploy"
     replace: |
-      Dạ em/mình xin gửi @taihnc , @trungdd, @tientm PR release nha:
+      Dạ em/mình xin gửi @taihnc ,@tientm PR release nha:
       * Static:
       * Templates:
       Note: static cho team em lên testing + disable auto sync ạ.
