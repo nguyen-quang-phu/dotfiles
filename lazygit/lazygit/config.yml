@@ -155,6 +155,31 @@ customCommands:
     command: "gh pr view -w"
     context: "commits"
     description: "Open Github PR in browser"
+  - key: 'n' # Shortcut for 'New'
+    command: "wt switch --create {{.Form.BranchName}}"
+    context: 'localBranches'
+    prompts:
+      - type: 'input'
+        title: 'New Worktrunk Branch'
+        key: 'BranchName'
+        initialValue: ''
+    loadingText: 'Creating worktree and running hooks...'
+    description: 'Create a new branch and worktree via Worktrunk'
+  - key: 'W'
+    command: "wt switch {{.SelectedLocalBranch.Name}}"
+    context: 'localBranches'
+    loadingText: 'Switching worktree...'
+    description: 'Switch to or create a Worktrunk worktree for this branch'
+  - key: 'C'
+    command: "wt commit"
+    context: 'files'
+    loadingText: 'Generating AI commit message...'
+    description: 'Worktrunk AI Commit'
+  - key: 'X'
+    command: "wt remove"
+    context: 'worktrees'
+    loadingText: 'Removing worktree...'
+    description: 'Remove current worktree and clean up via Worktrunk'
   # - key: "K"
   #   context: "localBranches"
   #   description: "Git Town Delete (deletes the current feature branch and sYnc)"

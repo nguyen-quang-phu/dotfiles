@@ -126,6 +126,9 @@ matches:
   - trigger: "@@remind"
     replace: "/remind ~lumin-templates \"@phongnh2 turn on prismic hook\" at 17:00pm"
 
+  - trigger: "@@linear"
+    replace: "@Linear create an issue for this with status = Selected for Development, tag = Bug, priority = Medium, and assignee = Me"
+
   - trigger: "@@daily-report"
     replace: |
       ✅ Yesterday:
