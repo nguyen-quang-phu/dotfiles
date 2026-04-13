@@ -15,8 +15,11 @@ install_cmd := if os() =~ 'linux' {
   'sudo pacman -S --noconfirm'
 } else if os() =~ 'macos' {
   'brew install'
+} else {
+  ''
 }
 
 [group('pacman')]
+[group('brew')]
 install +args:
   {{install_cmd}} {{args}}
