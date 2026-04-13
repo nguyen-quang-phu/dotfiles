@@ -1,0 +1,14 @@
+default:
+  just -g --list
+
+[group('hyprland')]
+hypr-reload:
+  hyprctl reload
+
+[group('ssh')]
+keygen email:
+  ssh-keygen -t rsa -C {{email}}
+
+[group('pacman')]
+install +args:
+  sudo pacman -S --noconfirm {{args}}
