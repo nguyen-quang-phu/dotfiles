@@ -9,17 +9,15 @@ hypr-reload:
 keygen email:
   ssh-keygen -t rsa -C {{email}}
 
-
-
-install_cmd := if os() =~ 'linux' {
-  'sudo pacman -S --noconfirm'
-} else if os() =~ 'macos' {
-  'brew install'
-} else {
-  ''
-}
-
-[group('pacman')]
 [group('brew')]
+[group('pacman')]
 install +args:
-  {{install_cmd}} {{args}}
+  {{\
+    if os() =~ 'linux' { \
+      'sudo pacman -S --noconfirm' \
+    } else if os() =~ 'macos' { \
+      'brew install' \
+    } else { \
+      error('unsupported OS') \
+    } \
+  }} {{args}}
