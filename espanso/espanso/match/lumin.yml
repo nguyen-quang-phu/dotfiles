@@ -39,9 +39,8 @@ matches:
   # Work
   - trigger: "@@review"
     replace: |
-      @devwo nào mn rảnh review giúp em/mình pr này nha:
-      - static:
-      - templates:
+      @wodev nào mn rảnh review giúp em/mình pr này nha:
+      - 
 
   - trigger: "@@verify-staging"
     replace: "@qcwo [Card]() này có trên staging rồi, nào mn rảnh verify giúp mình nha"
@@ -53,7 +52,7 @@ matches:
     replace: "luminoptimization-"
 
   - trigger: "@@boon"
-    replace: "/boon @tientm @thinhtran @longhn @huyentt @vytat @vyvt @tramntq 1 \"  wo  \""
+    replace: "/boon @thinhtran @longhn @huyentt @vytat @vyvt @khanhnvb @tannd166 1 \"  wo  \""
 
   - trigger: "@@deploy"
     replace: |
