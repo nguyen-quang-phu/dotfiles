@@ -1,0 +1,10 @@
+{
+  "type":"module",
+  "script": {
+    "commitlint": "commitlint"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^20.5.3",
+    "@commitlint/config-conventional": "^20.5.3"
+  }
+}
