@@ -1,0 +1,105 @@
+[alias]
+	br = "rev-parse --abbrev-ref HEAD"
+	can = "!git add . && git status && git commit --amend --no-edit"
+	cara = "!git commit --amend --reset-author --no-edit"
+	colast = "!git checkout -"
+	email = "config --local user.email"
+	fsck = "fsck --unreachable | grep commit | cut -d' ' -f3 | xargs git log --merges --no-walk --grep=WIP"
+	hide = "update-index --skip-worktree"
+	name = "config --local user.name"
+	pf = "push --force-with-lease"
+	rsho = "reset --hard ORIG_HEAD"
+	rss = "reset --soft HEAD~1"
+	s = "stash -u"
+	sp = "stash apply stash@{0}"
+	unhide = "update-index --no-skip-worktree"
+
+[branch]
+	autosetupmerge = "true"
+	sort = "committerdate"
+
+[color]
+	ui = "auto"
+
+[commit]
+	verbose = true
+
+[core]
+	fsmonitor = true
+	symlinks = false
+	untrackedCache = true
+	whitespace = "fix,-indent-with-non-tab,trailing-space,cr-at-eol"
+
+; [credential "https://gist.github.com"]
+; 	helper = ""
+; 	helper = "!gh auth git-credential"
+;
+; [credential "https://github.com"]
+; 	helper = ""
+; 	helper = "!gh auth git-credential"
+
+[diff]
+	algorithm = "histogram"
+	mnemonicprefix = true
+
+[fetch]
+	fsckObjects = true
+	prune = true
+
+[filter "lfs"]
+	clean = "git-lfs clean -- %f"
+	process = "git-lfs filter-process"
+	required = true
+	smudge = "git-lfs smudge -- %f"
+
+[gpg]
+	format = "openpgp"
+
+[help]
+	autocorrect = 10
+
+[init]
+	defaultBranch = "master"
+
+[merge]
+	conflictstyle = "zdiff3"
+	stat = "true"
+	tool = "meld"
+
+[pager]
+	diff = "diffnav"
+
+[pull]
+	rebase = true
+
+[push]
+	autoSetupRemote = true
+	default = "current"
+	followTags = true
+
+[rebase]
+	autoSquash = true
+	autoStash = true
+	updateRefs = true
+
+[receive]
+	fsckObjects = true
+
+[repack]
+	usedeltabaseoffset = "true"
+
+[rerere]
+	autoupdate = true
+	enabled = false
+
+[submodule]
+	recurse = true
+
+[transfer]
+	fsckObjects = true
+
+[includeIf "gitdir:~/"]
+	path = "~/.config/git/keynold"
+
+[includeIf "gitdir:~/Code/Lumin/"]
+	path = "~/.config/git/lumin"
