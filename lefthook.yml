@@ -24,6 +24,7 @@ prepare-commit-msg:
       run: node scripts/prepare-commit-msg.js {1}
       env:
         LEFTHOOK: 0
+
 # commit-msg:
 #   commands:
 #     "lint commit message":
@@ -51,3 +52,7 @@ prepare-commit-msg:
 #
 #     - script: "hello.go"
 #       runner: go run
+post-commit:
+  commands:
+    auto_push:
+      run: git push origin HEAD
