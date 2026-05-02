@@ -1,0 +1,89 @@
+#:schema https://github.com/joshmedeski/sesh/raw/main/sesh.schema.json
+blacklist = [
+  "zoxide",
+  "scratch"
+]
+
+cache = false
+
+[default_session]
+preview_command = "eza --all --git --icons --color=always {}"
+
+[[session]]
+name = "dotfiles config"
+path = "~/dotfiles"
+startup_command = "vim .stowrc"
+preview_command = "bat --color=always ~/dotfiles/.stowrc"
+
+[[session]]
+name = "tmux config"
+path = "~/.config/tmux"
+startup_command = "vim tmux.conf"
+preview_command = "bat --color=always ~/.config/tmux/tmux.conf"
+
+[[session]]
+name = "sesh config"
+path = "~/.config/sesh"
+startup_command = "vim sesh.toml"
+preview_command = "bat --color=always ~/.config/sesh/sesh.toml"
+
+[[session]]
+name = "gh-dash config"
+path = "~/.config/gh-dash"
+startup_command = "vim config.yml"
+preview_command = "bat --color=always ~/.config/gh-dash/config.yml"
+
+[[session]]
+name = "nvim config"
+path = "~/.config/nvim"
+startup_command = "vim init.lua"
+preview_command = "bat --color=always ~/.config/nvim/init.lua"
+
+[[session]]
+name = "espanso config"
+path = "~/.config/espanso"
+startup_command = "vim ."
+# preview_command = "bat --color=always ~/.config/nvim/init.lua"
+
+[[session]]
+name = "nvim config"
+path = "~/.config/nvim"
+startup_command = "vim init.lua"
+preview_command = "bat --color=always ~/.config/nvim/init.lua"
+
+[[session]]
+name = "television config"
+path = "~/.config/television"
+startup_command = "vim config.toml"
+preview_command = "bat --color=always ~/.config/television/config.toml"
+
+[[session]]
+name = "kitty config"
+path = "~/.config/kitty"
+startup_command = "vim kitty.conf"
+preview_command = "bat --color=always ~/.config/kitty/kitty.conf"
+
+[[session]]
+name = "darwin config"
+path = "~/.config/nix-darwin"
+startup_command = "vim flake.nix"
+preview_command = "bat --color=always ~/.config/nix-darwin/flake.nix"
+
+
+[[session]]
+name = "lumin"
+path = "~/Code/Lumin/platform"
+startup_command = "vim package.json"
+windows = [
+  "Server",
+  "Review"
+]
+
+[[window]]
+name = "Server"
+# startup_script = "vim ."
+
+[[window]]
+name = "Review"
+startup_script = "gh dash"
+
