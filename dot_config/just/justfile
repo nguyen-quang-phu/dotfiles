@@ -1,0 +1,35 @@
+default:
+  just -g --list
+
+[group('hyprland')]
+hypr-reload:
+  hyprctl reload
+
+[group('ssh')]
+keygen email:
+  ssh-keygen -t rsa -C {{email}}
+
+[group('archlinux')]
+arch-install pkg:
+  if pacman -Si {{pkg}} >/dev/null 2>&1; then \
+    sudo pacman -S --noconfirm {{pkg}}; \
+  elif yay -Si {{pkg}}-bin >/dev/null 2>&1; then \
+    yay -S --noconfirm {{pkg}}-bin; \
+  elif yay -Si {{pkg}}-git >/dev/null 2>&1; then \
+    yay -S --noconfirm {{pkg}}-git; \
+  else \
+    yay -S --noconfirm {{pkg}}-bin; \
+  fi \
+
+[group('brew')]
+[group('pacman')]
+install +args:
+  {{
+    if os() =~ 'linux' { 
+      'just -g arch-install'
+    } else if os() =~ 'macos' { 
+      'brew install' 
+    } else { 
+      error('unsupported OS') 
+    }
+  }} {{args}}

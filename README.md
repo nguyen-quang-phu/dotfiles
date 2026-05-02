@@ -47,6 +47,7 @@ Custom script-based aliases located in `~/.local/bin`:
 - **Espanso (`dot_config/espanso`):** Text expander configuration and matches.
 - **Fcitx5 (`dot_config/private_fcitx5`):** Input method configuration.
 - **Hyprland (`dot_config/hypr`):** Wayland compositor configuration.
+- **Just (`dot_config/just`):** Justfile for command automation.
 - **Neovim (`dot_config/nvim`):** A customized AstroNvim setup with many LSPs configured.
 - **Git (`dot_config/git`):** Encrypted identity configurations.
 - **Hooks (`lefthook.yml`):** Pre-configured git hooks for a smooth development workflow.
