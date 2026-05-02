@@ -52,6 +52,11 @@ startup_command = "vim init.lua"
 preview_command = "bat --color=always ~/.config/nvim/init.lua"
 
 [[session]]
+name = "spotify"
+path = "~"
+startup_command = "spotatui"
+
+[[session]]
 name = "television config"
 path = "~/.config/television"
 startup_command = "vim config.toml"
