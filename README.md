@@ -33,6 +33,14 @@ chezmoi init --apply github.com/nguyen-quang-phu/dotfiles
 - **Git (`dot_config/git`):** Encrypted identity configurations.
 - **Hooks (`lefthook.yml`):** Pre-configured git hooks for a smooth development workflow.
 
+## 📂 Chezmoi Conventions
+
+This repository follows [chezmoi's source state attributes](https://www.chezmoi.io/user-guide/source-state-attributes/):
+
+- `dot_`: Files or directories starting with `dot_` will be created with a `.` prefix in the destination (e.g., `dot_zshrc` becomes `~/.zshrc`).
+- `executable_`: Files prefixed with `executable_` will have executable permissions set (e.g., `executable_justg` becomes `~/.local/bin/justg` with `+x`).
+- `.tmpl`: Files ending in `.tmpl` are processed as templates, allowing for dynamic content based on variables or scripts.
+
 ## 🔑 Encryption
 
 This repository uses `age` for encryption. The script `run_onchange_before_decrypt-private-key.sh.tmpl` handles the decryption of sensitive files automatically when the decryption key is available in `~/.config/chezmoi/key.txt`.
