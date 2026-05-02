@@ -37,6 +37,7 @@ Custom script-based aliases located in `~/.local/bin`:
 - `czae`: `chezmoi add --encrypt`
 - `czra`: `chezmoi re-add`
 - `czap`: `chezmoi -v apply`
+- `vim`: `nvim`
 - `justg`: `just -g` (Global just)
 
 ## ⚙️ Components
