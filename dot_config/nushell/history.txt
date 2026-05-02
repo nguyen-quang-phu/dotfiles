@@ -1,0 +1,120 @@
+exit
+nvim tmux.conf
+ls -a
+ls -la
+cd ~/.config/
+ls -a
+cd hypr/
+ls -a
+nvim hyprland.conf
+fcitx5 -r
+vim hyprland.conf
+hyprctl reload
+vim hyprland.conf
+nvim hl
+shutdown now
+nvim tmux.conf
+ps | where status == Running
+ps
+fastfest
+exit
+spotify-player
+spotify_player
+justg install spotatui
+ls -a
+vim package.json
+z config
+cd ~/.config/
+ls -a
+cd nvim/
+ls -a
+nvim init.lua
+ls -a
+nbim package.json
+chezmoi --apply
+chezmoi --help
+chezmoi -v apply
+cd ~/.config/
+ls -a
+cd chezmoi/
+ls -a
+chezmoi -v apply
+cat ~/.config/chezmoi/key.txt
+chezmoi init
+chezmoi -v apply
+nvim package.json
+cd ~/.config/nvim
+ls -a
+nvim init.lua
+ls -a
+nvim package.json
+cd ~/.config/nvim
+chezmoi -v apply
+ls -a
+vim package.json
+nvim init.lua
+ls -a
+vim package.json
+nvim package.json
+chezmoi -v apply
+ls -a
+chezmoi -v apply
+nvim package.json
+z config
+cd ~/.config/nvim
+nvim init.lua
+chezmoi -v apply
+chezmoi re-add ~/.config/nvim
+chezmoi -v apply
+chezmoi edit ~/.config/nvim/
+ls -a
+chezmoi re-add ~/.config/nvim
+chezmoi -v apply
+nvim package.json
+cd ~/.config/nvim
+nvim package.json
+rm -rf .git
+nvim init.lua
+ls -a
+chezmoi re-add ~/.config/nvim
+chezmoi -v apply
+nvim package.json
+chezmoi -v apply
+nvim package.json
+chezmoi -v apply
+nvim package.json
+chezmoi age-keygen -o ~/.config/chezmoi/key.txt
+chezmoi init
+cd ~/.config/chezmoi
+ls -a
+nvim key.txt
+ls -a
+vim package.json
+chezmoi re-add --encrypt ~/.config/git/keynold
+chezmoi re-add --re-encrypt ~/.config/git/keynold
+chezmoi add --encrypt ~/.config/git/keynold
+chezmoi add --encrypt ~/.config/git/lumin
+cd ~/.config/git
+ls -a
+rm -rf keynold
+rm -rf lumin
+ls -la
+chezmoi -v apply
+ls -a
+vim keynold
+cd ~/.config/chezmoi/
+ls -a
+cat key.txt | wl-copy
+chezmoi add ~/.config/kitty/
+chezmoi add ~/.local/bin
+mkdir -p ~/.local/bin
+mkdir ~/.local/bin
+ls -a
+chezmoi add ~/.local/bin
+chmod +x dot_local/bin/justg
+chezmoi -v apply
+justg list
+cd ~/.config
+ls -a
+cd ~/.local/bin/
+ls -a
