@@ -19,6 +19,7 @@ chezmoi init --apply github.com/nguyen-quang-phu/dotfiles
 
 ## 📦 Features
 
+- **Shell:** [Nushell](https://www.nushell.sh/) with custom environment and PATH configuration.
 - **Editor:** Neovim (AstroNvim-based) with extensive LSP support and custom configurations.
 - **Tools Management:** Handled by `mise` (Node.js, Lefthook, etc.).
 - **Git Workflow:** 
@@ -27,11 +28,24 @@ chezmoi init --apply github.com/nguyen-quang-phu/dotfiles
   - Automatic push on commit.
 - **Security:** Secrets (like SSH keys or git configs) are encrypted with `age`.
 
+## ⌨️ Aliases
+
+Custom script-based aliases located in `~/.local/bin`:
+
+- `cz`: `chezmoi`
+- `cza`: `chezmoi add`
+- `czae`: `chezmoi add --encrypt`
+- `czra`: `chezmoi re-add`
+- `czap`: `chezmoi -v apply`
+- `justg`: `just -g` (Global just)
+
 ## ⚙️ Components
 
+- **Nushell (`dot_config/nushell`):** Environment and configuration for Nushell.
 - **Neovim (`dot_config/nvim`):** A customized AstroNvim setup with many LSPs configured.
 - **Git (`dot_config/git`):** Encrypted identity configurations.
 - **Hooks (`lefthook.yml`):** Pre-configured git hooks for a smooth development workflow.
+- **Agent Skills (`.agents/skills`):** Custom skills for AI agents (Gemini CLI, Cursor, etc.).
 
 ## 📂 Chezmoi Conventions
 
