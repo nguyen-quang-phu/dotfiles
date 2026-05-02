@@ -1,0 +1,105 @@
+# espanso match file
+
+# For a complete introduction, visit the official docs at: https://espanso.org/docs/
+
+# You can use this file to define the base matches (aka snippets)
+# that will be available in every application when using espanso.
+
+# Matches are substitution rules: when you type the "trigger" string
+# it gets replaced by the "replace" string.
+
+# yaml-language-server: $schema=https://raw.githubusercontent.com/espanso/espanso/dev/schemas/match.schema.json
+
+matches:
+  # Simple text replacement
+  - trigger: ":espanso"
+    replace: "Hi there!"
+
+  # NOTE: espanso uses YAML to define matches, so pay attention to the indentation!
+
+  # But matches can also be dynamic:
+
+  # Print the current date
+  - trigger: ":date"
+    replace: "{{mydate}}"
+    vars:
+      - name: mydate
+        type: date
+        params:
+          format: "%m/%d/%Y"
+
+  # Print the output of a shell command
+  - trigger: ":shell"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "echo 'Hello from your shell'"
+
+  # And much more! For more information, visit the docs: https://espanso.org/docs/
+  - trigger: "@@web-debugger"
+    replace: "setTimeout(() => { debugger; }, 1000)"
+
+  - trigger: "@@commit"
+    replace: "generate commit with staged file"
+
+  - trigger: "@@clear_mac"
+    replace: "npx mac-cleaner-cli"
+
+  - trigger: "@@optimize_prompt"
+    replace: |
+      <role>
+      Bạn là Prompt Engineer chuyên gia, chuyên tối ưu prompt cho Google Gemini 3.0 Pro.
+      </role>
+
+      <task>
+      Tôi sẽ đưa cho bạn một **raw prompt** (prompt thô, viết tự nhiên).
+      Hãy biến đổi nó thành **optimized prompt** theo chuẩn Gemini 3.0 Pro.
+      </task>
+
+      <optimization_rules>
+      **1. Cấu trúc XML bắt buộc:**
+      - <role>: Vai trò AI (cụ thể, có expertise)
+      - <context>: Thông tin nền (nếu có)
+      - <task>: Yêu cầu chính (ngắn gọn, trực tiếp)
+      - <constraints>: Giới hạn, điều kiện
+      - <output_format>: Định dạng kết quả mong muốn
+
+      **2. Nguyên tắc Gemini 3.0 Pro:**
+      - Instruction NGẮN GỌN (dưới 5 câu)
+      - Dùng động từ hành động trực tiếp
+      - Tránh từ mơ hồ (tốt, hay, chất lượng → thay bằng tiêu chí cụ thể)
+      - Đặt task/câu hỏi ở CUỐI prompt (sau context)
+
+      **3. Tối ưu cho Thinking Mode:**
+      - Nếu bài toán phức tạp → Thêm instruction "suy nghĩ từng bước"
+      - Yêu cầu AI tự kiểm tra kết quả
+      </optimization_rules>
+
+      <output_format>
+      ## 🔍 Phân tích prompt gốc
+      - **Vấn đề**: [Liệt kê điểm chưa tối ưu]
+      - **Thiếu**: [Những gì cần bổ sung]
+
+      ## ✨ Prompt đã tối ưu
+      ```xml
+      [Prompt hoàn chỉnh với đầy đủ tags]
+      ```
+
+      ## 💡 Giải thích thay đổi
+      - [Lý do từng thay đổi - ngắn gọn]
+      </output_format>
+
+      <constraints>
+      - Giữ nguyên ý định gốc của người dùng
+      - Không thêm yêu cầu mà người dùng không đề cập
+      - Output phải copy-paste được ngay
+      </constraints>
+
+      ---
+
+      **RAW PROMPT CỦA TÔI:**
+
+      [Dán prompt thô của bạn vào đây]
+

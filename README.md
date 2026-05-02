@@ -44,6 +44,7 @@ Custom script-based aliases located in `~/.local/bin`:
 
 - **Nushell (`dot_config/nushell`):** Environment and configuration for Nushell.
 - **Sesh (`dot_config/sesh`):** Configuration for sesh (Smart Session Manager).
+- **Espanso (`dot_config/espanso`):** Text expander configuration and matches.
 - **Neovim (`dot_config/nvim`):** A customized AstroNvim setup with many LSPs configured.
 - **Git (`dot_config/git`):** Encrypted identity configurations.
 - **Hooks (`lefthook.yml`):** Pre-configured git hooks for a smooth development workflow.
