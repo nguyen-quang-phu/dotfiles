@@ -35,7 +35,7 @@ chezmoi init --apply github.com/nguyen-quang-phu/dotfiles
 
 ## 📂 Chezmoi Conventions
 
-This repository follows [chezmoi's source state attributes](https://www.chezmoi.io/reference/source-state-attributes/):
+This repository follows [chezmoi's source state attributes](https://www.chezmoi.io/reference/source-state-attributes):
 
 - `dot_`: Files or directories starting with `dot_` will be created with a `.` prefix in the destination (e.g., `dot_zshrc` becomes `~/.zshrc`).
 - `executable_`: Files prefixed with `executable_` will have executable permissions set (e.g., `executable_justg` becomes `~/.local/bin/justg` with `+x`).
