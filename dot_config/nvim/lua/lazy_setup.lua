@@ -17,6 +17,7 @@ require("lazy").setup({
   -- Configure any other `lazy.nvim` configuration options here
   install = { colorscheme = { "astrotheme", "habamax" } },
   ui = { backdrop = 100 },
+  lockfile = "~/dotfiles/dot_config/nvim/lazy-lock.json",
   checker = {
     enabled = true, -- check for plugin updates periodically
     notify = true, -- notify on update
