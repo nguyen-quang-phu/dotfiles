@@ -738,6 +738,27 @@ return {
           }
         }
       }
+    },
+    {
+      "chrisgrieser/nvim-chainsaw",
+      keys = {
+        { "<leader>L", "", desc = "Log" },
+        { "<leader>Ld", "<cmd>lua require('chainsaw').debugLog()<CR>",desc = "Log Debug" },
+        { "<leader>Lm", "<cmd>lua require('chainsaw').messageLog()<CR>", desc = "Log Message" },
+        { "<leader>Lo", "<cmd>lua require('chainsaw').objectLog()<CR>", desc = "Log Object" },
+        { "<leader>Lr", "<cmd>lua require('chainsaw').removeLogs()<CR>", desc = "Remove Logs" },
+        { "<leader>Lt", "<cmd>lua require('chainsaw').typeLog()<CR>", desc = "Log Type" },
+        { "<leader>Lv", "<cmd>lua require('chainsaw').variableLog()<CR>", desc = "Log Variable" },
+      },
+      opts = {
+        marker = "♌️ Keynold 🗝️",
+        logStatements = {
+          variableLog = {
+            javascript = "console.log('{{marker}} ~ {{filename}}:{{lnum}} ~ {{var}}:', {{var}});",
+          },
+          -- the same for the other log statement operations
+        },
+      },
     }
   }
 }

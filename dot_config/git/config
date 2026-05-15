@@ -53,7 +53,7 @@
 	smudge = "git-lfs smudge -- %f"
 
 [gpg]
-	format = "openpgp"
+	format = "ssh"
 
 [help]
 	autocorrect = 10
