@@ -1,10 +1,19 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/jesseduffield/lazygit/master/schema/config.json
 os:
   editPreset: nvim-remote
+  openLink: >
+    bash -c '[[ "$OSTYPE" == "darwin"* ]] &&
+    open "{{link}}" ||
+    xdg-open "{{link}}"'
+
 git:
   localBranchSortOrder: recency
   overrideGpg: true
+  parseEmoji: true
 gui:
   nerdFontsVersion: '3'
+  showBranchCommitHash: true
+  showDivergenceFromBaseBranch: arrowAndNumber
   customIcons:
     filenames:
       "CONTRIBUTING.md": {icon: "", color: "#FEDDEF"}
@@ -16,7 +25,6 @@ gui:
       ".dog":
         icon: "\U000F0A43"
         color: "#B6977E"
-  parseEmoji: true
 customCommands:
   - key: "C"
     command: "npx better-commits"
