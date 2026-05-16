@@ -18,3 +18,5 @@
 #     config nu --doc | nu-highlight | less -Rchmod +x 
 
 use ($nu.default-config-dir | path join mise.nu)
+# https://zoxide.org/blog/zoxide-init-guide/
+source ~/.zoxide.nu
