@@ -10,16 +10,20 @@ cache = false
 preview_command = "eza --all --git --icons --color=always {}"
 
 [[session]]
+name = "keynold"
+path = "~"
+
+[[session]]
 name = "dotfiles config"
 path = "~/dotfiles"
-startup_command = "vim .stowrc"
-preview_command = "bat --color=always ~/dotfiles/.stowrc"
+# startup_command = "vim .stowrc"
+# preview_command = "bat --color=always ~/dotfiles/.stowrc"
 
 [[session]]
 name = "tmux config"
-path = "~/.config/tmux"
+path = "~/dotfiles/dot_config/tmux"
 startup_command = "vim tmux.conf"
-preview_command = "bat --color=always ~/.config/tmux/tmux.conf"
+preview_command = "bat --color=always ~/dotfiles/dot_config/tmux/tmux.conf"
 
 [[session]]
 name = "sesh config"
@@ -29,9 +33,9 @@ preview_command = "bat --color=always ~/dotfiles/dot_config/sesh/sesh.toml"
 
 [[session]]
 name = "gh-dash config"
-path = "~/.config/gh-dash"
+path = "~/dotfiles/dot_config/gh-dash"
 startup_command = "vim config.yml"
-preview_command = "bat --color=always ~/.config/gh-dash/config.yml"
+preview_command = "bat --color=always ~/dotfiles/dot_config/gh-dash/config.yml"
 
 [[session]]
 name = "nvim config"
