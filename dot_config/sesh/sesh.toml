@@ -23,9 +23,9 @@ preview_command = "bat --color=always ~/.config/tmux/tmux.conf"
 
 [[session]]
 name = "sesh config"
-path = "~/.config/sesh"
+path = "~/dotfiles/dot_config/sesh"
 startup_command = "vim sesh.toml"
-preview_command = "bat --color=always ~/.config/sesh/sesh.toml"
+preview_command = "bat --color=always ~/dotfiles/dot_config/sesh/sesh.toml"
 
 [[session]]
 name = "gh-dash config"
@@ -35,9 +35,9 @@ preview_command = "bat --color=always ~/.config/gh-dash/config.yml"
 
 [[session]]
 name = "nvim config"
-path = "~/.config/nvim"
+path = "~/dotfiles/dot_config/nvim"
 startup_command = "vim init.lua"
-preview_command = "bat --color=always ~/.config/nvim/init.lua"
+preview_command = "bat --color=always ~/dotfiles/dot_config/nvim/init.lua"
 
 [[session]]
 name = "espanso config"
@@ -46,10 +46,10 @@ startup_command = "vim ."
 # preview_command = "bat --color=always ~/.config/nvim/init.lua"
 
 [[session]]
-name = "nvim config"
-path = "~/.config/nvim"
-startup_command = "vim init.lua"
-preview_command = "bat --color=always ~/.config/nvim/init.lua"
+name = "chezmoi config"
+path = "~/dotfiles"
+startup_command = "vim package.json"
+preview_command = "bat --color=always ~/dotfiles/package.json"
 
 [[session]]
 name = "spotify"
