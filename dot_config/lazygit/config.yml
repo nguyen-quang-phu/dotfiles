@@ -2,6 +2,7 @@ os:
   editPreset: nvim-remote
 git:
   localBranchSortOrder: recency
+  overrideGpg: true
 gui:
   nerdFontsVersion: '3'
   customIcons:
