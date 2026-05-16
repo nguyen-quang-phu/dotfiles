@@ -49,7 +49,7 @@ matches:
     replace: "@qcwo [Card]() này có trên dev rồi, nào mn rảnh verify giúp mình nha"
 
   - trigger: "@@tag"
-    replace: "luminoptimization-"
+    replace: "@luminpdf/web-optimization@0.x.0"
 
   - trigger: "@@boon"
     replace: "/boon @thinhtran @longhn @huyentt @vytat @vyvt @khanhnvb @tannd166 1 \"  wo  \""
@@ -124,6 +124,9 @@ matches:
 
   - trigger: "@@remind"
     replace: "/remind ~lumin-templates \"@phongnh2 turn on prismic hook\" at 17:00pm"
+
+  - trigger: "@@release_branch"
+    replace: "release/lumin-web-optimization-0.x.0"
 
   - trigger: "@@linear"
     replace: "@Linear create an issue for this with status = Selected for Development, tag = Bug, priority = Medium, and assignee = Me"
