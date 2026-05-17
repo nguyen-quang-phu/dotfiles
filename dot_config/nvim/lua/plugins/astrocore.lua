@@ -79,6 +79,8 @@ return {
 
         -- setting a mapping to false will disable it
         -- ["<C-S>"] = false,
+        gt = false,
+        gT = false,
       },
       t = {
         ["<C-_>"] = { function() require("snacks").terminal() end, desc = "Toggle Terminal"},

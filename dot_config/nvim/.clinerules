@@ -1,0 +1,6 @@
+# Project Rules for AI Agents
+
+Please refer to and follow the specialized configuration rules located in:
+- `.agents/astrocore_standards.md` (Rules for AstroNvim AstroCore configuration)
+
+Always prioritize the standards defined in the `.agents/` directory.
