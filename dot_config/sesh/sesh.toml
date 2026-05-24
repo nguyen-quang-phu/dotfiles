@@ -58,6 +58,7 @@ preview_command = "bat --color=always ~/dotfiles/package.json"
 [[session]]
 name = "spotify"
 path = "~"
+# startup_command = "nvim \"-c\" \"lua Snacks.terminal.open('spotify_player',{win= {height = 0.99, width = 0.99}})\""
 startup_command = "spotatui"
 
 [[session]]
@@ -95,4 +96,22 @@ name = "Server"
 [[window]]
 name = "Review"
 startup_script = "gh dash"
+
+[[session]]
+name = "Bluetui"
+path = "~"
+# startup_command = "vim package.json"
+windows = [
+  "bluetui",
+  "wiremix"
+]
+
+[[window]]
+name = "bluetui"
+startup_script = "bluetui"
+# startup_script = "vim ."
+
+[[window]]
+name = "wiremix"
+startup_script= "wiremix"
 
