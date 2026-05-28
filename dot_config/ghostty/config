@@ -1,0 +1,25 @@
+# Ghostty binds cmd+1..9 to tab switching by default.
+# Unbind the physical digit keys, then rebind to send Meta-<digit> (ESC + digit).
+keybind = cmd+digit_1=unbind
+keybind = cmd+digit_2=unbind
+keybind = cmd+digit_3=unbind
+keybind = cmd+digit_4=unbind
+keybind = cmd+digit_5=unbind
+keybind = cmd+digit_6=unbind
+keybind = cmd+digit_7=unbind
+keybind = cmd+digit_8=unbind
+keybind = cmd+digit_9=unbind
+
+keybind = cmd+digit_1=text:\x1b1
+keybind = cmd+digit_2=text:\x1b2
+keybind = cmd+digit_3=text:\x1b3
+keybind = cmd+digit_4=text:\x1b4
+keybind = cmd+digit_5=text:\x1b5
+keybind = cmd+digit_6=text:\x1b6
+keybind = cmd+digit_7=text:\x1b7
+keybind = cmd+digit_8=text:\x1b8
+keybind = cmd+digit_9=text:\x1b9
+
+# Hyper (commonly cmd+ctrl+alt+shift) -> send Ctrl+<key>
+keybind = cmd+ctrl+alt+w=text:\x17
+keybind = cmd+ctrl+alt+shift+w=text:\x17
