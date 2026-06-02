@@ -75,6 +75,7 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
+(setq doom-theme 'catppuccin)
 ;;https://lists.gnu.org/archive/html/emacs-orgmode/2010-04/msg00122.html?utm_source=chatgpt.com
 (after! org
   (add-to-list 'org-modules 'org-habit))

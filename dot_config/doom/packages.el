@@ -54,3 +54,4 @@
 ;; (unpin! t)
 
 (package! super-save)
+(package! catppuccin-theme)
