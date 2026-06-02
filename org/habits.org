@@ -1,0 +1,16 @@
+#+title: Habits
+
+* TODO IELTS Listening
+SCHEDULED: <2026-06-02 Tue .+1d>
+:PROPERTIES:
+:STYLE: habit
+:END:
+
+* TODO Read 10 pages
+SCHEDULED: <2026-06-02 Tue .+1d>
+:PROPERTIES:
+:STYLE: habit
+:END:
+
+* TODO Test Habit
+SCHEDULED: <2026-06-02 Tue>
