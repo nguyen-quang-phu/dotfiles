@@ -55,3 +55,5 @@
 
 (package! super-save)
 (package! catppuccin-theme)
+(package! org-super-agenda)
+(package! org-modern)

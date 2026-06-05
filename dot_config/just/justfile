@@ -18,7 +18,7 @@ arch-install pkg:
   elif yay -Si {{pkg}}-git >/dev/null 2>&1; then \
     yay -S --noconfirm {{pkg}}-git; \
   else \
-    yay -S --noconfirm {{pkg}}-bin; \
+    yay -S --noconfirm {{pkg}}; \
   fi \
 
 [group('brew')]
@@ -33,3 +33,7 @@ install +args:
       error('unsupported OS') 
     }
   }} {{args}}
+
+[group('doom-emacs')]
+doom-sync:
+  chezmoi apply ~/.config/doom/ && ~/.config/emacs/bin/doom sync
