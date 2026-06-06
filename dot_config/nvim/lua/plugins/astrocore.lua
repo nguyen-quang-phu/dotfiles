@@ -94,7 +94,10 @@ return {
 
 				-- setting a mapping to false will disable it
 				-- ["<C-S>"] = false,
-				["<Leader>o"] = { desc = "Orgmode" },
+				["<Leader>o"] = {
+					"",
+					desc = "Orgmode",
+				},
 				["<Leader>oi"] = { desc = "Orgmode Insert" },
 				gt = false,
 				gT = false,

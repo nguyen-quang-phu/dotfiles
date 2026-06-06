@@ -25,13 +25,7 @@ return {
 						handler = function(data)
 							require("org-modern.menu")
 								:new({
-									window = {
-										margin = { 1, 0, 1, 0 },
-										padding = { 0, 1, 0, 1 },
-										title_pos = "center",
-										border = "rounded",
-										zindex = 1000,
-									},
+									window = { margin = { 1, 0, 1, 0 }, padding = { 0, 1, 0, 1 }, title_pos = "center", border = "rounded", zindex = 1000 },
 									icons = {
 										separator = "➜",
 									},
@@ -44,5 +38,5 @@ return {
 			-- Experimental LSP support
 			vim.lsp.enable("org")
 		end,
-	},
+	}
 }
