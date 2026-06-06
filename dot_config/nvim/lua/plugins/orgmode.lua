@@ -17,6 +17,11 @@ return {
   			org_todo_keywords = {
     			{  'TODO(t)', 'PROJ(p)', 'STRT(s)', 'WAIT(w)', 'HOLD(h)', 'IDEA(i)', 'LOOP(r)', '|', 'DONE(d)', 'KILL(k)','Fail(f)' },
   			},
+  			mappings = {
+  				global = {
+  					org_cycle = false,
+  				}
+  			},
 				ui = {
 					input = {
       			use_vim_ui = true
