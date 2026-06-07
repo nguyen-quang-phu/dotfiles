@@ -40,9 +40,9 @@ doom-sync:
 
 orgmode-sync message="sync":
   chezmoi re-add --re-encrypt ~/org
-  git add org/
-  @if git diff --staged --quiet; then \
+  git -C "$(chezmoi source-path)" add org/
+  @if git -C "$(chezmoi source-path)" diff --staged --quiet; then \
     echo "No changes to commit"; \
   else \
-    git commit -m "chore(org): {{message}}"; \
+    git -C "$(chezmoi source-path)" commit -m "chore(org): {{message}} $(date +'%Y-%m-%d %H:%M:%S')"; \
   fi
