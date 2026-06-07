@@ -6,6 +6,7 @@
 return {
 	"AstroNvim/astrocommunity",
 	{ import = "astrocommunity.ai.sidekick-nvim" },
+	{ import = "astrocommunity.color.headlines-nvim" },
 	{ import = "astrocommunity.colorscheme.catppuccin" },
 	{ import = "astrocommunity.completion.codeium-nvim" },
 	{ import = "astrocommunity.completion.blink-cmp" },
