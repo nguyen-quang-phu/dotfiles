@@ -11,14 +11,15 @@ return {
 				org_agenda_files = "~/org/**/*",
 				org_agenda_show_future_repeats = false,
 				org_agenda_span = 10,
-				org_agenda_start_day = "-1d",
+				org_agenda_start_day = "+0d",
+				org_log_into_drawer = "LOGBOOK",
 				org_agenda_start_on_weekday = false,
 				org_default_notes_file = "~/org/refile.org",
   			org_todo_keywords = {
     			{  'TODO(t)', 'PROJ(p)', 'STRT(s)', 'WAIT(w)', 'HOLD(h)', 'IDEA(i)', 'LOOP(r)', '|', 'DONE(d)', 'KILL(k)','Fail(f)' },
   			},
   			mappings = {
-  				global = {
+  				org = {
   					org_cycle = false,
   				}
   			},
