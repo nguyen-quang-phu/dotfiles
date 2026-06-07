@@ -38,6 +38,7 @@ install +args:
 doom-sync:
   chezmoi apply ~/.config/doom/ && ~/.config/emacs/bin/doom sync
 
+[group('orgmode')]
 orgmode-sync message="sync":
   chezmoi re-add --re-encrypt ~/org
   git -C "$(chezmoi source-path)" add org/
