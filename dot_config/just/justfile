@@ -37,3 +37,12 @@ install +args:
 [group('doom-emacs')]
 doom-sync:
   chezmoi apply ~/.config/doom/ && ~/.config/emacs/bin/doom sync
+
+orgmode-sync message="sync":
+  chezmoi re-add --re-encrypt ~/org
+  git add org/
+  @if git diff --staged --quiet; then \
+    echo "No changes to commit"; \
+  else \
+    git commit -m "chore(org): {{message}}"; \
+  fi
