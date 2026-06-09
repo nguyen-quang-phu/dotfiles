@@ -98,6 +98,12 @@ return {
 					"",
 					desc = "Orgmode",
 				},
+				["<Leader>X"] = {
+					function()
+						require("orgmode").action("org_mappings.toggle_checkbox")
+					end,
+					desc = "Toggle checkbox",
+				},
 				["<Leader>oi"] = { desc = "Orgmode Insert" },
 				gt = false,
 				gT = false,
