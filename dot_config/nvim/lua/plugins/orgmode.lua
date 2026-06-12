@@ -17,6 +17,7 @@ return {
 				org_default_notes_file = "~/org/refile.org",
 				org_log_done = "time",
 				org_log_into_drawer = "LOGBOOK",
+				org_startup_folded= "showeverything",
   			org_todo_keywords = {
   				{
 						'TODO(t)',
