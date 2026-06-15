@@ -9,10 +9,10 @@ return {
 			-- Setup orgmode
 			require("orgmode").setup({
 				org_agenda_files = "~/org/**/*",
-				org_agenda_show_future_repeats = false,
+				org_agenda_show_future_repeats = true,
 				org_agenda_skip_scheduled_if_done = true,
 				org_agenda_span = 10,
-				org_agenda_start_day = "+0d",
+				org_agenda_start_day = "-1d",
 				org_agenda_start_on_weekday = false,
 				org_default_notes_file = "~/org/refile.org",
 				org_log_done = "time",
