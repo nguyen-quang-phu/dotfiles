@@ -46,6 +46,7 @@ return {
 						2200,
 						2230,
 						2300,
+						2330,
 					}
 				},
   			mappings = {
@@ -74,7 +75,7 @@ return {
 				notifications = {
     			enabled = true,
     			cron_enabled = true,
-    			repeater_reminder_time = false,
+    			repeater_reminder_time = true,
     			deadline_warning_reminder_time = false,
     			reminder_time = 10,
     			deadline_reminder = true,
