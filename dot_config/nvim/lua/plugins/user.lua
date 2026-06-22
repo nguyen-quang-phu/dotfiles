@@ -450,7 +450,7 @@ return {
         },
 
         mux = {
-          enabled = true,
+          enabled = false,
         },
       },
     },
