@@ -34,6 +34,43 @@ install +args:
     }
   }} {{args}}
 
+[group('git')]
+[no-cd]
+worktree-window branch:
+  #!/usr/bin/env bash
+  set -euo pipefail
+  [[ -n "${TMUX:-}" ]] || { echo "❌ Not inside a tmux session — start tmux first."; exit 1; }
+  branch="{{branch}}"
+
+  # Locate the branch's existing worktree (empty if none yet).
+  find_worktree() {
+    git worktree list --porcelain \
+      | awk -v b="refs/heads/${branch}" '/^worktree /{p=$2} $0=="branch "b{print p}'
+  }
+
+  wt_path="$(find_worktree)"
+  if [[ -z "$wt_path" ]]; then
+    echo "🌱 Creating worktree for ${branch} via Worktrunk..."
+    wt switch "$branch" --yes --no-cd
+    wt_path="$(find_worktree)"
+  fi
+  [[ -n "$wt_path" ]] || { echo "❌ Could not locate worktree for ${branch}"; exit 1; }
+
+  # Short tab name:
+  #   release branch (pre-release/…-0.34.0)  → release-0.34.0
+  #   ticket branch  (feature/wo-1068-foo)   → WO-1068
+  #   otherwise                              → last path segment
+  seg="${branch##*/}"
+  if [[ "$branch" == *release/* && "$seg" =~ ([0-9]+\.[0-9]+\.[0-9]+) ]]; then
+    window="release-${BASH_REMATCH[1]}"
+  elif [[ "$seg" =~ ^([a-zA-Z]+-[0-9]+) ]]; then
+    window="$(echo "${BASH_REMATCH[1]}" | tr '[:lower:]' '[:upper:]')"
+  else
+    window="$seg"
+  fi
+  echo "🪟 Opening tmux window '${window}' → ${wt_path}"
+  tmux new-window -c "$wt_path" -n "$window"
+
 [group('doom-emacs')]
 doom-sync:
   chezmoi apply ~/.config/doom/ && ~/.config/emacs/bin/doom sync

@@ -42,6 +42,11 @@ matches:
       @wodev nào mn rảnh review giúp em/mình pr này nha:
       - 
 
+  - trigger: "@@urgent_review"
+    replace: |
+      [urgent] @wodev mn review sớm giúp em/mình pr này nha:
+      - 
+
   - trigger: "@@verify-staging"
     replace: "@qcwo [Card]() này có trên staging rồi, nào mn rảnh verify giúp mình nha"
 
@@ -129,7 +134,7 @@ matches:
     replace: "release/lumin-web-optimization-0.x.0"
 
   - trigger: "@@linear"
-    replace: "@Linear create an issue for this with status = Selected for Development, tag = Bug, priority = Medium, and assignee = Me"
+    replace: "@Linear create an issue for this with status = Selected for Development, tag = Bug, priority = Medium, assignee = Me and cycle = Upcoming"
 
   - trigger: "@@daily-report"
     replace: |
@@ -139,3 +144,7 @@ matches:
       - 
       🚧 Blockers:
       - None
+
+  - trigger: "@@final-release"
+    replace: "/remind #vn-web-optimization \"@woqc @Huyen (Nami) Final release plan tomorrow\" at 16:00 xx/xx/2026"
+

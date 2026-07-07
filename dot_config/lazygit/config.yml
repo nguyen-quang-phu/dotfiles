@@ -165,20 +165,22 @@ customCommands:
     context: "commits"
     description: "Open Github PR in browser"
   - key: 'n' # Shortcut for 'New'
-    command: "wt switch --create {{.Form.BranchName}}"
+    command: "wt switch --create {{.Form.BranchName}} --yes --no-cd && just -g worktree-window '{{.Form.BranchName}}'"
     context: 'localBranches'
     prompts:
       - type: 'input'
         title: 'New Worktrunk Branch'
         key: 'BranchName'
         initialValue: ''
-    loadingText: 'Creating worktree and running hooks...'
-    description: 'Create a new branch and worktree via Worktrunk'
-  - key: 'W'
-    command: "wt switch {{.SelectedLocalBranch.Name}}"
+    loadingText: 'Creating worktree and opening tmux window...'
+    description: 'Create a new branch + worktree, then open it in a tmux window'
+    output: log
+  - key: 'w'
     context: 'localBranches'
-    loadingText: 'Switching worktree...'
-    description: 'Switch to or create a Worktrunk worktree for this branch'
+    description: "Open this branch's worktree in a new tmux window"
+    command: "just -g worktree-window '{{.SelectedLocalBranch.Name}}'"
+    loadingText: 'Opening worktree window...'
+    output: log
   - key: 'C'
     command: "wt commit"
     context: 'files'
