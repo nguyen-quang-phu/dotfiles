@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(chezmoi source-path *)",
+      "Read(//Users/dev/.local/share/chezmoi/**)"
+    ]
+  }
+}

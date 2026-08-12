@@ -1,0 +1,33 @@
+0000000000000000000000000000000000000000 2377d3ce1d20616de82ad406bbb9536e13d624d4 keynold <nqphu1998@gmail.com> 1754102100 +0700	commit (initial): ✨ feat: reinit config
+2377d3ce1d20616de82ad406bbb9536e13d624d4 209121d4f1823104acb87bee8eec36bbb4ff7bbb keynold <nqphu1998@gmail.com> 1754106198 +0700	commit: ✨ feat: update secrets
+209121d4f1823104acb87bee8eec36bbb4ff7bbb 4bf36182736f883c2a9086a307019c379c89a8b7 keynold <nqphu1998@gmail.com> 1755236921 +0700	commit: feat: update config
+4bf36182736f883c2a9086a307019c379c89a8b7 fe92880f44d52d22c06fbc7d2c532a2c82fc8bed keynold <nqphu1998@gmail.com> 1756548579 +0700	commit: update config aerospace
+fe92880f44d52d22c06fbc7d2c532a2c82fc8bed 63f8ac20db4e46b66c090d8490d35b6a092a96f1 keynold <nqphu1998@gmail.com> 1756551830 +0700	commit: WIP
+63f8ac20db4e46b66c090d8490d35b6a092a96f1 b5dfcbcf696f1872d0b514f7f1b019d73e41cbe1 keynold <nqphu1998@gmail.com> 1756552020 +0700	commit: WIP
+b5dfcbcf696f1872d0b514f7f1b019d73e41cbe1 fe92880f44d52d22c06fbc7d2c532a2c82fc8bed keynold <nqphu1998@gmail.com> 1756552052 +0700	reset: moving to fe92880f44d52d22c06fbc7d2c532a2c82fc8bed
+fe92880f44d52d22c06fbc7d2c532a2c82fc8bed 209121d4f1823104acb87bee8eec36bbb4ff7bbb keynold <nqphu1998@gmail.com> 1756781337 +0700	reset: moving to 209121d4f1823104acb87bee8eec36bbb4ff7bbb
+209121d4f1823104acb87bee8eec36bbb4ff7bbb fe92880f44d52d22c06fbc7d2c532a2c82fc8bed keynold <nqphu1998@gmail.com> 1756781362 +0700	pull --no-edit: Fast-forward
+fe92880f44d52d22c06fbc7d2c532a2c82fc8bed 4bf36182736f883c2a9086a307019c379c89a8b7 keynold <nqphu1998@gmail.com> 1756781380 +0700	reset: moving to 4bf36182736f883c2a9086a307019c379c89a8b7
+4bf36182736f883c2a9086a307019c379c89a8b7 fe92880f44d52d22c06fbc7d2c532a2c82fc8bed keynold <nqphu1998@gmail.com> 1757244768 +0700	pull --no-edit: Fast-forward
+fe92880f44d52d22c06fbc7d2c532a2c82fc8bed 43475d6d35bcf0fe5c9c3e5079683c6fc0b9b5a2 keynold <nqphu1998@gmail.com> 1759300058 +0700	commit: update config
+43475d6d35bcf0fe5c9c3e5079683c6fc0b9b5a2 54e08db274358df0180a12f8283bf6b283f528fa keynold <nqphu1998@gmail.com> 1760419537 +0700	commit: feat: update application configurations and disable unused programs
+54e08db274358df0180a12f8283bf6b283f528fa 43475d6d35bcf0fe5c9c3e5079683c6fc0b9b5a2 keynold <nqphu1998@gmail.com> 1760419875 +0700	reset: moving to 43475d6d35bcf0fe5c9c3e5079683c6fc0b9b5a2
+43475d6d35bcf0fe5c9c3e5079683c6fc0b9b5a2 3bbc7a7a655ffe86c2fcc7b123b7cb2e1e544f92 keynold <nqphu1998@gmail.com> 1761546721 +0700	commit: update nix configuration
+3bbc7a7a655ffe86c2fcc7b123b7cb2e1e544f92 c2af100cda37e2a93b2c4284b9e35d0610336c2d keynold <nqphu1998@gmail.com> 1761550765 +0700	commit: update cli configuration
+c2af100cda37e2a93b2c4284b9e35d0610336c2d 18f66e8c365ebe13c26dfff3e3ca1cf5618f854a keynold <nqphu1998@gmail.com> 1761635604 +0700	commit: add user
+18f66e8c365ebe13c26dfff3e3ca1cf5618f854a 019b7a52e6649f7f90f2fa9a03a79b842b13d310 keynold <nqphu1998@gmail.com> 1761915817 +0700	commit: remote unuse app
+019b7a52e6649f7f90f2fa9a03a79b842b13d310 3017c8ec143fae93b49e4fc296376593f3ca44b3 keynold <nqphu1998@gmail.com> 1761925235 +0700	commit: rerange folder
+3017c8ec143fae93b49e4fc296376593f3ca44b3 8f89d7054da5f31180c2291a016abf39d98b3a00 keynold <nqphu1998@gmail.com> 1761926424 +0700	commit: update structure folder
+8f89d7054da5f31180c2291a016abf39d98b3a00 9ceb442df5e79e1f89ca7f73bb3342453697e0a8 keynold <nqphu1998@gmail.com> 1761926923 +0700	commit: add nix-homebrew
+9ceb442df5e79e1f89ca7f73bb3342453697e0a8 462487b04e717d66c2b1649fb42e30fb99095d24 keynold <nqphu1998@gmail.com> 1761927811 +0700	commit: update config nix-homebrew
+462487b04e717d66c2b1649fb42e30fb99095d24 d242de024320a7c9cf910df774f8ce8cf88cc11e keynold <nqphu1998@gmail.com> 1762695344 +0700	rebase (finish): refs/heads/master onto 18f66e8c365ebe13c26dfff3e3ca1cf5618f854a
+d242de024320a7c9cf910df774f8ce8cf88cc11e bd175c5f3fe2e96d8cbc2b8d4f1400405a5da219 keynold <nqphu1998@gmail.com> 1762701222 +0700	commit: update config
+bd175c5f3fe2e96d8cbc2b8d4f1400405a5da219 8b9f55af9fd302143d8c1308fdc64fc2c44c6d2b keynold <nqphu1998@gmail.com> 1764860727 +0700	commit: update config
+8b9f55af9fd302143d8c1308fdc64fc2c44c6d2b be6ceb95a92d2c8ce751d37704fab98f16e383fa keynold <nqphu1998@gmail.com> 1766234387 +0700	commit: ✨ feat: refactor zsh to folder
+be6ceb95a92d2c8ce751d37704fab98f16e383fa 711087151c5e1806640fb966676133bc82c9935a keynold <nqphu1998@gmail.com> 1769940310 +0700	commit: update config: add homebrew packages, aerospace launchd, and shell improvements
+711087151c5e1806640fb966676133bc82c9935a dac9b465df823f8822d104b738d96e9162bca335 keynold <nqphu1998@gmail.com> 1770718687 +0700	commit: update config: add new packages, keybindings, and aerospace rules
+dac9b465df823f8822d104b738d96e9162bca335 77500a4b5ec5089c99246c17a1eb775ee1b2891d keynold <nqphu1998@gmail.com> 1774164249 +0700	commit: update config: add tmux, git perf, new packages, and aerospace slack rule
+77500a4b5ec5089c99246c17a1eb775ee1b2891d 371868eb7fe7adf4c9fbbb063aea58e5ee7a28fe keynold <nqphu1998@gmail.com> 1774717171 +0700	commit: update config: add new packages and git diffnav pager
+371868eb7fe7adf4c9fbbb063aea58e5ee7a28fe 64d86ede5dbe44d745ce40ecab0c99822d47815c keynold <nqphu1998@gmail.com> 1780893349 +0700	commit: update config
+64d86ede5dbe44d745ce40ecab0c99822d47815c a55f427e23500fb6a18e3df9ddb0e5dea9bafa15 keynold <nqphu1998@gmail.com> 1785819706 +0700	commit: WIP
+a55f427e23500fb6a18e3df9ddb0e5dea9bafa15 0c172978469dbe2ac6ce5823e7dc9f333d46a8ee keynold <nqphu1998@gmail.com> 1786433403 +0700	commit: fix: update config

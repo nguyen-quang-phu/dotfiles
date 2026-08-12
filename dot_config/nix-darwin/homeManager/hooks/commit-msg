@@ -1,0 +1,42 @@
+#!/bin/bash
+# Git hook: Auto-prepend emoji, type, and ticket ID from branch to commit message
+if ps -o args= $PPID | grep -q -- '--amend'; then
+  exit 0
+fi
+
+# Skip if commit message already starts with emoji + type (likely an amend)
+if [[ "$COMMIT_MSG" =~ ^(✨|🐛|📝|🎨|♻️|⚡|✅|🔧) ]]; then
+  exit 0
+fi
+# Get current branch name
+BRANCH_NAME=$(git rev-parse --abbrev-ref HEAD)
+
+# Detect commit type based on branch prefix
+case "$BRANCH_NAME" in
+  feature/*) TYPE="feat" EMOJI="✨" ;;
+  feat/*) TYPE="feat" EMOJI="✨" ;;
+  bugfix/*) TYPE="fix" EMOJI="🐛" ;;
+  fix/*) TYPE="fix" EMOJI="🐛" ;;
+  docs/*) TYPE="docs" EMOJI="📝" ;;
+  style/*) TYPE="style" EMOJI="🎨" ;;
+  refactor/*) TYPE="refactor" EMOJI="♻️" ;;
+  perf/*) TYPE="perf" EMOJI="⚡" ;;
+  test/*) TYPE="test" EMOJI="✅" ;;
+  chore/*) TYPE="chore" EMOJI="✅" ;;
+  *) TYPE="chore" EMOJI="🔧" ;; # default
+esac
+
+# Extract ticket ID (like LT-1234)
+if [[ $BRANCH_NAME =~ ([A-Z]+-[0-9]+) ]]; then
+  TICKET="${BASH_REMATCH[1]}"
+else
+  TICKET=""
+fi
+
+# Read current commit message
+COMMIT_MSG=$(cat "$1")
+
+# Only modify if ticket is found and not already in message
+if [[ -n "$TICKET" && ! "$COMMIT_MSG" =~ $TICKET ]]; then
+  echo "$EMOJI $TYPE($TICKET): $COMMIT_MSG" > "$1"
+fi
