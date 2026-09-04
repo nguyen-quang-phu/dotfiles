@@ -148,3 +148,5 @@ matches:
   - trigger: "@@final-release"
     replace: "/remind #vn-web-optimization \"@woqc @Huyen (Nami) Final release plan tomorrow\" at 16:00 xx/xx/2026"
 
+  - trigger: "@@remind-webhook"
+    replace: "/remind #vn-web-optimization \"@Phu Nguyen Quang turn on prismic webhook\" at 16:30 today"

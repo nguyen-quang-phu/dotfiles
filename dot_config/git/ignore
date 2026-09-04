@@ -17,9 +17,11 @@ git-town.toml
 justfile
 keynold_scripts
 lefthook-local.yml
-remote.just
+*.just
 rules
 sgconfig.yml
 types
 vendor
 .cursor
+
+**/.claude/settings.local.json
