@@ -6,6 +6,7 @@
 return {
 	"AstroNvim/astrocommunity",
 	-- { import = "astrocommunity.completion.copilot-cmp" },
+	-- { import = "astrocommunity.pack.typescript-all-in-one" },
 	{ import = "astrocommunity.ai.sidekick-nvim" },
 	{ import = "astrocommunity.color.headlines-nvim" },
 	{ import = "astrocommunity.colorscheme.catppuccin" },
@@ -26,6 +27,7 @@ return {
 	{ import = "astrocommunity.lsp.nvim-java" },
 	{ import = "astrocommunity.lsp.ts-error-translator-nvim" },
 	{ import = "astrocommunity.motion.mini-ai" },
+	{ import = "astrocommunity.motion.nvim-surround" },
 	{ import = "astrocommunity.pack.biome" },
 	{ import = "astrocommunity.pack.docker" },
 	{ import = "astrocommunity.pack.eslint" },
@@ -39,10 +41,9 @@ return {
 	{ import = "astrocommunity.pack.oxlint" },
 	{ import = "astrocommunity.pack.prettier" },
 	{ import = "astrocommunity.pack.tailwindcss" },
-	-- { import = "astrocommunity.pack.typescript-all-in-one" },
 	{ import = "astrocommunity.pack.typescript" },
 	{ import = "astrocommunity.recipes.ai" },
 	{ import = "astrocommunity.recipes.heirline-nvchad-statusline" },
+	{ import = "astrocommunity.terminal-integration.flatten-nvim" },
 	{ import = "astrocommunity.utility.noice-nvim" },
-	-- import/override with your plugins folder
 }

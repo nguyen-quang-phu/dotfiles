@@ -16,13 +16,16 @@ f12 = "actions:edit"
 ctrl-up = "actions:goto_parent_dir"
 
 [actions.edit]
-description = "Opens the selected entries with the default editor (falls back to vim)"
-command = "${EDITOR:-vim} '{}'"
+description = "Opens the selection in this tmux session's nvim (falls back to a new nvim)"
+command = "tv-open-in-nvim '{}'"
 shell = "bash"
 # use `mode = "fork"` if you want to return to tv afterwards
 mode = "execute"
 
 [actions.goto_parent_dir]
 description = "Re-opens tv in the parent directory"
-command = "tv files .."
+# Same as the text channel: `tv-restart` keeps tv.nvim's `--expect` keys alive
+# across the restart so <CR> still hands the selection back to nvim.
+command = "tv-restart files .."
+shell = "bash"
 mode = "execute"

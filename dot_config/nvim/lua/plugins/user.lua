@@ -153,6 +153,7 @@ return {
       local h = require("tv").handlers
 
       require("tv").setup({
+        -- layout = "portrait",
         -- global window appearance (can be overridden per channel)
         window = {
           width = 0.8, -- 80% of editor width
@@ -170,7 +171,7 @@ return {
             handlers = {
               ["<CR>"] = h.open_as_files, -- default: open selected files
               ["<C-q>"] = h.send_to_quickfix, -- send to quickfix list
-              ["<C-s>"] = h.open_in_split, -- open in horizontal split
+              -- ["<C-s>"] = h.open_in_split, -- open in horizontal split
               ["<C-v>"] = h.open_in_vsplit, -- open in vertical split
               ["<C-y>"] = h.copy_to_clipboard, -- copy paths to clipboard
             },
@@ -182,7 +183,7 @@ return {
             handlers = {
               ["<CR>"] = h.open_at_line, -- Jump to line:col in file
               ["<C-q>"] = h.send_to_quickfix, -- Send matches to quickfix
-              ["<C-s>"] = h.open_in_split, -- Open in horizontal split
+              -- ["<C-s>"] = h.open_in_split, -- Open in horizontal split
               ["<C-v>"] = h.open_in_vsplit, -- Open in vertical split
               ["<C-y>"] = h.copy_to_clipboard, -- Copy matches to clipboard
             },
@@ -443,6 +444,7 @@ return {
           generate_commit = "Generate commit with staged changes",
           create_branch_and_generate_commit = "Create branch and generate commit with staged changes",
           review_commit= "Can you review latest commit for any issues or improvements?",
+          resolve_pr_comments = "Use `gh` to list the unresolved review comments on the pull request for the current branch. For each one, show me the comment with its file and line, address it in the code, then resolve the thread on GitHub once the change is made.",
           -- security = "Review {file} for security vulnerabilities",
           -- custom = function(ctx)
           --   return "Current file: " .. ctx.buf .. " at line " .. ctx.row

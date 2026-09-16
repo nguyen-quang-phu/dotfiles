@@ -1,0 +1,45 @@
+[metadata]
+name = "text"
+description = "A channel to find and select text from files"
+requirements = ["rg", "bat"]
+
+[source]
+# Cycle between sources with <CTRL-S>.
+command = [
+  { name = "Default", run = "rg . --no-heading --line-number --colors 'match:fg:white' --colors 'path:fg:blue' --color=always" },
+  { name = "Hidden",  run = "rg . --no-heading --line-number --hidden --colors 'match:fg:white' --colors 'path:fg:blue' --color=always" },
+]
+ansi = true
+output = "{strip_ansi|split:\\::..2}"
+
+[preview]
+command = "bat -n --color=always '{strip_ansi|split:\\::0}'"
+env = { BAT_THEME = "ansi" }
+offset = '{strip_ansi|split:\::1}'
+
+[ui]
+preview_panel = { header = '{strip_ansi|split:\::..2}' }
+
+[keybindings]
+# NOTE: `enter` is deliberately left at its default (confirm_selection).
+# Binding it to an action here would swallow the key, and tv.nvim's
+# `--expect enter` only *adds* confirm keys -- it cannot take `enter` back from
+# a channel binding. Rebinding it breaks <CR> -> h.open_at_line inside nvim.
+ctrl-o = "actions:edit"
+# Exact (substring) matching is a CLI-only flag, so this restarts the channel
+# with it enabled. Launch as `tv text --exact` to get it from the start.
+ctrl-g = "actions:exact"
+
+[actions.edit]
+description = "Open the match in this tmux session's nvim (falls back to a new nvim)"
+command = "tv-open-in-nvim '{strip_ansi|split:\\::0}' '{strip_ansi|split:\\::1}'"
+shell = "bash"
+mode = "execute"
+
+[actions.exact]
+description = "Restart this channel with exact (substring) matching instead of fuzzy"
+# Restarting drops the `--expect` keys tv.nvim launched tv with, which breaks
+# <CR> -> h.open_at_line in nvim. `tv-restart` re-adds them when $NVIM is set.
+command = "tv-restart text --exact"
+shell = "bash"
+mode = "execute"

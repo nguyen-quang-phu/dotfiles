@@ -1,0 +1,104 @@
+# ~/.zshrc — managed by chezmoi
+# (zsh was migrated out of nix-darwin/home-manager; this file is hand-managed)
+
+# ── Homebrew env (sets HOMEBREW_PREFIX, adds brew to PATH) ────────────────────
+if [ -x /opt/homebrew/bin/brew ]; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
+BREW_PREFIX="${HOMEBREW_PREFIX:-/opt/homebrew}"
+
+# ── PATH / env ────────────────────────────────────────────────────────────────
+export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/.config/tmux/workspaces:$PATH"
+export XDG_CONFIG_HOME="$HOME/.config"
+export ESPANSO_CONFIG_DIR="$HOME/.config/espanso"
+
+# nix-darwin defaults EDITOR to nano; override it here (this file wins, it is
+# sourced after /etc/zprofile).
+export EDITOR="nvim"
+export VISUAL="nvim"
+
+# ── Secrets (agenix-decrypted mcp env) ────────────────────────────────────────
+_mcp_secret="$(getconf DARWIN_USER_TEMP_DIR)/agenix/mcp"
+[ -f "$_mcp_secret" ] && eval "$(cat "$_mcp_secret")"
+unset _mcp_secret
+
+# ── History ───────────────────────────────────────────────────────────────────
+HISTFILE="$HOME/.zsh_history"
+HISTSIZE=10000
+SAVEHIST=10000
+mkdir -p "$(dirname "$HISTFILE")"
+setopt HIST_FCNTL_LOCK HIST_IGNORE_DUPS HIST_IGNORE_SPACE SHARE_HISTORY
+setopt NO_APPEND_HISTORY NO_EXTENDED_HISTORY NO_HIST_EXPIRE_DUPS_FIRST
+setopt NO_HIST_FIND_NO_DUPS NO_HIST_IGNORE_ALL_DUPS NO_HIST_SAVE_NO_DUPS
+
+# ── Completion ──────────────────────────────────────────────────────────────--
+autoload -Uz compinit && compinit -d "${XDG_CACHE_HOME:-$HOME/.cache}/zcompdump"
+
+# ── zsh-autosuggestions (homebrew) ────────────────────────────────────────────
+if [ -f "$BREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh" ]; then
+  source "$BREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
+  ZSH_AUTOSUGGEST_STRATEGY=(history)
+fi
+
+# ── Tool integrations ─────────────────────────────────────────────────────────
+command -v starship >/dev/null && [[ $TERM != "dumb" ]] && eval "$(starship init zsh)"
+command -v zoxide   >/dev/null && eval "$(zoxide init zsh)"
+command -v mise     >/dev/null && eval "$(mise activate zsh)"
+command -v direnv   >/dev/null && eval "$(direnv hook zsh)"
+if command -v atuin >/dev/null && [[ $options[zle] = on ]]; then
+  eval "$(atuin init zsh)"
+fi
+
+# fnm
+FNM_PATH="$BREW_PREFIX/opt/fnm/bin"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="$FNM_PATH:$PATH"
+  eval "$(fnm env --use-on-cd --shell zsh)"
+fi
+
+# ── Aliases ───────────────────────────────────────────────────────────────────
+alias t='tmux new-session -A -s keynold'
+alias ...='cd ../..'
+alias darwin-build='just -f ~/.config/nix-darwin/justfile build'
+alias darwin-update='just -f ~/.config/nix-darwin/justfile update'
+alias edit-secrets='just -f ~/.config/nix-darwin/justfile edit-secrets'
+alias justg='just -g'
+alias asvim='NVIM_APPNAME=astro_nvim nvim'
+alias ze=zellij
+alias zed='ze a -c default'
+
+if command -v eza >/dev/null; then
+  alias eza='eza --icons auto --git --group-directories-first --header'
+  alias ls=eza
+  alias ll='eza -l'
+  alias la='eza -a'
+  alias lla='eza -la'
+  alias lt='eza --tree'
+fi
+
+# ── Functions ─────────────────────────────────────────────────────────────────
+mux() {
+  if [ -z "$1" ]; then
+    echo "Usage: mux <project_name>"
+    return 1
+  fi
+  local project="$1"
+  if ! tmux has-session -t "$project" 2>/dev/null; then
+    tmuxinator start "$project" && sleep 2
+  fi
+  tmux attach -t "$project"
+}
+
+# ── SDKMAN (MUST be at the end of the file for sdkman to work) ─────────────────
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$SDKMAN_DIR/bin/sdkman-init.sh" ]] && source "$SDKMAN_DIR/bin/sdkman-init.sh"
+
+# ── zsh-syntax-highlighting (homebrew — MUST be sourced last) ──────────────────
+if [ -f "$BREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ]; then
+  source "$BREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+  ZSH_HIGHLIGHT_HIGHLIGHTERS=(main)
+fi
+
+if command -v wt >/dev/null 2>&1; then eval "$(command wt config shell init zsh)"; fi
