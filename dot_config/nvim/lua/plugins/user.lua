@@ -441,7 +441,7 @@ return {
       },
       cli = {
         prompts = {
-          generate_commit = "Generate commit with staged changes",
+          generate_commit = "Generate commit with staged changes without any Co-authored-by, Signed-off-by, or other attribution trailers.",
           create_branch_and_generate_commit = "Create branch and generate commit with staged changes",
           review_commit= "Can you review latest commit for any issues or improvements?",
           resolve_pr_comments = "Use `gh` to list the unresolved review comments on the pull request for the current branch. For each one, show me the comment with its file and line, address it in the code, then resolve the thread on GitHub once the change is made.",
