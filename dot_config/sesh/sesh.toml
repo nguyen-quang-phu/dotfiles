@@ -1,8 +1,5 @@
 #:schema https://github.com/joshmedeski/sesh/raw/main/sesh.schema.json
-blacklist = [
-  "zoxide",
-  "scratch"
-]
+blacklist = ["zoxide", "scratch"]
 
 cache = false
 
@@ -89,10 +86,7 @@ preview_command = "bat --color=always ~/.config/nix-darwin/flake.nix"
 name = "lumin"
 path = "~/Code/Lumin/platform"
 startup_command = "vim package.json"
-windows = [
-  "Server",
-  "Review"
-]
+windows = ["Server", "Review"]
 
 [[window]]
 name = "Server"
@@ -103,13 +97,20 @@ name = "Review"
 startup_script = "gh dash"
 
 [[session]]
+name = "Neovim server"
+path = "~/Code/Lumin/platform"
+startup_command = "nvim --headless --listen 0.0.0.0:6666"
+windows = ["Tailscale"]
+
+[[window]]
+name = "Tailscale"
+# startup_script = "tailscale up"
+
+[[session]]
 name = "Bluetui"
 path = "~"
 # startup_command = "vim package.json"
-windows = [
-  "bluetui",
-  "wiremix"
-]
+windows = ["bluetui", "wiremix"]
 
 [[window]]
 name = "bluetui"
@@ -118,5 +119,4 @@ startup_script = "bluetui"
 
 [[window]]
 name = "wiremix"
-startup_script= "wiremix"
-
+startup_script = "wiremix"
