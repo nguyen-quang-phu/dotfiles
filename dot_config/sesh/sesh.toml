@@ -107,6 +107,16 @@ name = "Tailscale"
 # startup_script = "tailscale up"
 
 [[session]]
+name = "Neovim client"
+path = "~/Code/keynold/nvim-client"
+startup_command = "nvim --server localhost:6666 --remote-ui"
+windows = ["Ssh-tunnel"]
+
+[[window]]
+name = "Ssh-tunnel"
+startup_script = "ssh -N -L 6666:127.0.0.1:6666 root@archlinux"
+
+[[session]]
 name = "Bluetui"
 path = "~"
 # startup_command = "vim package.json"

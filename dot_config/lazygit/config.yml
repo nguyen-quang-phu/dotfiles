@@ -160,6 +160,11 @@ customCommands:
     command: "gh pr view -w {{.SelectedLocalBranch.Name}}"
     context: "localBranches"
     description: "Open Github PR in browser"
+  - key: "R"
+    command: 'tuicr pr "$(gh pr view {{.SelectedLocalBranch.Name | quote}} --json number --jq .number)"'
+    context: "localBranches"
+    description: "Review branch's GitHub PR in tuicr"
+    output: terminal
   - key: "G"
     command: "gh pr view -w"
     context: "commits"
@@ -179,7 +184,7 @@ customCommands:
     context: 'localBranches'
     description: "Open this branch's worktree in a new tmux window"
     command: "just -g worktree-window '{{.SelectedLocalBranch.Name}}'"
-    loadingText: 'Opening worktree window...'
+    loadingText: 'Opening worktree window'
     output: log
   - key: 'C'
     command: "wt commit"
@@ -191,6 +196,21 @@ customCommands:
     context: 'worktrees'
     loadingText: 'Removing worktree...'
     description: 'Remove current worktree and clean up via Worktrunk'
+  - key: 'R'
+    command: 'tuicr -w'
+    context: files
+    description: review uncommitted changes in tuicr
+    output: terminal
+  - key: 'R'
+    command: 'tuicr -r {{.SelectedCommitRange.From}}^..{{.SelectedCommitRange.To}}'
+    context: commits
+    description: review selected commits in tuicr
+    output: terminal
+  - key: 'R'
+    command: 'tuicr -r {{.SelectedCommitRange.From}}^..{{.SelectedCommitRange.To}}'
+    context: subCommits
+    description: review selected commits in tuicr
+    output: terminal
   # - key: "K"
   #   context: "localBranches"
   #   description: "Git Town Delete (deletes the current feature branch and sYnc)"

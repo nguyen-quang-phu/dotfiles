@@ -30,6 +30,7 @@ return {
       dashboard = { enabled = true },
       terminal = {
         enabled = true,
+        stack = false,
         win = {
           keys = {
             -- nav_h = { "<C-h>", term_nav("h"), desc = "Go to Left Window", expr = true, mode = "t" },
@@ -830,5 +831,11 @@ return {
         { "rcarriga/nvim-notify", optional = true },
       },
     },
-  },
+    {
+      "vuki656/package-info.nvim",
+      opts = {
+        notifications = false,
+      }
+    },
+  }
 }
