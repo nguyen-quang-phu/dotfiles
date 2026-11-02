@@ -39,12 +39,12 @@ matches:
   # Work
   - trigger: "@@review"
     replace: |
-      @wodev nào mn rảnh review giúp em/mình pr này nha:
+      @wodev nào mn rảnh review giúp mình pr này nha:
       - 
 
   - trigger: "@@urgent_review"
     replace: |
-      [urgent] @wodev mn review sớm giúp em/mình pr này nha:
+      [urgent] @wodev mn review sớm giúp mình pr này nha:
       - 
 
   - trigger: "@@verify-staging"
@@ -154,3 +154,5 @@ matches:
   - trigger: "@@datadog-query-preview"
     replace: "service:lumin-frontend pod_name:pr-$|$-lumin-frontend-*"
 
+  - trigger: "@@claude-test"
+    replace: "help me test this card with chrome profile is opening and add evidence in comment: "
