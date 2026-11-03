@@ -156,3 +156,6 @@ matches:
 
   - trigger: "@@claude-test"
     replace: "help me test this card with chrome profile is opening and add evidence in comment: "
+
+  - trigger: "@@noti-webhook"
+    replace: "Hi @channel, we're releasing a new feature and will be extending the testing period in our testing environment. During this time, the Prismic webhook will be temporarily disabled and will be re-enabled tomorrow. Sorry for the inconvenience, and thank you for your patience!"
